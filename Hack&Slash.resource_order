@@ -16,5 +16,10 @@
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
   ],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"Sprite1","order":16,"path":"sprites/Sprite1/Sprite1.yy",},
+    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"Wall","order":1,"path":"objects/Wall/Wall.yy",},
+    {"name":"blackcolor","order":2,"path":"sprites/blackcolor/blackcolor.yy",},
+  ],
 }
