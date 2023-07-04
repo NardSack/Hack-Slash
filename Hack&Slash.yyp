@@ -34,11 +34,12 @@
     "IDEVersion": "2023.4.0.84",
   },
   "resources": [
+    {"id":{"name":"spr_staticCross","path":"sprites/spr_staticCross/spr_staticCross.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"greenbg","path":"sprites/greenbg/greenbg.yy",},},
     {"id":{"name":"obj_cross","path":"objects/obj_cross/obj_cross.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
-    {"id":{"name":"sp_cross","path":"sprites/sp_cross/sp_cross.yy",},},
+    {"id":{"name":"spr_cross","path":"sprites/spr_cross/spr_cross.yy",},},
     {"id":{"name":"Wall","path":"objects/Wall/Wall.yy",},},
     {"id":{"name":"bluwall","path":"sprites/bluwall/bluwall.yy",},},
     {"id":{"name":"Object_Player","path":"objects/Object_Player/Object_Player.yy",},},
