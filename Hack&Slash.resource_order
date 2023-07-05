@@ -16,11 +16,11 @@
     {"name":"crosshair","order":3,"path":"folders/Sprites/crosshair.yy",},
     {"name":"player","order":4,"path":"folders/Sprites/player.yy",},
     {"name":"dash","order":3,"path":"folders/Sprites/player/dash.yy",},
+    {"name":"death","order":4,"path":"folders/Sprites/player/death.yy",},
     {"name":"melee","order":2,"path":"folders/Sprites/player/melee.yy",},
     {"name":"walk","order":1,"path":"folders/Sprites/player/walk.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"death","order":4,"path":"folders/Sprites/player/death.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_staticCross","order":1,"path":"sprites/spr_staticCross/spr_staticCross.yy",},
