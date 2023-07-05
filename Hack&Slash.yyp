@@ -32,6 +32,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"walk","folderPath":"folders/Sprites/player/walk.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"death","folderPath":"folders/Sprites/player/death.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pistol.wav","CopyToMask":-1,"filePath":"datafiles",},
@@ -48,6 +49,9 @@
     {"id":{"name":"snd_pistolshot","path":"sounds/snd_pistolshot/snd_pistolshot.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"spr_playerwalk_down","path":"sprites/spr_playerwalk_down/spr_playerwalk_down.yy",},},
+    {"id":{"name":"spr_playerdash_right","path":"sprites/spr_playerdash_right/spr_playerdash_right.yy",},},
+    {"id":{"name":"spr_playerdeath","path":"sprites/spr_playerdeath/spr_playerdeath.yy",},},
+    {"id":{"name":"spr_playerdash_left","path":"sprites/spr_playerdash_left/spr_playerdash_left.yy",},},
     {"id":{"name":"greenbg","path":"sprites/greenbg/greenbg.yy",},},
     {"id":{"name":"spr_playeridle_up","path":"sprites/spr_playeridle_up/spr_playeridle_up.yy",},},
     {"id":{"name":"spr_playermelee_right","path":"sprites/spr_playermelee_right/spr_playermelee_right.yy",},},

@@ -20,10 +20,13 @@
     {"name":"walk","order":1,"path":"folders/Sprites/player/walk.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"death","order":4,"path":"folders/Sprites/player/death.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_staticCross","order":1,"path":"sprites/spr_staticCross/spr_staticCross.yy",},
     {"name":"Sprite1","order":2,"path":"sprites/Sprite1/Sprite1.yy",},
+    {"name":"spr_playerdash_right","order":2,"path":"sprites/spr_playerdash_right/spr_playerdash_right.yy",},
+    {"name":"spr_playerdash_left","order":3,"path":"sprites/spr_playerdash_left/spr_playerdash_left.yy",},
     {"name":"spr_playeridle_up","order":1,"path":"sprites/spr_playeridle_up/spr_playeridle_up.yy",},
     {"name":"spr_playermelee_right","order":3,"path":"sprites/spr_playermelee_right/spr_playermelee_right.yy",},
     {"name":"spr_playeridle_left","order":2,"path":"sprites/spr_playeridle_left/spr_playeridle_left.yy",},
