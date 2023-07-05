@@ -1,9 +1,9 @@
 sprite_index = spr_cross;
 image_speed = 1;
-audio_play_sound(pistolshot, 10, false);
+audio_play_sound(snd_pistolshot, 10, false);
 
-if ev_animation_end != true {
+if image_index != 0 {
 	image_index = 1;
-	audio_play_sound(pistolshot, 10, false);
+	audio_play_sound(snd_pistolshot, 10, false);
 }
 
