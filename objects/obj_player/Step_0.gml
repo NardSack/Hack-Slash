@@ -8,11 +8,32 @@ _up =keyboard_check(ord("W"))
 _down = keyboard_check(ord("S"))
 
 dash= keyboard_check_pressed(vk_shift)||keyboard_check_pressed(vk_space)
+xdir=_right-_left
+ydir=_down-_up
+
+
+//walk animation
+	if (xdir>0)
+	{
+		sprite_index=spr_playerwalk_right;
+	}
+	else if (xdir<0)
+	{
+		sprite_index=spr_playerwalk_left;
+	}
+		else if (ydir>0)
+	{
+		sprite_index=spr_playerwalk_down;
+	}
+		else if (ydir<0)
+	{
+		sprite_index=spr_playerwalk_up;
+	} 
+
 //movement
 if(candash)&&(dash)&&(_right||_left||_down||_up)&&(dashcooldown<1)
 {
-	xdir=_right-_left
-	ydir=_down-_up
+// dash animation
 	if (xdir>0)
 	{
 		sprite_index=spr_playerdash_right;
