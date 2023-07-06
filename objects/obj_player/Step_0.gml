@@ -13,7 +13,7 @@ ydir=_down-_up
 
 
 //walk animation
-	if (xdir>0)
+/*	if (xdir>0)
 	{
 		sprite_index=spr_playerwalk_right;
 	}
@@ -29,30 +29,36 @@ ydir=_down-_up
 	{
 		sprite_index=spr_playerwalk_up;
 	} 
-
+*/
 //movement
-if(candash)&&(dash)&&(_right||_left||_down||_up)&&(dashcooldown<1)
+if(candash)&&(dash)&&(_right||_left||_down||_up)&&(dashcooldown<1)&&(!place_meeting(x+_xsped,y+_ysped,obj_wall))
 {
 // dash animation
 	if (xdir>0)
 	{
 		sprite_index=spr_playerdash_right;
+		image_speed=1 
 	}
 	else if (xdir<0)
 	{
 		sprite_index=spr_playerdash_left;
+		image_speed=1
 	}
 		else if (ydir>0)
 	{
 		sprite_index=spr_playerdash_down;
+		image_speed=1
 	}
 		else if (ydir<0)
 	{
 		sprite_index=spr_playerdash_up;
+		image_speed=1
 	}
+
+	
 	candash =false
 	dashcooldown=50
-	image_speed=1
+	
 	dashdirection = point_direction(0,0,_right-_left,_down-_up)
 	dashsp=dashdis/dashtime
 	dashleft= dashdis

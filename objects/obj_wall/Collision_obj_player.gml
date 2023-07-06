@@ -1,4 +1,4 @@
- with(Object_Player)
+ with(obj_player)
  {
 	 y+=0
 	 x+=00
