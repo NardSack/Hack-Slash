@@ -8,7 +8,7 @@ candash= true
 dashdis=100
 dashtime=10
 dashcooldown=0
-is_busy=false
+
 // game speed
 //game_set_speed(60,gamespeed_fps)
  StateFree=function()

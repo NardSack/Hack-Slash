@@ -6,91 +6,66 @@ _right =keyboard_check(ord("D"))
 _left = keyboard_check(ord("A"))
 _up =keyboard_check(ord("W"))
 _down = keyboard_check(ord("S"))
+_movement= _down||_up||_left||_right
 
 dash= keyboard_check_pressed(vk_shift)||keyboard_check_pressed(vk_space)
 xdir=_right-_left
 ydir=_down-_up
-xdirIntent = undefined
-ydirIntent = undefined
-//direction storage
-// x
-if (xdir>0) 
-{ 
-	xdirIntent = true
-}
-else if (xdir<0) 
-{ 
-	xdirIntent = false
-}
 
-//y
-if (ydir>0) 
-{ 
-	ydirIntent = true
-}
-else if (ydir<0) 
-{ 
-	ydirIntent = false
-}
+
 
 //walk animation
-if (keyboard_check(ord("W"))^^keyboard_check(ord("A"))^^keyboard_check(ord("S"))^^keyboard_check(ord("D")))
+if (keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S"))||keyboard_check(ord("D")))
 {
-	is_busy = true;
-	if (xdir>0)
-		{
-			image_speed=1;
-			sprite_index=spr_playerwalk_right;
-			is_busy=false;
-		}
-	else if (xdir<0)
-		{
-			image_speed=1;
-			sprite_index=spr_playerwalk_left;
-			is_busy=false;
-		}
-	else if (ydir>0)
+
+	if (keyboard_check(ord("S")))// check going down
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_down;
-			is_busy=false;
+			
 		}
-	else if (ydir<0)
+	else if (keyboard_check(ord("W")))
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_up
-			is_busy=false;
-	} 
-}
-else
-{
-	is_busy=false;
+		} 
+	if (keyboard_check(ord("D")))//check going to right
+		{
+			image_speed=1;
+			sprite_index=spr_playerwalk_right;
+			
+		}
+	else if (keyboard_check(ord("A")))
+		{
+			image_speed=1;
+			sprite_index=spr_playerwalk_left;
+			
+		}
 }
 
-//busy (if)
-if (!is_busy)
+
+//idle animation
+
+if(_movement==false)
 {
-	if (ydirIntent==true)
+	if(sprite_index==spr_playerwalk_down)
 	{
-		sprite_index=spr_playeridle_down;
-		ydirIntent=undefined
+		sprite_index=spr_playeridle_down
 	}
-	else if (ydirIntent==false)
+	else if (sprite_index==spr_playerwalk_up)
 	{
-		sprite_index=spr_playeridle_up;
-		ydirIntent=undefined
-	}	
-	if (xdirIntent==true)
-	{
-		sprite_index=spr_playeridle_right;
-		xdirIntent=undefined
+		sprite_index=spr_playeridle_up
 	}
-	else if (xdirIntent==false)
+	else if (sprite_index==spr_playerwalk_right)
 	{
-		sprite_index=spr_playeridle_left;
-		xdirIntent=undefined
+		sprite_index=spr_playeridle_right
+	}
+	else if (sprite_index==spr_playerwalk_left)
+	{
+		sprite_index=spr_playeridle_left
 	}
 }
+
 
 //movement dash
 /*
