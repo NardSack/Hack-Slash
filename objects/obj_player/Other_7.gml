@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 /*
-if (sprite_index=spr_playerdash_down)||(sprite_index=spr_playerdash_up)||(sprite_index=spr_playerdash_right)||(sprite_index=spr_playerdash_left) //fuckin fix this shit
+if (sprite_index=spr_playerdash_down)||(sprite_index=spr_playerdash_up)||(sprite_index=spr_playerdash_right)||(sprite_index=spr_playerdash_left)
 {
 		if (sprite_index=spr_playerdash_right)^^(sprite_index=spr_playerwalk_right)
 		{
