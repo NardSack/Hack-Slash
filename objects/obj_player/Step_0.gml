@@ -2,47 +2,107 @@
 // You can write your code in this editor
 
 
-_right =keyboard_check(ord("D"))
-_left = keyboard_check(ord("A"))
-_up =keyboard_check(ord("W"))
-_down = keyboard_check(ord("S"))
-_movement= _down||_up||_left||_right
+right =keyboard_check(ord("D"))
+left = keyboard_check(ord("A"))
+up =keyboard_check(ord("W"))
+down = keyboard_check(ord("S"))
+_movement= down||up||left||right
 
 dash= keyboard_check_pressed(vk_shift)||keyboard_check_pressed(vk_space)
-xdir=_right-_left
-ydir=_down-_up
+xdir=right-left
+ydir=down-up
 
 
 
 //walk animation
-if (keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S"))||keyboard_check(ord("D")))
+if (_movement)
 {
 
-	if (keyboard_check(ord("S")))// check going down
+	if (down)// check going down
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_down;
 			
 		}
-	else if (keyboard_check(ord("W")))
+	else if (up)
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_up
 		} 
-	if (keyboard_check(ord("D")))//check going to right
+	if (right)//check going to right
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_right;
 			
 		}
-	else if (keyboard_check(ord("A")))
+	else if (left)
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_left;
 			
 		}
 }
+//movement dash
 
+//lock dirction
+//decrease from dash to walk gradually
+
+//lock the player control until dash finish
+
+//conditions for dashing
+if (_movement)&&(playercontrol)&&(dash)
+{
+	dashsp = 7
+	playercontrol = false
+	while (dashsp >=movespeed)||(dashsp==0)
+	{
+		_ysped=0
+		_xsped=0
+		//diagonal movement dash
+		if (left)&&(up)
+		{
+			_xsped=-dashsp
+			_ysped=-dashsp
+		}
+		else if (right)&&(up)
+		{
+			_xsped=dashsp
+			_ysped=-dashsp
+		}
+		else if (left)&&(down)
+		{
+			_xsped=-dashsp
+			_ysped=dashsp
+		}
+		else if (right)&&(down)
+		{
+			_xsped=dashsp
+			_ysped=dashsp
+		}
+		//horizontal movement dash
+		else if (right)
+		{
+			_xsped=dashsp
+		}
+		else if (left)
+		{
+			_xsped=-dashsp
+		}
+		// vertical movement dash
+		else if (up)
+		{
+			_ysped=-dashsp
+		}
+		else if (down)
+		{
+			_ysped=dashsp
+		}
+		checkcollisiondash()
+		
+		dashsp-=1
+	}
+	playercontrol = true
+}
 
 //idle animation
 
@@ -67,42 +127,11 @@ if(_movement==false)
 }
 
 
-//movement dash
-/*
-if(candash)&&(dash)&&(_right||_left||_down||_up)&&(dashcooldown<1)&&(!place_meeting(x+_xsped,y+_ysped,obj_wall))
-{
-// dash animation
-	if (xdir>0)
-	{
-		sprite_index=spr_playerdash_right;
-		image_speed=1 
-	}
-	else if (xdir<0)
-	{
-		sprite_index=spr_playerdash_left;
-		image_speed=1
-	}
-		else if (ydir>0)
-	{
-		sprite_index=spr_playerdash_down;
-		image_speed=1
-	}
-		else if (ydir<0)
-	{
-		sprite_index=spr_playerdash_up;
-		image_speed=1
-	}
 
-	
-	candash =false
-	dashcooldown=50
-	
-	dashdirection = point_direction(0,0,_right-_left,_down-_up)
-	dashsp=dashdis/dashtime
-	dashleft= dashdis
-	state = statedash
-}
-*/
+
+
+
+
 
 state()
-dashcooldown-=1
+  
