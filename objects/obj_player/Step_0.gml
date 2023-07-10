@@ -17,25 +17,25 @@ ydir=down-up
 //walk animation
 if (_movement)
 {
-
-	if (down)// check going down
+	
+	if (down &&(down-up !=0))// check going down
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_down;
 			
 		}
-	else if (up)
+	else if (up&&(down-up !=0))
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_up
 		} 
-	if (right)//check going to right
+	if (right&&(right-left!=0))//check going to right
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_right;
 			
 		}
-	else if (left)
+	else if (left&&(right-left!=0))
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_left;
@@ -50,77 +50,59 @@ if (_movement)
 //lock the player control until dash finish
 
 //conditions for dashing
-if (_movement)&&(playercontrol)&&(dash)
+if (dash&&_movement&&playercontrol&&(xdir!=0||ydir!=0))
 {
-	dashsp = 7
-	playercontrol = false
-	while (dashsp >=movespeed)||(dashsp==0)
-	{
-		_ysped=0
-		_xsped=0
-		//diagonal movement dash
-		if (left)&&(up)
-		{
-			_xsped=-dashsp
-			_ysped=-dashsp
-		}
-		else if (right)&&(up)
-		{
-			_xsped=dashsp
-			_ysped=-dashsp
-		}
-		else if (left)&&(down)
-		{
-			_xsped=-dashsp
-			_ysped=dashsp
-		}
-		else if (right)&&(down)
-		{
-			_xsped=dashsp
-			_ysped=dashsp
-		}
-		//horizontal movement dash
-		else if (right)
-		{
-			_xsped=dashsp
-		}
-		else if (left)
-		{
-			_xsped=-dashsp
-		}
-		// vertical movement dash
-		else if (up)
-		{
-			_ysped=-dashsp
-		}
-		else if (down)
-		{
-			_ysped=dashsp
-		}
-		checkcollisiondash()
-		
-		dashsp-=1
-	}
-	playercontrol = true
-}
+	Dashsp=9
+	playercontrol=false
+	xd=xdir
+	yd=ydir
 
+	state=StateDash
+	
+}
+if(state == StateDash)
+{
+		if (yd>0)// check going down
+		{
+			image_speed=1;
+			sprite_index=spr_playerdash_down;
+			
+		}
+	else if (yd<0)
+		{
+			image_speed=1;
+			sprite_index=spr_playerdash_up
+		} 
+	if (xd>0)//check going to right
+		{
+			image_speed=1;
+			sprite_index=spr_playerdash_right;
+			
+		}
+	else if (xd<0)
+		{
+			image_speed=1;
+			sprite_index=spr_playerdash_left;
+			
+		}
+}
 //idle animation
 
 if(_movement==false)
 {
-	if(sprite_index==spr_playerwalk_down)
+	if(sprite_index==spr_playerwalk_down)||(sprite_index == spr_playerdash_down)
 	{
 		sprite_index=spr_playeridle_down
 	}
-	else if (sprite_index==spr_playerwalk_up)
+	else if (sprite_index==spr_playerwalk_up)||(sprite_index == spr_playerdash_up)
 	{
 		sprite_index=spr_playeridle_up
 	}
-	else if (sprite_index==spr_playerwalk_right)
+	else if (sprite_index==spr_playerwalk_right)||(sprite_index == spr_playerdash_right)
 	{
 		sprite_index=spr_playeridle_right
 	}
-	else if (sprite_index==spr_playerwalk_left)
+	else if (sprite_index==spr_playerwalk_left)||(sprite_index == spr_playerdash_left)
 	{
 		sprite_index=spr_playeridle_left
 	}
