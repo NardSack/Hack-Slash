@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_playerdeath",
-  "bbox_bottom": 62,
+  "bbox_bottom": 77,
   "bbox_left": 0,
-  "bbox_right": 50,
+  "bbox_right": 62,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -35,7 +35,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 68,
+  "height": 84,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"92ee6e4f-23d4-44c7-848e-8e02039cf0b5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -106,5 +106,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 68,
+  "width": 84,
 }

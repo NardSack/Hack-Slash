@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_tenerideath",
-    "path": "sprites/spr_tenerideath/spr_tenerideath.yy",
+    "name": "spr_teneriattack",
+    "path": "sprites/spr_teneriattack/spr_teneriattack.yy",
   },
   "spriteMaskId": null,
   "visible": true,

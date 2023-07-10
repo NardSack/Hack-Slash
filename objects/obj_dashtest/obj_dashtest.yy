@@ -1,8 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bulletbreaktest",
-  "eventList": [],
+  "name": "obj_dashtest",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -26,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ebullet_hit",
-    "path": "sprites/spr_ebullet_hit/spr_ebullet_hit.yy",
+    "name": "spr_playeridle_down",
+    "path": "sprites/spr_playeridle_down/spr_playeridle_down.yy",
   },
   "spriteMaskId": null,
   "visible": true,
