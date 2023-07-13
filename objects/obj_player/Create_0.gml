@@ -6,6 +6,7 @@ _xsped=0
 _ysped=0
 playercontrol=true
 Dashsp = 9
+isBusy = false
 // game speed
 //game_set_speed(60,gamespeed_fps)
  StateFree=function()
@@ -39,7 +40,7 @@ if(place_meeting(x+_xsped,y+_ysped,obj_wall))
 
 StateDash=function ()
  {
-
+isDashing = true
 _xsped = xd*Dashsp
 _ysped = yd*Dashsp
 	 if(place_meeting(x+_xsped,y+_ysped,obj_wall))
