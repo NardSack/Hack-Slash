@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 3,
   "parent": {
-    "name": "1hit",
-    "path": "folders/Sprites/enemy/major/carnifex/attack/attackfx/1hit.yy",
+    "name": "attackfx",
+    "path": "folders/Sprites/enemy/major/carnifex/attack/1hit/attackfx.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
