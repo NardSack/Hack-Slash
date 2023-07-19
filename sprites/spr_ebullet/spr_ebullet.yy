@@ -27,7 +27,7 @@
   "origin": 9,
   "parent": {
     "name": "energyrifle",
-    "path": "folders/Sprites/playerweapons/energyrifle.yy",
+    "path": "folders/Sprites/player/playerweapons/energyrifle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

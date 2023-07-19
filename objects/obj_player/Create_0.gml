@@ -14,6 +14,9 @@ isBusy = false
 _xsped = (right-left)*movespeed
 _ysped = (down-up)*movespeed
 
+//aim direction
+
+aimDir = 0;
 
 //collision
 if(place_meeting(x+_xsped,y+_ysped,obj_wall))

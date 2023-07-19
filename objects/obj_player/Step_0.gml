@@ -11,11 +11,14 @@ dash= keyboard_check_pressed(vk_shift)||keyboard_check_pressed(vk_space)
 xdir=right-left
 ydir=down-up
 
+//depth
+depth = -bbox_bottom;
+
 //walk animation
 if (_movement)
 {
 	
-	if (down &&(down-up !=0))// check going down
+	if (down&&(down-up !=0))// check going down
 		{
 			image_speed=1;
 			sprite_index=spr_playerwalk_down;
@@ -110,3 +113,6 @@ if(_movement==false)
 
 state()
   
+//aim direction
+
+aimDir = point_direction(x, y, mouse_x, mouse_y);

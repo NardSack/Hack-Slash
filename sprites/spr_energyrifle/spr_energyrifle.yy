@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_energyrifle",
-  "bbox_bottom": 12,
+  "bbox_bottom": 14,
   "bbox_left": 0,
-  "bbox_right": 35,
+  "bbox_right": 41,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 13,
+  "height": 15,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0e074647-246b-48d4-ab5a-77d43288237a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "energyrifle",
-    "path": "folders/Sprites/playerweapons/energyrifle.yy",
+    "path": "folders/Sprites/player/playerweapons/energyrifle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -59,8 +59,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 10,
-    "yorigin": 7,
+    "xorigin": 8,
+    "yorigin": 9,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 36,
+  "width": 42,
 }
