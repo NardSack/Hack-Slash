@@ -1,11 +1,10 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 right =keyboard_check(ord("D"))
 left = keyboard_check(ord("A"))
 up =keyboard_check(ord("W"))
 down = keyboard_check(ord("S"))
 _movement= down||up||left||right
+
+shootKey = mouse_check_button(mb_left);
 
 dash= keyboard_check_pressed(vk_shift)||keyboard_check_pressed(vk_space)
 xdir=right-left
@@ -116,3 +115,9 @@ state()
 //aim direction
 
 aimDir = point_direction(x, y, mouse_x, mouse_y);
+
+//shooting weapon
+if shootKey	//last
+{
+	//var _bulletInst = instance_create_depth(x, y, depth-100,)	
+}

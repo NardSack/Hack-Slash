@@ -1,17 +1,22 @@
-	draw_self();
-
-	//pin gun on character
-	var _weaponYsc1 = 1;
-
-	if aimDir > 90 && aimDir <270
+//draw weapon behind player
+	if aimDir >= 55 && aimDir < 140
 	{
-		_weaponYsc1 = -1;
+		draw_my_weapon()
 	}
 
-	draw_sprite_ext(spr_revolver, 0, (x+1), (y-2) , 1, _weaponYsc1, aimDir, c_white, 1);
+//draw the player
+draw_self();
 
-
-
+//draw weapon
+	if aimDir >= 140 && aimDir < 360
+	{
+		draw_my_weapon();
+	}
+	else if aimDir >= 0 && aimDir < 55
+	{
+		draw_my_weapon()
+	}
+	
 
 
 
