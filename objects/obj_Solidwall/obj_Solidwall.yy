@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Solidwall",
+  "name": "obj_solidwall",
   "eventList": [],
   "managed": false,
   "overriddenProperties": [],
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "solidWall",
-    "path": "sprites/solidWall/solidWall.yy",
+    "name": "solidwall",
+    "path": "sprites/solidwall/solidwall.yy",
   },
   "spriteMaskId": null,
   "visible": true,

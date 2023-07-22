@@ -79,3 +79,10 @@ if(place_meeting(x+_xsped,y+_ysped,obj_wall))
 	}
  }
 state = StateFree
+
+//weapon info
+	shootTimer = 0;
+	shootCooldown = 60;
+	
+	bulletObj = obj_rbullet;
+	weaponLength = sprite_get_bbox_right(spr_revolver) - sprite_get_xoffset(spr_revolver);

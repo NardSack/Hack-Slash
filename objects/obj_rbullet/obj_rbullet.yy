@@ -1,11 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_player",
+  "name": "obj_rbullet",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -30,12 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_playeridle_down",
-    "path": "sprites/spr_playeridle_down/spr_playeridle_down.yy",
+    "name": "spr_rbullet",
+    "path": "sprites/spr_rbullet/spr_rbullet.yy",
   },
-  "spriteMaskId": {
-    "name": "spr_playeridle_down",
-    "path": "sprites/spr_playeridle_down/spr_playeridle_down.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

@@ -112,12 +112,48 @@ if(_movement==false)
 
 state()
   
-//aim direction
+	//aim direction
 
-aimDir = point_direction(x, y, mouse_x, mouse_y);
+	aimDir = point_direction(x, y, mouse_x, mouse_y);
 
-//shooting weapon
-if shootKey	//last
-{
-	//var _bulletInst = instance_create_depth(x, y, depth-100,)	
-}
+	//shooting the weapon
+	if shootTimer > 0 { shootTimer--; };
+	
+	if shootKey	&& shootTimer <= 0
+	{
+		//reset timer
+		shootTimer = shootCooldown;
+		//create bullet
+		var _xOffset = lengthdir_x( weaponLength + weaponOffsetDist, aimDir)
+		var _yOffset = lengthdir_y( weaponLength + weaponOffsetDist , aimDir)
+		var _bulletInst = instance_create_depth( x + _xOffset + 3, y + _yOffset - 10, depth-100, bulletObj);
+		
+		//change bullet direction
+		with (_bulletInst)
+		{
+			dir = other.aimDir;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
