@@ -132,9 +132,19 @@ state()
 		with (_bulletInst)
 		{
 			dir = other.aimDir;
+			//turn the bullet to face correct direction at creation if needed
+			if dirFix == true 
+			{
+				image_angle = dir;
+			}
+			if highSpeed == true
+			{
+				image_xscale = max(1, spd/sprite_width)
+			}
 		}
+		
+		audio_play_sound(snd_pistolshot,1,0)
 	}
-	
 	
 	
 	

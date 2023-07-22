@@ -27,12 +27,6 @@
 	{
 		destroy = true;
 	}
-	
-	image_angle = dir;
-	
-
-
-
 
 
 

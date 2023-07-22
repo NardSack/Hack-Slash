@@ -8,7 +8,6 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_2FBBF2E9","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_6B6277CD","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_546D19A8","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_24A0A7D7","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_4FEE1682","path":"rooms/Room1/Room1.yy",},
@@ -27,7 +26,6 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":"none","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2FBBF2E9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":128.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6B6277CD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cross","path":"objects/obj_cross/obj_cross.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-16.0,"y":-16.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_546D19A8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemytest","path":"objects/obj_enemytest/obj_enemytest.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":379.0,"y":242.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_24A0A7D7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_majortest","path":"objects/obj_majortest/obj_majortest.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":256.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4FEE1682","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bossfx","path":"objects/obj_bossfx/obj_bossfx.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":491.0,"y":185.5,},
@@ -79,7 +77,7 @@
   },
   "sequenceId": null,
   "views": [
-    {"hborder":200,"hport":1080,"hspeed":-1,"hview":480,"inherit":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"vborder":100,"visible":true,"vspeed":-1,"wport":1920,"wview":854,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":200,"hport":1080,"hspeed":-1,"hview":480,"inherit":false,"objectId":null,"vborder":100,"visible":true,"vspeed":-1,"wport":1920,"wview":854,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
@@ -90,7 +88,7 @@
   ],
   "viewSettings": {
     "clearDisplayBuffer": true,
-    "clearViewBackground": true,
+    "clearViewBackground": false,
     "enableViews": true,
     "inheritViewSettings": false,
   },
