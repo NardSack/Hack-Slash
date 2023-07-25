@@ -1,6 +1,5 @@
 // Inherit the parent event
 event_inherited();
-image_speed=1;
 //change properties
 dir = 0;
 spd =10;

@@ -66,7 +66,7 @@
     {"name":"obj_enemytest","order":3,"path":"objects/obj_enemytest/obj_enemytest.yy",},
     {"name":"spr_lucentattack_left","order":3,"path":"sprites/spr_lucentattack_left/spr_lucentattack_left.yy",},
     {"name":"spr_playermelee_upHB","order":1,"path":"sprites/spr_playermelee_upHB/spr_playermelee_upHB.yy",},
-    {"name":"spr_ebullet_hit","order":2,"path":"sprites/spr_ebullet_hit/spr_ebullet_hit.yy",},
+    {"name":"spr_sgbullet_hit","order":2,"path":"sprites/spr_sgbullet_hit/spr_sgbullet_hit.yy",},
     {"name":"spr_carnifexattack1_left","order":4,"path":"sprites/spr_carnifexattack1_left/spr_carnifexattack1_left.yy",},
     {"name":"spr_stonestructures","order":2,"path":"sprites/spr_stonestructures/spr_stonestructures.yy",},
     {"name":"spr_energyrifle","order":1,"path":"sprites/spr_energyrifle/spr_energyrifle.yy",},

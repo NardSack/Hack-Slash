@@ -81,7 +81,12 @@ state = StateFree
 //weapon info
 	shootTimer = 0;
 	
-	weapon = global.WeaponList.shotgun;
+	//add weapons to player weapon inventory
+	array_push( global.PlayerWeapons, global.WeaponList.revolver);
+	array_push( global.PlayerWeapons, global.WeaponList.shotgun);
+	
+	selectedWeapon = 0;
+	weapon = global.PlayerWeapons[selectedWeapon];
 	
 	
 	
