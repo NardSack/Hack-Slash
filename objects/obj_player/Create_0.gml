@@ -1,4 +1,4 @@
-
+//base variables
 movespeed=3
 _xsped=0
 _ysped=0
@@ -6,8 +6,6 @@ playercontrol=true
 Dashsp = 9
 isBusy = false
 
-// game speed
-//game_set_speed(60,gamespeed_fps)
  StateFree=function()
 {
 _xsped = (right-left)*movespeed
@@ -19,7 +17,7 @@ aimDir = 0;
 weaponOffsetDist = 6;
 
 //collision
-if(place_meeting(x+_xsped,y+_ysped,obj_wall))
+if(place_meeting(x+_xsped,y+_ysped,obj_wall)) //if next frame will collide with wall
 {
 	while(abs(_xsped)>0.1||abs(_ysped)>0.1)
 	{

@@ -1,4 +1,4 @@
-//draw weapon behind player
+//draw weapon behind player when aiming up
 	if aimDir >= 55 && aimDir < 140
 	{
 		draw_my_weapon()
@@ -7,7 +7,7 @@
 //draw the player
 draw_self();
 
-//draw weapon
+//draw weapon in front of player
 	if aimDir >= 140 && aimDir < 360
 	{
 		draw_my_weapon();
@@ -16,12 +16,3 @@ draw_self();
 	{
 		draw_my_weapon()
 	}
-
-
-
-
-
-
-
-
-

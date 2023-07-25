@@ -5,8 +5,7 @@ function draw_my_weapon()
 	//get weapon off player's body
 	var _xOffset = lengthdir_x(weaponOffsetDist + 3, aimDir);
 	var _yOffset = lengthdir_y(weaponOffsetDist, aimDir);
-	
-	
+		
 	//pin gun on character
 	var _weaponYsc1 = 1;
 
@@ -15,7 +14,6 @@ function draw_my_weapon()
 	{
 		_weaponYsc1 = -1;
 	}
-	
 	
 	draw_sprite_ext(weapon.sprite, 0, (x+_xOffset), (y+_yOffset - 6) , 1, _weaponYsc1, aimDir, c_white, 1);
 }
