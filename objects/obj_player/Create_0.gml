@@ -1,5 +1,3 @@
-y=128
-x=128
 
 movespeed=3
 _xsped=0
@@ -82,7 +80,26 @@ state = StateFree
 
 //weapon info
 	shootTimer = 0;
-	shootCooldown = 60;
 	
-	bulletObj = obj_rbullet;
-	weaponLength = sprite_get_bbox_right(spr_revolver) - sprite_get_xoffset(spr_revolver);
+	weapon = global.WeaponList.shotgun;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,5 +1,5 @@
 dir = 0;
-spd = 100;
+spd =100;
 xspd = 0;
 yspd = 0;
 

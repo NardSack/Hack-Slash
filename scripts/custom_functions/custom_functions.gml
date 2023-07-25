@@ -17,5 +17,5 @@ function draw_my_weapon()
 	}
 	
 	
-	draw_sprite_ext(spr_revolver, 0, (x+_xOffset), (y+_yOffset - 6) , 1, _weaponYsc1, aimDir, c_white, 1);
+	draw_sprite_ext(weapon.sprite, 0, (x+_xOffset), (y+_yOffset - 6) , 1, _weaponYsc1, aimDir, c_white, 1);
 }

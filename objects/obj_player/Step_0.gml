@@ -56,6 +56,7 @@ if (dash&&_movement&&playercontrol&&(xdir!=0||ydir!=0)&&(!isBusy))
 	state=StateDash
 	
 }
+
 if(state == StateDash) 
 {
 		if (xd>0)&&(!isBusy)//check going to right
@@ -92,19 +93,19 @@ if(state == StateDash)
 
 if(_movement==false)
 {
-	if(sprite_index==spr_playerwalk_down)||(sprite_index == spr_playerdash_down)
+	if((sprite_index==spr_playerwalk_down)||(sprite_index == spr_playerdash_down))&&(!isBusy)
 	{
 		sprite_index=spr_playeridle_down
 	}
-	else if (sprite_index==spr_playerwalk_up)||(sprite_index == spr_playerdash_up)
+	else if ((sprite_index==spr_playerwalk_up)||(sprite_index == spr_playerdash_up))&&(!isBusy)
 	{
 		sprite_index=spr_playeridle_up
 	}
-	else if (sprite_index==spr_playerwalk_right)||(sprite_index == spr_playerdash_right)
+	else if ((sprite_index==spr_playerwalk_right)||(sprite_index == spr_playerdash_right))&&(!isBusy)
 	{
 		sprite_index=spr_playeridle_right
 	}
-	else if (sprite_index==spr_playerwalk_left)||(sprite_index == spr_playerdash_left)
+	else if ((sprite_index==spr_playerwalk_left)||(sprite_index == spr_playerdash_left))&&(!isBusy)
 	{
 		sprite_index=spr_playeridle_left
 	}
@@ -118,15 +119,14 @@ state()
 
 	//shooting the weapon
 	if shootTimer > 0 { shootTimer--; };
-	
 	if shootKey	&& shootTimer <= 0
 	{
 		//reset timer
-		shootTimer = shootCooldown;
+		shootTimer = weapon.cooldown;
 		//create bullet
-		var _xOffset = lengthdir_x( weaponLength + weaponOffsetDist, aimDir)
-		var _yOffset = lengthdir_y( weaponLength + weaponOffsetDist , aimDir)
-		var _bulletInst = instance_create_depth( x + _xOffset + 3, y + _yOffset - 10, depth-100, bulletObj);
+		var _xOffset = lengthdir_x( weapon.length + weaponOffsetDist, aimDir)
+		var _yOffset = lengthdir_y( weapon.length + weaponOffsetDist , aimDir)
+		var _bulletInst = instance_create_depth( x + _xOffset + 3, y + _yOffset - 9, depth-100, weapon.bulletObj);
 		
 		//change bullet direction
 		with (_bulletInst)

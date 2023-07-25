@@ -16,7 +16,6 @@ draw_self();
 	{
 		draw_my_weapon()
 	}
-	
 
 
 
