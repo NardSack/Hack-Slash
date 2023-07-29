@@ -186,8 +186,34 @@ draw_sprite_ext(txtb_spr[page], txtb_img, _txtb_x, _txtb_y, textbox_width/txtb_s
 for (var c = 0; c < draw_char; c++)
 	{
 		
+		//-------------special fx-------------//
+		//float text
+		var _float_y = 0;
+		var _float_mult = 1;
+		if float_text[c, page] == true
+			{
+				float_dir[c, page] -= 6;
+				_float_y = dsin( float_dir[c,page] * _float_mult);
+			}
+			
+		//shake text	
+		var _shake_x = 0;
+		var _shake_y = 0;
+		var _shake_mult = 0.8;
+		if shake_text[c, page] == true
+			{
+				shake_timer[c, page]--;
+				if shake_timer[c, page] <= 0
+					{
+						shake_timer[c, page] = irandom_range(4,6);
+						shake_dir[c, page] = irandom(360);
+					}
+						_shake_x = lengthdir_x(_shake_mult, shake_dir[c, page]);
+						_shake_y = lengthdir_y(_shake_mult, shake_dir[c, page]);		
+			}
+		
 		//the text
-		draw_text(char_x[c, page], char_y[c, page], char[c, page]);
+		draw_text_color(char_x[c, page] + _shake_x, char_y[c, page] + _float_y + _shake_y, char[c, page], col_1[c,page], col_2[c,page], col_3[c,page], col_4[c,page], 1);
 		
 	}
 

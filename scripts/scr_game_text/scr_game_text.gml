@@ -12,9 +12,12 @@ switch(_text_id){
 	
 	case "trigger 1":
 		scr_text("Hey Venator, it smells like updog in here.", "buddy", -1)
+			scr_text_color(28, 33, c_yellow, c_yellow, c_yellow, c_yellow); scr_text_float(28, 33);
 		scr_text("What is updog???", "player")
+			scr_text_color(7, 12, c_red,c_red,c_red,c_red); scr_text_shake(7, 12);
 		scr_text("Nothin' much what's up with you???", "buddygrin", -1)
-		scr_text("......", "playerdespair")
+		scr_text(". . . . . .", "playerdespair")
+			scr_text_shake(0, 11);
 		scr_text("I hate you.", "playerdespair")
 		break;
 	
@@ -22,16 +25,17 @@ switch(_text_id){
 	
 	case "trigger 2":
 		scr_text("A dead Venator. Torn to shreds.", "buddy")
-		scr_text("Something wicked this way comes.","buddygrin")
+		scr_text("Something wicked this way comes.","buddy")
 		scr_text("A Carnifex. One of your own, consumed by the Black Mold. He is naught but a corpse now.", "buddy")
-		scr_text("Show what remains no mercy.", "buddygrin")
+			scr_text_color(2, 9, c_red,c_red,c_red,c_red)
+		scr_text("Show what remains no mercy...", "buddygrin")
 		break;
 	
 	
 	
 	case "trigger 3":
 		scr_text("this is trigger 3")
-		scr_text("this is trigger 3 and it works even with really long text, like really really fucking long text, like holy shit this is so fucking long goddamn", "buddy")
+		scr_text("this is trigger 3 and it works even with really long text, like really really fucking long text, like holy shit this is so fucking long goddamn.", "buddy")
 		scr_text("neat.", "player")
 		break;
 	
