@@ -1,5 +1,11 @@
+	//collision
+	if place_meeting( x, y, obj_solidwall) //only collide with solid walls
+	{
+		destroy = true;
+	}
 	//move
-	if destroy == false
+	else 
+	//if destroy == false
 	{
 		
 	xspd = lengthdir_x( spd, dir);
@@ -19,10 +25,10 @@
 	}
 
 	//collision
-	if place_meeting( x, y, obj_solidwall) //only collide with solid walls
+/*	if place_meeting( x, y, obj_solidwall) //only collide with solid walls
 	{
 		destroy = true;
-	}
+	}*/
 	
 	//bullet out of range
 	if point_distance(xstart, ystart, x, y) > maxDist

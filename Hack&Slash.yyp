@@ -102,7 +102,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"obj_enemytest","path":"objects/obj_enemytest/obj_enemytest.yy",},},
@@ -166,6 +166,7 @@
     {"id":{"name":"spr_runtattack","path":"sprites/spr_runtattack/spr_runtattack.yy",},},
     {"id":{"name":"spr_carnifexvfx1_rightHB","path":"sprites/spr_carnifexvfx1_rightHB/spr_carnifexvfx1_rightHB.yy",},},
     {"id":{"name":"spr_playeridle_up","path":"sprites/spr_playeridle_up/spr_playeridle_up.yy",},},
+    {"id":{"name":"State","path":"scripts/State/State.yy",},},
     {"id":{"name":"spr_props","path":"sprites/spr_props/spr_props.yy",},},
     {"id":{"name":"obj_sgbullet","path":"objects/obj_sgbullet/obj_sgbullet.yy",},},
     {"id":{"name":"spr_lucentidle_right","path":"sprites/spr_lucentidle_right/spr_lucentidle_right.yy",},},

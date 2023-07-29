@@ -3,123 +3,220 @@ right =keyboard_check(ord("D"));
 left = keyboard_check(ord("A"));
 up =keyboard_check(ord("W"));
 down = keyboard_check(ord("S"));
-_movement= down||up||left||right;
+//_movement= down||up||left||right;
 dash= keyboard_check_pressed(vk_space);/*||keyboard_check_pressed(vk_shift)*/
+inputX=0
+inputY=0
+inputX=right-left;
+inputY=down-up;
+checkdone=true;
+
+
+
+if (action=="move")
+{
+	#region move
+//movement declare
+moveSpeed=2;
+moveX=lerp(moveX,inputX*moveSpeed,0.2);
+moveY=lerp(moveY,inputY*moveSpeed,0.2);
+
+
+
+
+//collision
+if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wall
+{
+	while(abs(moveX)>0.1||abs(moveY)>0.1)
+	{
+		if(abs(moveX)>0.1)
+		{
+			moveX *= 0.5
+			if(!place_meeting(x+moveX,y,obj_wall))
+			x+=moveX;
+		}
+		if abs(moveY)>0.1
+		{
+            moveY *= 0.5
+			if(!place_meeting(x,y+moveY,obj_wall))
+			y+=moveY;
+		}
+	}
+	moveX=0
+	moveY=0
+}
+//	x+=_xsped
+//	y+=_ysped//move_and_collide(_xsped*movespeed,_ysped*movespeed,obj_wall)}
+if (state != states.attackdown && state != states.attackhorizontal && state != states.attackup)
+{
+
+	x+=moveX
+	y+=moveY
+	
+	if ((state==states.walkdown||state==states.walkup||state==states.walkhorizon)&&(inputX==0&&inputY==0)&&checkdone)
+	{
+		checkdone=false;
+		if (state==states.walkdown)
+		{
+			state_set(states.idledown)
+		}
+		else if(state==states.walkup)
+		{
+			state_set(states.idleup)
+		}
+		else if (state==states.walkhorizon)
+		{
+			state_set(states.idlehorizon)
+		}
+	}
+	
+	//flip
+	if (inputX !=0 &&checkdone)
+	{
+	image_xscale = sign(inputX);
+	dir=sign(inputX)
+	state_set(states.walkhorizon);
+	}
+	else if (inputY !=0 &&checkdone){
+		image_xscale= dir
+		if (inputY<=0)
+		{
+			state_set(states.walkup);
+		}
+		else
+		{	
+			state_set(states.walkdown);
+		}
+	}
+
+	//Attack
+	if (keyboard_check_pressed(vk_shift))
+	{
+		checkdone=false;
+		ydir=0
+		if (dir== -1)
+			{ydir= 1}
+		else if (dir == 1)
+			{ydir= (-1)}
+			if (inputX !=0 && inputY==0){
+			image_xscale = sign(inputX);
+			state_set(states.attackhorizontal);
+			}
+			else if (inputX ==0 && inputY==0)
+			{
+				image_xscale=dir;
+				
+
+				if (state== states.walkhorizon|| state==states.idlehorizon)
+				{
+
+					state_set(states.attackhorizontal)
+				}
+				else if (state== states.walkup||state==states.idleup)
+				{
+					state_set(states.attackup)
+				}
+				else if (state== states.walkdown||state==states.idledown)
+				{
+					image_xscale=ydir
+					state_set(states.attackdown)
+				}
+			}
+
+			else if (inputY <0)// condition wrong
+			{
+				state_set(states.attackup);
+			}
+			else if (inputY>0)
+			{
+				image_xscale=ydir
+				state_set(states.attackdown);
+			}
+	}
+	if (dash)
+	{
+		action="dash"
+		image_index=0
+		dashy=inputY
+		dashx=inputX
+		moveSpeed=6;
+	}
+
+	
+}
+#endregion
+}
+
+if action == "dash"
+{#region dash
+if state== states.walkhorizon||state==states.idlehorizon
+{
+	state_set(states.dashhorizonal)
+	if dashx == 0
+	{
+		dashx= dir
+	}
+}
+else if state== states.walkup||state==states.idleup
+{
+	state_set(states.dashup)
+	if dashy == 0 
+	{
+		dashy= -1
+	}
+}
+else if state== states.walkdown||state==states.idledown
+{
+	state_set(states.dashdown)
+		if dashy == 0 
+	{
+		dashy= 1
+	}
+}
+
+moveX=lerp(moveX,dashx*moveSpeed,0.2);
+moveY=lerp(moveY,dashy*moveSpeed,0.2);
+//collision
+if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wall
+{
+	while(abs(moveX)>0.1||abs(moveY)>0.1)
+	{
+		if(abs(moveX)>0.1)
+		{
+			moveX *= 0.5
+			if(!place_meeting(x+moveX,y,obj_wall))
+			x+=moveX;
+		}
+		if abs(moveY)>0.1
+		{
+            moveY *= 0.5
+			if(!place_meeting(x,y+moveY,obj_wall))
+			y+=moveY;
+		}
+	}
+	moveX=0
+	moveY=0
+}
+	x+=moveX
+	y+=moveY
+	if moveSpeed > 2
+	{
+	moveSpeed-=0.1
+	}
+#endregion
+}
+
+
+
+//depth
+depth = -bbox_bottom;
+  
+//aim direction
 
 shootKey = mouse_check_button(mb_left);
 
 swapKey1 = keyboard_check_pressed((ord("1")));
 swapKey2 = keyboard_check_pressed((ord("2")));
-
-
-xdir=right-left;
-ydir=down-up;
-
-//depth
-depth = -bbox_bottom;
-
-//walk animation (REVAMP PLEASE)
-if (_movement)
-{
-	
-	if (down&&(down-up !=0))// check going down
-		{
-			image_speed=1;
-			sprite_index=spr_playerwalk_down;
-		}
-	else if (up&&(down-up !=0))
-		{
-			image_speed=1;
-			sprite_index=spr_playerwalk_up
-		} 
-	if (right&&(right-left!=0))//check going to right
-		{
-			image_speed=1;
-			sprite_index=spr_playerwalk_right;
-		}
-	else if (left&&(right-left!=0))
-		{
-			image_speed=1;
-			sprite_index=spr_playerwalk_left;
-		}
-		
-}
-//movement dash 
-
-//lock dirction
-//decrease from dash to walk gradually
-
-//lock the player control until dash finish
-
-//conditions for dashing (REVAMP PLEASE)
-if (dash&&_movement&&playercontrol&&(xdir!=0||ydir!=0)&&(!isBusy))
-{
-	Dashsp=9
-	playercontrol=false
-	xd=xdir
-	yd=ydir
-
-	state=StateDash
-	
-}
-
-if(state == StateDash) (REVAMP PLEASE)
-{
-		if (xd>0)&&(!isBusy)//check going to right
-		{
-			isBusy=true;
-			
-			sprite_index=spr_playerdash_right;
-			image_speed=1;
-		}
-	else if (xd<0)&&(!isBusy)
-		{
-			isBusy=true;
-
-			sprite_index=spr_playerdash_left;
-			image_speed=1;
-		}
-		if (yd>0)&&(!isBusy)// check going down
-		{
-			isBusy=true;
-
-			sprite_index=spr_playerdash_down;
-			image_speed=1;
-		}
-	else if (yd<0)&&(!isBusy)
-		{
-			isBusy=true;
-
-			sprite_index=spr_playerdash_up;
-			image_speed=1;
-		} 
-	isBusy=false;
-}
-//idle animation (REVAMP PLEASE BRO PLEAAAAAASE)
-
-if(_movement==false)
-{
-	if((sprite_index==spr_playerwalk_down)||(sprite_index == spr_playerdash_down))&&(!isBusy)
-	{
-		sprite_index=spr_playeridle_down
-	}
-	else if ((sprite_index==spr_playerwalk_up)||(sprite_index == spr_playerdash_up))&&(!isBusy)
-	{
-		sprite_index=spr_playeridle_up
-	}
-	else if ((sprite_index==spr_playerwalk_right)||(sprite_index == spr_playerdash_right))&&(!isBusy)
-	{
-		sprite_index=spr_playeridle_right
-	}
-	else if ((sprite_index==spr_playerwalk_left)||(sprite_index == spr_playerdash_left))&&(!isBusy)
-	{
-		sprite_index=spr_playeridle_left
-	}
-}
-
-state()
-  
-//aim direction
 
 aimDir = point_direction(x, y, mouse_x, mouse_y);
 	
