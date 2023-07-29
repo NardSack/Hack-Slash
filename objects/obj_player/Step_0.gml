@@ -218,6 +218,8 @@ shootKey = mouse_check_button(mb_left);
 swapKey1 = keyboard_check_pressed((ord("1")));
 swapKey2 = keyboard_check_pressed((ord("2")));
 
+
+
 aimDir = point_direction(x, y, mouse_x, mouse_y);
 	
 //weapon swapping
