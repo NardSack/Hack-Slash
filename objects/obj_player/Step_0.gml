@@ -63,7 +63,7 @@ if (dash&&_movement&&playercontrol&&(xdir!=0||ydir!=0)&&(!isBusy))
 	
 }
 
-if(state == StateDash) (REVAMP PLEASE)
+if(state == StateDash) //(REVAMP PLEASE)
 {
 		if (xd>0)&&(!isBusy)//check going to right
 		{
