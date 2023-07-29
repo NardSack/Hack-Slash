@@ -17,19 +17,118 @@ if setup == false
 				//find how many characters are on each page and store that number in the "text_length" array
 				text_length[p] = string_length(text[p]);
 				
-				//get tthe x position for the textbox
+				//x position for the background box
+				background_x_offset[p] = 48;
+				
+				//get the x position for the textbox
+					//character on left
+					text_x_offset[p] = 224;
+					portrait_x_offset[p] = 64;
+					
+					//character on right
+					if speaker_side[p] == -1
+						{
+							text_x_offset[p] = 64;	
+							portrait_x_offset[p] = 640;
+						}
 					//no character (center the textbox)
-					text_x_offset[p] = 152;
+					if speaker_sprite[p] == noone { text_x_offset[p] = 152 };
+					
+					
+				//setting individual characters and finding where lines of text should break
+				for (var c = 0; c < text_length[p]; c++)
+					{
+						
+						var _char_pos = c+1;
+						
+						//store individual characters into the "char" array
+						char[c,p] = string_char_at(text[p], _char_pos);
+						
+						//get current width of line
+						var _txt_up_to_char = string_copy( text[p], 1, _char_pos);
+						var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[c, p]);
+						
+						//get the last free space
+						if char[c, p] == " " { last_free_space = _char_pos+1 };
+						
+						//get the line breaks 
+						if _current_txt_w - line_break_offset[p] > line_width
+							{
+								line_break_pos[line_break_num[p], p] = last_free_space;
+								line_break_num[p]++;
+								var _txt_up_to_last_space = string_copy(text[p], 1, last_free_space);
+								var _last_free_space_string = string_char_at(text[p], last_free_space);
+								line_break_offset[p] = string_width(_txt_up_to_last_space) - string_width(_last_free_space_string);
+							}
+						
+					}	
+				
+				//getting each character's coordinates
+				for (var c = 0; c < text_length[p]; c++)
+					{
+						
+						var _char_pos=c+1;
+						var _txt_x = textbox_x + text_x_offset[p] + border;
+						var _txt_y = textbox_y + border/2; //change past textbox_y to change dist between top of textbox and text
+						//get current width of line
+						var _txt_up_to_char = string_copy( text[p], 1, _char_pos);
+						var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[c, p]);
+						var _txt_line = 0;
+						
+						//compensate for string breaks
+						for (var lb = 0; lb < line_break_num[p]; lb++)
+							{
+								//if the current looping char is after a line break
+								if _char_pos >= line_break_pos[lb, p]
+									{
+										var _str_copy = string_copy(text[p], line_break_pos[lb, p], _char_pos-line_break_pos[lb, p]);
+										_current_txt_w = string_width( _str_copy );
+										
+										//record the "line" this character should be on
+										_txt_line = lb+1; //+1 since lb starts at 0
+									}
+							}
+						
+						//add to the x and y coordinates based on the new info
+						char_x[c,p] = _txt_x + _current_txt_w;
+						char_y[c,p] = _txt_y + _txt_line*line_sep;
+					}
 			}
 	}
 	
 //typing the text
-if draw_char < text_length[page]
-	{
-		draw_char+=text_spd;
-		draw_char = clamp(draw_char, 0, text_length[page]);
-	}
-
+if text_pause_timer <= 0 {
+	if draw_char < text_length[page]
+		{
+			draw_char+=text_spd;
+			draw_char = clamp(draw_char, 0, text_length[page]);
+			var _check_char = string_char_at(text[page], draw_char);
+			if _check_char == "." || _check_char == "!" || _check_char == "?" || _check_char == ";" 
+				{
+					text_pause_timer = text_pause_time;
+					if !audio_is_playing(snd[page])
+						{
+							audio_play_sound(snd[page], 8, false);
+						}
+				}
+			else
+				{
+					if snd_count < snd_delay 
+						{
+							snd_count++;
+						}
+					else
+						{
+							snd_count = 0;
+							audio_play_sound(snd[page], 8, false);
+						}
+				}
+		}
+}
+else
+{
+	text_pause_timer--;
+}
 //-----------------------flip through pages-----------------------//
 if accept_key
 	{
@@ -56,14 +155,55 @@ if accept_key
 	}
 
 //-----------------------draw the textbox-----------------------//
-
+var _txtb_x = textbox_x + text_x_offset[page];
+var _txtb_y	= textbox_y;
+var _bg_x = textbox_x + background_x_offset[page];
+var _bg_y = textbox_y-16;
 txtb_img += txtb_img_spd;
-txtb_spr_w = sprite_get_width(txtb_spr);
-txtb_spr_h = sprite_get_height(txtb_spr);
+txtb_spr_w = sprite_get_width(txtb_spr[page]);
+txtb_spr_h = sprite_get_height(txtb_spr[page]);
 
+//draw the background box
+draw_sprite_ext(txtb_spr[page], txtb_img, _bg_x, _bg_y, backbox_width/txtb_spr_w, backbox_height/txtb_spr_h, 0, c_white, 1);
+
+//draw the speaker
+if speaker_sprite[page] != noone
+	{
+		sprite_index = speaker_sprite[page];
+		if draw_char ==text_length[page] {image_index = 0};
+		var _speaker_x = textbox_x + portrait_x_offset[page];
+		if speaker_side[page] == -1 { _speaker_x += sprite_width };
+		//draw the speaker
+		draw_sprite_ext(txtb_spr[page], txtb_img, textbox_x + portrait_x_offset[page], textbox_y, sprite_width/txtb_spr_w, sprite_height/txtb_spr_h, 0, c_white, 1);
+		draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y, speaker_side[page], 1, 0, c_white, 1);
+		
+		//draw the name (Cont. here)
+	}
 //back of the textbox
-draw_sprite_ext(txtb_spr, txtb_img, textbox_x + text_x_offset[page], textbox_y, textbox_width/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_white, 1);
+draw_sprite_ext(txtb_spr[page], txtb_img, _txtb_x, _txtb_y, textbox_width/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_white, 1);
 
 //draw the text
-var _drawtext = string_copy(text[page], 1, draw_char);
-draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border/2, _drawtext, line_sep, line_width);
+for (var c = 0; c < draw_char; c++)
+	{
+		
+		//the text
+		draw_text(char_x[c, page], char_y[c, page], char[c, page]);
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

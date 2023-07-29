@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e56d4e0d-43fd-4f46-8f48-ed87501319f4",},
   ],
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 1,
+  "gridY": 1,
   "height": 48,
   "HTile": false,
   "layers": [
@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Dialogue System",
-    "path": "folders/Dialogue System.yy",
+    "name": "group1",
+    "path": "folders/Sprites/group1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
