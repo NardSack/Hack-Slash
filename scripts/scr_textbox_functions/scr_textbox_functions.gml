@@ -8,11 +8,13 @@ function scr_set_defaults_for_text() {
 	speaker_sprite[page_number] = noone; //default no character
 	speaker_side[page_number] = 1; //default character on left side if there is one
 	snd[page_number] = snd_player_mid;
+	name[page_number] = "Name Here";
 }
 
 /// @param text
 /// @param [portrait]
 /// @param [side]
+/// @param [name]
 function scr_text(_text){
 
 scr_set_defaults_for_text();
@@ -28,24 +30,28 @@ if argument_count > 1
 			speaker_sprite[page_number] = spr_player_spk;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_player_mid;
+			name[page_number] = "The Venator";
 			break;
 			
 		case "playerdespair":
 			speaker_sprite[page_number] = spr_player_spk_despair;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_player_low;
+			name[page_number] = "The Venator";
 			break;
 			
 		case "buddy":
 			speaker_sprite[page_number] = spr_buddy_spk;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_buddy;
+			name[page_number] = "????????";
 			break;
 			
 		case "buddygrin":
 			speaker_sprite[page_number] = spr_buddy_spk_grin;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_buddy;
+			name[page_number] = "????????";
 			break;
 		
 	}
@@ -53,8 +59,6 @@ if argument_count > 2
 	{
 		speaker_side[page_number] = argument[2];
 	}
-
-
 
 page_number++;
 

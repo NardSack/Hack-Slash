@@ -4,6 +4,9 @@ depth = -9999;
 backbox_width = 752;
 backbox_height = 176;
 
+//name offset
+name_offset = 112;
+
 //textbox parameters
 textbox_width = 560;
 textbox_height = 144;

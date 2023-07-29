@@ -103,7 +103,7 @@ if text_pause_timer <= 0 {
 			draw_char+=text_spd;
 			draw_char = clamp(draw_char, 0, text_length[page]);
 			var _check_char = string_char_at(text[page], draw_char);
-			if _check_char == "." || _check_char == "!" || _check_char == "?" || _check_char == ";" 
+			if _check_char == "." || _check_char == "!" || _check_char == "?" || _check_char == ";" || _check_char == ","
 				{
 					text_pause_timer = text_pause_time;
 					if !audio_is_playing(snd[page])
@@ -176,7 +176,7 @@ if speaker_sprite[page] != noone
 		//draw the speaker
 		draw_sprite_ext(txtb_spr[page], txtb_img, textbox_x + portrait_x_offset[page], textbox_y, sprite_width/txtb_spr_w, sprite_height/txtb_spr_h, 0, c_white, 1);
 		draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y, speaker_side[page], 1, 0, c_white, 1);
-		
+		draw_text(textbox_x + portrait_x_offset[page],textbox_y + name_offset, name[page]);
 		//draw the name (Cont. here)
 	}
 //back of the textbox
