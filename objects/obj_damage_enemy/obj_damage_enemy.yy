@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rbullet",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-  ],
+  "name": "obj_damage_enemy",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "Enemy System",
+    "path": "folders/Enemy System.yy",
   },
   "parentObjectId": {
-    "name": "obj_damage_enemy",
-    "path": "objects/obj_damage_enemy/obj_damage_enemy.yy",
+    "name": "obj_damage_parent",
+    "path": "objects/obj_damage_parent/obj_damage_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_rbullet",
-    "path": "sprites/spr_rbullet/spr_rbullet.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

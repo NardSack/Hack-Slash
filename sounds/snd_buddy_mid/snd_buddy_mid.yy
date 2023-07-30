@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_buddy",
+  "name": "snd_buddy_mid",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_buddy.wav",
+  "soundFile": "snd_buddy_mid.wav",
   "type": 0,
   "volume": 0.9,
 }

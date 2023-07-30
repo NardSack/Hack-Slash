@@ -5,6 +5,8 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -13,8 +15,8 @@
     "path": "folders/Enemy System/enemy.yy",
   },
   "parentObjectId": {
-    "name": "obj_melee_parent",
-    "path": "objects/obj_melee_parent/obj_melee_parent.yy",
+    "name": "obj_dummy",
+    "path": "objects/obj_dummy/obj_dummy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

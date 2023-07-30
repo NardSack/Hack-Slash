@@ -1,6 +1,7 @@
 // Inherit the parent event (parent is obj_rbullet)
 event_inherited();
 //change properties
+damage = 2;
 dir = 0; 
 spd =10; //speed of bullet
 xspd = 0;

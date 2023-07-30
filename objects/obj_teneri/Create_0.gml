@@ -1,7 +1,8 @@
 // Inherit the parent event
 event_inherited();
 alert_dis = 250;
-movespeed = 1.9
+attack_dis = 18;
+move_spd = 1.9;
 
 //assign sprites
 s_idle = spr_teneriidle;
