@@ -58,6 +58,7 @@ state = states.idledown;
 
 aimDir = 0;
 weaponOffsetDist = 6;
+
 //weapon info
 	shootTimer = 0;
 	
@@ -67,21 +68,6 @@ weaponOffsetDist = 6;
 	
 	selectedWeapon = 0;
 	weapon = global.PlayerWeapons[selectedWeapon];
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "group1",
-    "path": "folders/Sprites/group1.yy",
+    "name": "Misc",
+    "path": "folders/Sprites/Misc.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

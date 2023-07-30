@@ -25,17 +25,19 @@ switch(_text_id){
 	
 	case "trigger 2":
 		scr_text("A dead Venator. Torn to shreds.", "buddy")
+			scr_text_color(7,15, c_lime, c_lime, c_lime, c_lime)
 		scr_text("Something wicked this way comes.","buddy")
 		scr_text("A Carnifex. One of your own, consumed by the Black Mold. He is naught but a corpse now.", "buddy")
-			scr_text_color(2, 9, c_red,c_red,c_red,c_red)
+			scr_text_color(2, 10, c_red,c_red,c_red,c_red)
 		scr_text("Show what remains no mercy...", "buddygrin")
+			scr_text_shake(0,30);
 		break;
 	
 	
 	
 	case "trigger 3":
 		scr_text("this is trigger 3")
-		scr_text("this is trigger 3 and it works even with really long text, like really really fucking long text, like holy shit this is so fucking long goddamn.", "buddy")
+		scr_text("this is trigger 3 and it works even with really long text, like really really fucking long text, like holy shit this is so fucking long goddamn.", "player")
 		scr_text("neat.", "player")
 		break;
 	
