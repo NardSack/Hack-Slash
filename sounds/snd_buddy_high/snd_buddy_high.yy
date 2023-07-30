@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_buddy",
+  "name": "snd_buddy_high",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 512,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.119333,
+  "duration": 0.160271,
   "parent": {
     "name": "Voices",
     "path": "folders/Dialogue System/Voices.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_buddy.wav",
+  "soundFile": "snd_buddy_high.wav",
   "type": 0,
-  "volume": 0.9,
+  "volume": 1.0,
 }

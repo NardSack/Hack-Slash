@@ -105,7 +105,7 @@ if argument_count > 1
 		case "buddygrin":
 			speaker_sprite[page_number] = spr_buddy_spk_grin;
 			txtb_spr[page_number] = spr_textbox;
-			snd[page_number] = snd_buddy;
+			snd[page_number] = snd_buddy_high;
 			name[page_number] = "????????";
 			break;
 		
