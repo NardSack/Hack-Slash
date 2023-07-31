@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = 5;
+damage = 1;
 dir = 0;
 spd = 100; //speed of bullet
 xspd = 0;

@@ -1,10 +1,11 @@
 {
   "FolderOrderSettings": [
     {"name":"Animation Curves","order":14,"path":"folders/Animation Curves.yy",},
+    {"name":"Sprites","order":5,"path":"folders/Dialogue System/Sprites.yy",},
     {"name":"Voices","order":4,"path":"folders/Dialogue System/Voices.yy",},
+    {"name":"Enemy System","order":1,"path":"folders/Enemy System.yy",},
     {"name":"Objects","order":2,"path":"folders/Objects.yy",},
     {"name":"player","order":15,"path":"folders/Objects/player.yy",},
-    {"name":"Walls","order":6,"path":"folders/Walls.yy",},
     {"name":"Paths","order":9,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":3,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
@@ -53,12 +54,11 @@
     {"name":"walk","order":1,"path":"folders/Sprites/player/walk.yy",},
     {"name":"tilesets","order":2,"path":"folders/Sprites/tilesets.yy",},
     {"name":"darkRuins","order":1,"path":"folders/Sprites/tilesets/darkRuins.yy",},
+    {"name":"Walls","order":5,"path":"folders/Sprites/Walls.yy",},
     {"name":"Tile Sets","order":7,"path":"folders/Tile Sets.yy",},
     {"name":"darkRuins","order":1,"path":"folders/Tile Sets/darkRuins.yy",},
     {"name":"Timelines","order":12,"path":"folders/Timelines.yy",},
-    {"name":"Enemy System","order":1,"path":"folders/Enemy System.yy",},
-    {"name":"Walls","order":5,"path":"folders/Sprites/Walls.yy",},
-    {"name":"Sprites","order":5,"path":"folders/Dialogue System/Sprites.yy",},
+    {"name":"Walls","order":6,"path":"folders/Walls.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_lucentattack_left","order":3,"path":"sprites/spr_lucentattack_left/spr_lucentattack_left.yy",},

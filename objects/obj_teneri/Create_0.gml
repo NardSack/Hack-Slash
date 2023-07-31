@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+hp = 1.5;
 alert_dis = 250;
 attack_dis = 18;
 move_spd = 1.9;
