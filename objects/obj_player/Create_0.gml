@@ -6,7 +6,11 @@ moveSpeed=2;
 moveX=0;
 moveY=0;
 dir=1;
-hp=10;
+
+gun_alpha = 1;
+
+//damage setup
+get_damaged_create(10, true);
 
 
 action = "move"
@@ -30,12 +34,15 @@ dashdown: new State(spr_playerdash_down) ,
 
 }
 
+#region
 states.attackdown.StateOnEnd(states.idledown);
 states.attackup.StateOnEnd(states.idleup);
 states.attackhorizontal.StateOnEnd(states.idlehorizon);
 //states.walkdown.StateOnEnd(states.idledown);
 //states.walkup.StateOnEnd(states.idleup);
 //states.walkhorizon.StateOnEnd(states.idlehorizon);
+#endregion
+
 if (inputX !=0 || inputY !=0)
 {//
 	states.dashup.StateOnEnd(states.walkup);

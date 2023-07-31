@@ -1,18 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_SwordHitBox",
+  "name": "obj_damage_player_test",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Combat System/player.yy",
+    "name": "Damages Players",
+    "path": "folders/Combat System/Damage/Damages Players.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_damage_player",
+    "path": "objects/obj_damage_player/obj_damage_player.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,10 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
-  "spriteMaskId": {
-    "name": "spr_playermelee_rightHB",
-    "path": "sprites/spr_playermelee_rightHB/spr_playermelee_rightHB.yy",
+  "spriteId": {
+    "name": "spr_damage_player_test",
+    "path": "sprites/spr_damage_player_test/spr_damage_player_test.yy",
   },
+  "spriteMaskId": null,
   "visible": true,
 }

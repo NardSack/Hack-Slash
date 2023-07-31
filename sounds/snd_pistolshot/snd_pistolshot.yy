@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.21898,
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "Sounds",
+    "path": "folders/Combat System/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 5512,
