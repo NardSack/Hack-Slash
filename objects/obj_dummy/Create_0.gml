@@ -1,7 +1,7 @@
 //default variables
 
 //health
-hp = 10;
+hp = 100;
 
 //ai
 alert = false;
