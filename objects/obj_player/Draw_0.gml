@@ -6,7 +6,8 @@
 
 //draw the player
 draw_self();
-
+// draw player hp (to be changed)
+draw_text( x, y, "health: "+string(hp)	);
 //draw weapon in front of player
 	if aimDir >= 140 && aimDir < 360
 	{

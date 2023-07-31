@@ -6,6 +6,7 @@ moveSpeed=2;
 moveX=0;
 moveY=0;
 dir=1;
+hp=10;
 
 
 action = "move"
