@@ -3,7 +3,7 @@ event_inherited();
 hp = 1.5;
 alert_dis = 250;
 attack_dis = 18;
-move_spd = 1.9;
+move_spd = 3;
 
 //assign sprites
 s_idle = spr_teneriidle;
