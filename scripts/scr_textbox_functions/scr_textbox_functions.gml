@@ -24,8 +24,8 @@ function scr_set_defaults_for_text() {
 	txtb_spr[page_number] = spr_textbox; //default text box sprite
 	speaker_sprite[page_number] = noone; //default no character
 	speaker_side[page_number] = 1; //default character on left side if there is one
-	snd[page_number] = snd_player_mid;
-	name[page_number] = "Name Here";
+	snd[page_number] = snd_player_mid; //default text sound
+	name[page_number] = "Placeholder"; //default name placeholder
 }
 
 //---------------text vfx---------------//

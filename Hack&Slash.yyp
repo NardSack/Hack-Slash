@@ -135,6 +135,7 @@
     {"id":{"name":"weapon_creation","path":"scripts/weapon_creation/weapon_creation.yy",},},
     {"id":{"name":"spr_lucentattack_right","path":"sprites/spr_lucentattack_right/spr_lucentattack_right.yy",},},
     {"id":{"name":"spr_lucentshot_travel","path":"sprites/spr_lucentshot_travel/spr_lucentshot_travel.yy",},},
+    {"id":{"name":"Sprite99","path":"sprites/Sprite99/Sprite99.yy",},},
     {"id":{"name":"spr_runtidle_left","path":"sprites/spr_runtidle_left/spr_runtidle_left.yy",},},
     {"id":{"name":"spr_sgbullet","path":"sprites/spr_sgbullet/spr_sgbullet.yy",},},
     {"id":{"name":"snd_pistolshot","path":"sounds/snd_pistolshot/snd_pistolshot.yy",},},
@@ -214,7 +215,6 @@
     {"id":{"name":"spr_stonewalls","path":"sprites/spr_stonewalls/spr_stonewalls.yy",},},
     {"id":{"name":"spr_playerdash_down","path":"sprites/spr_playerdash_down/spr_playerdash_down.yy",},},
     {"id":{"name":"obj_cross","path":"objects/obj_cross/obj_cross.yy",},},
-    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"spr_propshadow","path":"sprites/spr_propshadow/spr_propshadow.yy",},},
     {"id":{"name":"scr_textbox_functions","path":"scripts/scr_textbox_functions/scr_textbox_functions.yy",},},
     {"id":{"name":"spr_playerdash_up","path":"sprites/spr_playerdash_up/spr_playerdash_up.yy",},},
@@ -252,7 +252,6 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
