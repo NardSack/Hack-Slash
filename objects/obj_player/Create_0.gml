@@ -5,7 +5,7 @@ dashx=0
 moveSpeed=2;
 moveX=0;
 moveY=0;
-dir=0;
+dir=1;
 
 
 action = "move"
