@@ -31,8 +31,8 @@ global.WeaponList = {
 		sprite_get_bbox_right(spr_shotgun) - sprite_get_xoffset(spr_shotgun),
 		obj_sgbullet,
 		60,
-		7,
-		14
+		12,
+		72
 	)
 	
 }

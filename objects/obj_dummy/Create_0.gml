@@ -1,8 +1,13 @@
 //default variables
+
+//health
+hp = 100;
+
+//ai
 alert = false;
-alert_dis = 250;
-attack_dis = 18;
-move_spd = 1;
+alert_dis = 0;
+attack_dis = 0;
+move_spd = 0;
 current_state = enemy_states.IDLE;
 facing = 1;
 

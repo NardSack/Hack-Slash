@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Walls",
-    "path": "folders/Objects/Walls.yy",
+    "path": "folders/Walls.yy",
   },
   "parentObjectId": {
     "name": "obj_wall",

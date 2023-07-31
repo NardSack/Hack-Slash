@@ -78,6 +78,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 	state_set(states.walkhorizon);
 	}
 	else if (inputY !=0 &&checkdone){
+		
 		image_xscale= dir
 		if (inputY<=0)
 		{

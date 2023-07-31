@@ -11,6 +11,8 @@ draw_set_color(c_red);
 draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1);
 draw_set_color(c_white);
 
+// draw player hp (to be changed)
+draw_text( x, y, "health: "+string(hp)	);
 //draw weapon in front of player
 	if aimDir >= 140 && aimDir < 360
 	{
