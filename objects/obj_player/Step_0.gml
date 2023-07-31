@@ -100,7 +100,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 			{ydir= (-1)}
 			if (inputX !=0 && inputY==0){
 			image_xscale = sign(inputX);
-			state_set(states.attackhorizontal);
+			state_set_attack(states.attackhorizontal);
 			}
 			else if (inputX ==0 && inputY==0)
 			{
@@ -110,27 +110,27 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 				if (state== states.walkhorizon|| state==states.idlehorizon)
 				{
 
-					state_set(states.attackhorizontal)
+					state_set_attack(states.attackhorizontal)
 				}
 				else if (state== states.walkup||state==states.idleup)
 				{
-					state_set(states.attackup)
+					state_set_attack(states.attackup)
 				}
 				else if (state== states.walkdown||state==states.idledown)
 				{
 					image_xscale=ydir
-					state_set(states.attackdown)
+					state_set_attack(states.attackdown)
 				}
 			}
 
 			else if (inputY <0)// condition wrong
 			{
-				state_set(states.attackup);
+				state_set_attack(states.attackup);
 			}
 			else if (inputY>0)
 			{
 				image_xscale=ydir
-				state_set(states.attackdown);
+				state_set_attack(states.attackdown);
 			}
 	}
 	if (dash)

@@ -14,6 +14,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dialogue System","folderPath":"folders/Dialogue System.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Voices","folderPath":"folders/Dialogue System/Voices.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy System","folderPath":"folders/Enemy System.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"enemy","folderPath":"folders/Enemy System/enemy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extensions","folderPath":"folders/Extensions.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
@@ -79,8 +81,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"darkRuins","folderPath":"folders/Tile Sets/darkRuins.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"enemy","folderPath":"folders/Enemy System/enemy.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy System","folderPath":"folders/Enemy System.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"34x15 runt without shadows.png","CopyToMask":-1,"filePath":"datafiles",},
@@ -116,11 +116,12 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_lucentattack_left","path":"sprites/spr_lucentattack_left/spr_lucentattack_left.yy",},},
     {"id":{"name":"spr_playermelee_upHB","path":"sprites/spr_playermelee_upHB/spr_playermelee_upHB.yy",},},
+    {"id":{"name":"obj_SwordHitBox","path":"objects/obj_SwordHitBox/obj_SwordHitBox.yy",},},
     {"id":{"name":"spr_carnifexvfx2_left","path":"sprites/spr_carnifexvfx2_left/spr_carnifexvfx2_left.yy",},},
     {"id":{"name":"spr_sgbullet_hit","path":"sprites/spr_sgbullet_hit/spr_sgbullet_hit.yy",},},
     {"id":{"name":"spr_carnifexattack1_left","path":"sprites/spr_carnifexattack1_left/spr_carnifexattack1_left.yy",},},
