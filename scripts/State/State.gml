@@ -21,33 +21,38 @@ function state_set_attack (_state)
 	//just need to adjust the hitbox correctly
 	var addy=0
 	var addx=0
-	var number=48
+	var number=1
+	var mask =spr_playermelee_rightHB
 	if _state == states.attackdown
 	{
+		mask=spr_playermelee_downHB
+		
 		if image_xscale== -1
 		{
-			addx=24
+			addx= number
 		}
 		else if image_xscale== 1
 		{
-			addx= -24
+			addx= -number
 		}
 		addy= number
 	}
 	else if _state == states.attackup
 	{
+		mask=spr_playermelee_upHB
 		if image_xscale== 1
 		{
-			addx=24
+			addx=  number
 		}
 		else if image_xscale== -1
 		{
-			addx= -24
+			addx= -number
 		}
 		addy= -number
 	}
 	else if _state == states.attackhorizontal
 	{
+
 		if image_xscale == 1
 		{
 		addx= number
@@ -60,7 +65,10 @@ function state_set_attack (_state)
 	
 	state_set(_state);
 	
-	var _hitbox = instance_create_depth(x + addx,y+addy,depth,obj_SwordHitBox);
+	var _hitbox = instance_create_depth(x + addx,y+addy,depth,obj_SwordHitBox,
+	{
+		mask_index : mask
+	});
 	_hitbox.sprite_index=sprite_index;
 	_hitbox.image_xscale=image_xscale;
 	

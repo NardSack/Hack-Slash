@@ -30,8 +30,8 @@
   "solid": false,
   "spriteId": null,
   "spriteMaskId": {
-    "name": "spr_playeridle_down",
-    "path": "sprites/spr_playeridle_down/spr_playeridle_down.yy",
+    "name": "spr_playermelee_rightHB",
+    "path": "sprites/spr_playermelee_rightHB/spr_playermelee_rightHB.yy",
   },
   "visible": true,
 }
