@@ -7,6 +7,10 @@ moveX=0;
 moveY=0;
 dir=1;
 
+is_reading = false;
+read_timer = 0;
+read_delay = 30;
+
 gun_alpha = 1;
 
 //damage setup

@@ -85,6 +85,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"darkRuins","folderPath":"folders/Tile Sets/darkRuins.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls","folderPath":"folders/Walls.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Triggers","folderPath":"folders/Dialogue System/Triggers.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"34x15 runt without shadows.png","CopyToMask":-1,"filePath":"datafiles",},
@@ -142,6 +143,7 @@
     {"id":{"name":"obj_dummy","path":"objects/obj_dummy/obj_dummy.yy",},},
     {"id":{"name":"weapon_creation","path":"scripts/weapon_creation/weapon_creation.yy",},},
     {"id":{"name":"spr_lucentattack_right","path":"sprites/spr_lucentattack_right/spr_lucentattack_right.yy",},},
+    {"id":{"name":"spr_speaktrigger_contact","path":"sprites/spr_speaktrigger_contact/spr_speaktrigger_contact.yy",},},
     {"id":{"name":"spr_lucentshot_travel","path":"sprites/spr_lucentshot_travel/spr_lucentshot_travel.yy",},},
     {"id":{"name":"spr_death_laugh","path":"sprites/spr_death_laugh/spr_death_laugh.yy",},},
     {"id":{"name":"spr_runtidle_left","path":"sprites/spr_runtidle_left/spr_runtidle_left.yy",},},
@@ -199,6 +201,7 @@
     {"id":{"name":"spr_carnifexvfx1_rightHB","path":"sprites/spr_carnifexvfx1_rightHB/spr_carnifexvfx1_rightHB.yy",},},
     {"id":{"name":"spr_playeridle_up","path":"sprites/spr_playeridle_up/spr_playeridle_up.yy",},},
     {"id":{"name":"State","path":"scripts/State/State.yy",},},
+    {"id":{"name":"obj_speaktrigger_contact","path":"objects/obj_speaktrigger_contact/obj_speaktrigger_contact.yy",},},
     {"id":{"name":"spr_props","path":"sprites/spr_props/spr_props.yy",},},
     {"id":{"name":"obj_sgbullet","path":"objects/obj_sgbullet/obj_sgbullet.yy",},},
     {"id":{"name":"spr_lucentidle_right","path":"sprites/spr_lucentidle_right/spr_lucentidle_right.yy",},},

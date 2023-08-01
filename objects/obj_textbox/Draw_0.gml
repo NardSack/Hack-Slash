@@ -145,6 +145,8 @@ if accept_key
 				else
 					{
 						instance_destroy();
+						obj_player.is_reading = false;
+						obj_player.read_timer = obj_player.read_delay;
 					}
 			}
 		//if not done typing, fill out the page instantly

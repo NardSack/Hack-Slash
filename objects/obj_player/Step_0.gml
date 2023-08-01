@@ -5,6 +5,7 @@ up =keyboard_check(ord("W"));
 down = keyboard_check(ord("S"));
 
 meleeKey = keyboard_check_pressed(vk_shift);
+interactKey = keyboard_check_pressed(ord("F"));
 
 //_movement= down||up||left||right;
 dash= keyboard_check_pressed(vk_space);/*||keyboard_check_pressed(vk_shift)*/
@@ -23,7 +24,10 @@ moveX=lerp(moveX,inputX*moveSpeed,0.2);
 moveY=lerp(moveY,inputY*moveSpeed,0.2);
 
 
-
+if read_timer > 0
+{
+	read_timer--;	
+}
 
 //collision
 if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wall

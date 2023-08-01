@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Dialogue System",
-    "path": "folders/Dialogue System.yy",
+    "name": "Triggers",
+    "path": "folders/Dialogue System/Triggers.yy",
   },
   "parentObjectId": null,
   "persistent": false,

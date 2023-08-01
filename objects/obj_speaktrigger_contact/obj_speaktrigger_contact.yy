@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_speaktrigger_interact",
+  "name": "obj_speaktrigger_contact",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_speaktrigger_interact",
-    "path": "sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",
+    "name": "spr_speaktrigger_contact",
+    "path": "sprites/spr_speaktrigger_contact/spr_speaktrigger_contact.yy",
   },
   "spriteMaskId": null,
   "visible": true,
