@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Damages Enemies",
-    "path": "folders/Combat System/Damage/Damages Enemies.yy",
+    "name": "Projectiles",
+    "path": "folders/Combat System/Damage/Damages Enemies/Projectiles.yy",
   },
   "parentObjectId": {
     "name": "obj_rbullet",

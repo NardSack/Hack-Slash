@@ -86,6 +86,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls","folderPath":"folders/Walls.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Triggers","folderPath":"folders/Dialogue System/Triggers.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Projectiles","folderPath":"folders/Combat System/Damage/Damages Enemies/Projectiles.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"34x15 runt without shadows.png","CopyToMask":-1,"filePath":"datafiles",},
