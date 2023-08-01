@@ -1,21 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_SwordHitBox",
+  "name": "obj_speaktrigger_interact",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Damages Enemies",
-    "path": "folders/Combat System/Damage/Damages Enemies.yy",
+    "name": "Dialogue System",
+    "path": "folders/Dialogue System.yy",
   },
   "parentObjectId": {
-    "name": "obj_damage_enemy",
-    "path": "objects/obj_damage_enemy/obj_damage_enemy.yy",
+    "name": "obj_speaktrigger",
+    "path": "objects/obj_speaktrigger/obj_speaktrigger.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,10 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
-  "spriteMaskId": {
-    "name": "spr_playermelee_rightHB",
-    "path": "sprites/spr_playermelee_rightHB/spr_playermelee_rightHB.yy",
+  "spriteId": {
+    "name": "spr_speaktrigger_interact",
+    "path": "sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",
   },
+  "spriteMaskId": null,
   "visible": true,
 }

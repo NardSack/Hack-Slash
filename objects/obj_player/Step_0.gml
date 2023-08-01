@@ -4,6 +4,8 @@ left = keyboard_check(ord("A"));
 up =keyboard_check(ord("W"));
 down = keyboard_check(ord("S"));
 
+meleeKey = keyboard_check_pressed(vk_shift);
+
 //_movement= down||up||left||right;
 dash= keyboard_check_pressed(vk_space);/*||keyboard_check_pressed(vk_shift)*/
 inputX=0
@@ -90,7 +92,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 	}
 
 	//Attack
-	if (keyboard_check_pressed(vk_shift))
+	if (meleeKey)
 	{
 		checkdone=false;
 		ydir=0

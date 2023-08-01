@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Combat System",
-    "path": "folders/Combat System.yy",
+    "name": "Scripts",
+    "path": "folders/Combat System/Scripts.yy",
   },
 }

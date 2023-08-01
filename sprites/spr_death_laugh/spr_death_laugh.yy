@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite99",
+  "name": "spr_death_laugh",
   "bbox_bottom": 749,
   "bbox_left": 150,
   "bbox_right": 649,
@@ -33,7 +33,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite99",
+    "name": "spr_death_laugh",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"611f987a-1b46-4707-9412-b86fb83695a1","path":"sprites/Sprite99/Sprite99.yy",},},},"Disabled":false,"id":"8c1c6372-9b19-4022-ac46-fe48ca65f524","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"81c0c8d6-e991-4e82-8d7b-d7b4456653f3","path":"sprites/Sprite99/Sprite99.yy",},},},"Disabled":false,"id":"e8a73d8a-b2e6-4764-a45a-5b0a095b98f0","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"611f987a-1b46-4707-9412-b86fb83695a1","path":"sprites/spr_death_laugh/spr_death_laugh.yy",},},},"Disabled":false,"id":"8c1c6372-9b19-4022-ac46-fe48ca65f524","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"81c0c8d6-e991-4e82-8d7b-d7b4456653f3","path":"sprites/spr_death_laugh/spr_death_laugh.yy",},},},"Disabled":false,"id":"e8a73d8a-b2e6-4764-a45a-5b0a095b98f0","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
