@@ -99,14 +99,14 @@ if argument_count > 1
 			speaker_sprite[page_number] = spr_buddy_spk;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_buddy_mid;
-			name[page_number] = "????????";
+			name[page_number] = "???????????";
 			break;
 			
 		case "buddygrin":
 			speaker_sprite[page_number] = spr_buddy_spk_grin;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_buddy_low;
-			name[page_number] = "????????";
+			name[page_number] = "???????????";
 			break;
 		
 	}

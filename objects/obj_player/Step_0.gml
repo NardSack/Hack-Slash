@@ -4,6 +4,9 @@ left = keyboard_check(ord("A"));
 up =keyboard_check(ord("W"));
 down = keyboard_check(ord("S"));
 
+meleeKey = keyboard_check_pressed(vk_shift);
+interactKey = keyboard_check_pressed(ord("F"));
+
 //_movement= down||up||left||right;
 dash= keyboard_check_pressed(vk_space);/*||keyboard_check_pressed(vk_shift)*/
 inputX=0
@@ -11,7 +14,6 @@ inputY=0
 inputX=right-left;
 inputY=down-up;
 checkdone=true;
-
 
 if (action=="move")
 {
@@ -22,7 +24,10 @@ moveX=lerp(moveX,inputX*moveSpeed,0.2);
 moveY=lerp(moveY,inputY*moveSpeed,0.2);
 
 
-
+if read_timer > 0
+{
+	read_timer--;	
+}
 
 //collision
 if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wall
@@ -49,7 +54,7 @@ if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wa
 //	y+=_ysped//move_and_collide(_xsped*movespeed,_ysped*movespeed,obj_wall)}
 if (state != states.attackdown && state != states.attackhorizontal && state != states.attackup)
 {
-
+	gun_alpha = 1;
 	x+=moveX
 	y+=moveY
 	
@@ -91,7 +96,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 	}
 
 	//Attack
-	if (keyboard_check_pressed(vk_shift))
+	if (meleeKey)
 	{
 		checkdone=false;
 		ydir=0
@@ -137,6 +142,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 	if (dash)
 	{
 		action="dash"
+		gun_alpha = 0;
 		image_index=0
 		dashy=inputY
 		dashx=inputX
@@ -207,7 +213,7 @@ if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wa
 #endregion
 }
 
-
+get_damaged(obj_damage_player, true);
 
 //depth
 depth = -bbox_bottom;

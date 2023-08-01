@@ -24,7 +24,8 @@ function state_set_attack (_state)
 	var number=1
 	var mask =spr_playermelee_rightHB
 	if _state == states.attackdown
-	{
+	{	
+		gun_alpha = 0;
 		mask=spr_playermelee_downHB
 		
 		if image_xscale== -1
@@ -39,6 +40,7 @@ function state_set_attack (_state)
 	}
 	else if _state == states.attackup
 	{
+		gun_alpha = 0;
 		mask=spr_playermelee_upHB
 		if image_xscale== 1
 		{
@@ -52,7 +54,7 @@ function state_set_attack (_state)
 	}
 	else if _state == states.attackhorizontal
 	{
-
+		gun_alpha = 0;
 		if image_xscale == 1
 		{
 		addx= number

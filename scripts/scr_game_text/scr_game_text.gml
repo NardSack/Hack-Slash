@@ -5,8 +5,8 @@ switch(_text_id){
 	
 	/*  -------------HOW TO ADD TEXT-------------
 	//add comment here to help identify where this text can be found in-game (e.g. "before boss door" or "room 1 exit")
-	case "keyword or id (create here first, reference in trigger object's creation code after)":
-		scr_text("add your text here (this counts as one page.)", "character (optional, default is none)", 1/-1 (1 is default, facing right, -1 is facing left), "name here")
+	case "keyword id (create here first, reference in trigger object's creation code after)":
+		scr_text("add your text here (this counts as one page.)", "character (optional, default is none)", 1/-1 (1 is default, facing right, -1 is facing left), "speaker here")
 		break; //(ends the textbox)
 	*/
 	
@@ -37,12 +37,11 @@ switch(_text_id){
 	
 	case "trigger 3":
 		scr_text("this is trigger 3")
-		scr_text("this is trigger 3 and it works even with really long text, like really really fucking long text, like holy shit this is so fucking long goddamn.", "player")
+		scr_text("this is trigger 3 and it works even with really long text, like really really long text, like this text is so long.")
 		scr_text("neat.", "player")
 		break;
 	
 	
 	
 	}
-	
 }

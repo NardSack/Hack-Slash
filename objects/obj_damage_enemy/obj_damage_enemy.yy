@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy System",
-    "path": "folders/Enemy System.yy",
+    "name": "Damages Enemies",
+    "path": "folders/Combat System/Damage/Damages Enemies.yy",
   },
   "parentObjectId": {
     "name": "obj_damage_parent",
