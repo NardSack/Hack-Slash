@@ -128,8 +128,8 @@
     "path": "folders/Tile Sets/darkRuins.yy",
   },
   "spriteId": {
-    "name": "spr_darkgrass",
-    "path": "sprites/spr_darkgrass/spr_darkgrass.yy",
+    "name": "spr_grass",
+    "path": "sprites/spr_grass/spr_grass.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-alert_dis = 250;
+alert_dis = 500;
 attack_dis = 18;
 move_spd = 3;
 
