@@ -209,6 +209,7 @@
     {"id":{"name":"spr_props","path":"sprites/spr_props/spr_props.yy",},},
     {"id":{"name":"obj_sgbullet","path":"objects/obj_sgbullet/obj_sgbullet.yy",},},
     {"id":{"name":"spr_lucentidle_right","path":"sprites/spr_lucentidle_right/spr_lucentidle_right.yy",},},
+    {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"id":{"name":"ts_plants","path":"tilesets/ts_plants/ts_plants.yy",},},
     {"id":{"name":"spr_lucentidle_left","path":"sprites/spr_lucentidle_left/spr_lucentidle_left.yy",},},
     {"id":{"name":"spr_lucentwalk_left","path":"sprites/spr_lucentwalk_left/spr_lucentwalk_left.yy",},},
@@ -233,6 +234,7 @@
     {"id":{"name":"custom_functions","path":"scripts/custom_functions/custom_functions.yy",},},
     {"id":{"name":"spr_playeridle_right","path":"sprites/spr_playeridle_right/spr_playeridle_right.yy",},},
     {"id":{"name":"spr_stonewalls","path":"sprites/spr_stonewalls/spr_stonewalls.yy",},},
+    {"id":{"name":"Obj_menu","path":"objects/Obj_menu/Obj_menu.yy",},},
     {"id":{"name":"spr_playerdash_down","path":"sprites/spr_playerdash_down/spr_playerdash_down.yy",},},
     {"id":{"name":"obj_cross","path":"objects/obj_cross/obj_cross.yy",},},
     {"id":{"name":"spr_propshadow","path":"sprites/spr_propshadow/spr_propshadow.yy",},},
@@ -277,6 +279,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rmInitialize","path":"rooms/rmInitialize/rmInitialize.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
