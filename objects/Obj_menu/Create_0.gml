@@ -1,7 +1,4 @@
 //main menu
-menu[0]="Start";
-menu[1]="Option";
-menu[2]="Exit";
-
-index = 0
-//mewnu index position
+hover =0;
+mxPrev = mouse_x;
+myPrev = mouse_y;
