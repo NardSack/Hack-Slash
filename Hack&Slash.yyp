@@ -234,7 +234,7 @@
     {"id":{"name":"custom_functions","path":"scripts/custom_functions/custom_functions.yy",},},
     {"id":{"name":"spr_playeridle_right","path":"sprites/spr_playeridle_right/spr_playeridle_right.yy",},},
     {"id":{"name":"spr_stonewalls","path":"sprites/spr_stonewalls/spr_stonewalls.yy",},},
-    {"id":{"name":"Obj_menu","path":"objects/Obj_menu/Obj_menu.yy",},},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"spr_playerdash_down","path":"sprites/spr_playerdash_down/spr_playerdash_down.yy",},},
     {"id":{"name":"obj_cross","path":"objects/obj_cross/obj_cross.yy",},},
     {"id":{"name":"spr_propshadow","path":"sprites/spr_propshadow/spr_propshadow.yy",},},

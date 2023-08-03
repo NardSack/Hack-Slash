@@ -24,3 +24,21 @@ draw_text( x, y, string(hp));
 	{
 		draw_my_weapon()
 	}
+
+//draw interact prompt
+if place_meeting(x, y, obj_speaktrigger_interact)
+	{
+		draw_text(x-14, y-60, "[F]")	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
