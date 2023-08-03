@@ -1,8 +1,8 @@
 var up = keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"))
 var down = keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))
 var select = keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_space)
-
-
+x=camera_get_view_x(view_camera[0])+(camera_get_view_width(view_camera[0]) div 2)
+y=camera_get_view_y(view_camera[0])+(camera_get_view_height(view_camera[0]) div 2)
 mouseOver = false;
 if point_in_rectangle(mouse_x,mouse_y,x,y,x+width,y+height)
 {
@@ -40,4 +40,4 @@ if ((mouse_check_button_pressed(mb_left)&& mouseOver)||keyboard_check_pressed(vk
 }
 
 mxPrev = mouse_x;
-myPrev = mouse_y;
+myPrev = mouse_y; 

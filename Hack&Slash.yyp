@@ -66,6 +66,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"idle","folderPath":"folders/Sprites/enemy/minor/ranged/lucent/idle.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"walk","folderPath":"folders/Sprites/enemy/minor/ranged/lucent/walk.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"MenuBox","folderPath":"folders/Sprites/MenuBox.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"farni little detour on menu(possible)","folderPath":"folders/Sprites/MenuBox/farni little detour on menu(possible).yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Misc","folderPath":"folders/Sprites/Misc.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"player","folderPath":"folders/Sprites/player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"dash","folderPath":"folders/Sprites/player/dash.yy",},
@@ -88,7 +89,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"darkRuins","folderPath":"folders/Tile Sets/darkRuins.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls","folderPath":"folders/Walls.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"farni little detour on menu(possible)","folderPath":"folders/Sprites/MenuBox/farni little detour on menu(possible).yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"34x15 runt without shadows.png","CopyToMask":-1,"filePath":"datafiles",},
