@@ -36,9 +36,10 @@ switch(_text_id){
 	
 	
 	case "trigger 3":
-		scr_text("this is trigger 3")
-		scr_text("this is trigger 3 and it works even with really long text, like really really long text, like this text is so long.")
-		scr_text("neat.", "player")
+		scr_text("A training dummy.")
+		scr_text("Its patronizing smile mocks me, destroy it, Venator.", "buddy")
+		scr_text_color(32, 38, c_red,c_red,c_red,c_red); scr_text_shake(32, 38);
+		scr_text("( . . . Seriously?)", "playerdespair")
 		break;
 	
 	

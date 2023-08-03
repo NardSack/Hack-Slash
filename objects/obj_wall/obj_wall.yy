@@ -35,5 +35,5 @@
     "path": "sprites/bluwall/bluwall.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

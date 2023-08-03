@@ -33,5 +33,5 @@
     "path": "sprites/solidwall/solidwall.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

@@ -1,8 +1,33 @@
+function calc_enemy_movement()
+{
+	///@desc moves enemy and applies drag
+		
+	if !place_meeting( x, y, obj_wall)
+	{
+	//apply movement
+	x+= hsp;
+	y+= vsp;
+	//slowdown
+	hsp *= global.drag;
+	vsp *= global.drag;
+	}
+	check_if_stopped();
+}
+
+function check_if_stopped()
+{
+	if abs(hsp) < 0.1 hsp = 0;
+	if abs(vsp) < 0.1 vsp = 0;
+}
+
 function check_facing()
 {	
 	///@desc check which way enemy is moving
-	var _facing = sign(x-xp);
-	if _facing != 0 { facing = _facing }
+	if knockback_time <= 0
+		{
+			var _facing = sign(x-xp);
+			if _facing != 0 { facing = _facing }
+		}
 }
 
 function check_for_player()
@@ -44,15 +69,18 @@ function check_for_player()
 	}
 }
 
-function enemy_anim(){
+function enemy_anim()
+{
 	switch (current_state)
 	{
 		case enemy_states.IDLE:
 			sprite_index = s_idle;
+			show_hurt()
 		break;
 	
 		case enemy_states.MOVE:
 			sprite_index = s_walk;
+			show_hurt()
 		break;
 	
 		case enemy_states.ATTACK:
@@ -67,3 +95,23 @@ function enemy_anim(){
 	xp = x;
 	yp = y;
 }
+
+function show_hurt()
+{	///@desc show the hurt sprite when being knocked back
+	
+	if knockback_time-- > 0 sprite_index = s_hurt;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

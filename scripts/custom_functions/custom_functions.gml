@@ -23,6 +23,7 @@ function get_damaged_create(_hp = 100, _iframes = false )
 {
 
 	hp = _hp;
+	maxhp = _hp
 	if _iframes = true
 		{
 			iframeTimer = 0;
@@ -97,7 +98,9 @@ function get_damaged( _damageObj, _iframes = false )
 										ds_list_add(damageList, _inst);
 									}
 								//take damage from specific instance
-								hp -= _inst.damage;
+
+								damage_entity( self, _inst, _inst.damage , self.knockback_time);
+						
 								_hitConfirm = true;
 								//tell the damage instance it has hit
 								_inst.hitConfirm = true;
