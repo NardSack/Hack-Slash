@@ -5,6 +5,8 @@ get_damaged( obj_damage_enemy );
 if hp <= 0
 	{
 		current_state = enemy_states.DEAD;
+		hp = 0;
+		image_index = 0;
 	}
 
 	switch (current_state)

@@ -1,4 +1,3 @@
-
 //ai varaibles
 alert = false;
 alert_dis = 0;
@@ -6,7 +5,9 @@ attack_dis = 0;
 move_spd = 0;
 current_state = enemy_states.IDLE;
 facing = 1;
-
+hsp = 0;
+vsp = 0;
+knockback_time = 0;
 //------------AI Pathing------------//
 
 //init previous positions

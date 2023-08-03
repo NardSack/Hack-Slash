@@ -130,6 +130,7 @@
     {"id":{"name":"spr_playermelee_upHB","path":"sprites/spr_playermelee_upHB/spr_playermelee_upHB.yy",},},
     {"id":{"name":"obj_SwordHitBox","path":"objects/obj_SwordHitBox/obj_SwordHitBox.yy",},},
     {"id":{"name":"spr_carnifexvfx2_left","path":"sprites/spr_carnifexvfx2_left/spr_carnifexvfx2_left.yy",},},
+    {"id":{"name":"entity_processes","path":"scripts/entity_processes/entity_processes.yy",},},
     {"id":{"name":"spr_sgbullet_hit","path":"sprites/spr_sgbullet_hit/spr_sgbullet_hit.yy",},},
     {"id":{"name":"spr_carnifexattack1_left","path":"sprites/spr_carnifexattack1_left/spr_carnifexattack1_left.yy",},},
     {"id":{"name":"spr_tenerihurt_right","path":"sprites/spr_tenerihurt_right/spr_tenerihurt_right.yy",},},
