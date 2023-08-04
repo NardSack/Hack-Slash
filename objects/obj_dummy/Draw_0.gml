@@ -1,5 +1,6 @@
 //draw sprite
 draw_sprite_ext(sprite_index, image_index, x, y, facing, 1, 0, c_white, 1);
+draw_set_font(global.font_main)
 
 //draw text
 draw_text( x, y, string(hp));

@@ -10,6 +10,7 @@ knockback_time = 0;
 hsp = 0;
 vsp = 0;
 
+
 is_reading = false;
 read_timer = 0;
 read_delay = 30;
