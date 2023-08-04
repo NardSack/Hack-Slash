@@ -8,7 +8,7 @@ function damage_entity( _tid, _sid, _damage, _time)
 			path_end();
 			//set knockback
 			if _dead var _dis = 4 else _dis = 1;
-			if _sid == object_get_name(obj_sgbullet) _dis = 0.33;
+			if _sid.object_index == obj_sgbullet _dis = 0.8;
 			var _dir = point_direction(_sid.x, _sid.y, x, y);
 			hsp += lengthdir_x(_dis, _dir);
 			vsp += lengthdir_y(_dis, _dir);
