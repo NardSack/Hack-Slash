@@ -14,7 +14,7 @@ if setup == false
 		//loop through the pages
 		for (var p = 0; p < page_number; p++)
 			{
-				//find how many characters are on each page and store that number in the "text_length" array
+				//find how many characters are on each page and store in the "text_length" array
 				text_length[p] = string_length(text[p]);
 				
 				//x position for the background box

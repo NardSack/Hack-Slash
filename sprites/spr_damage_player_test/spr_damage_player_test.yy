@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Damages Players",
-    "path": "folders/Combat System/Damage/Damages Players.yy",
+    "name": "Misc",
+    "path": "folders/Sprites/Misc.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

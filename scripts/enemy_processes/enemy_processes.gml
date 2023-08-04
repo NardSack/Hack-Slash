@@ -62,9 +62,11 @@ function check_for_player()
 	}
 	else
 	{
-		if _dis <= attack_dis
+		//close enough to attack
+		if _dis <= attack_dis && attack_timer-- <= 0
 			{
 				path_end();
+				current_state = enemy_states.ATTACK;
 			}
 	}
 }
@@ -94,6 +96,27 @@ function enemy_anim()
 	//update previous position
 	xp = x;
 	yp = y;
+}
+
+function perform_attack()
+{
+	if image_index >= attack_frame_start
+	{
+			//reset for next attack
+			attack_timer += attack_cooldown;
+			
+			//create hitbox
+			var _inst = instance_create_depth(x, y, depth-2000, obj_teneri_hb,
+			{
+				mask_index : s_attack
+			}
+			);
+			
+			_inst.damage = damage;
+			_inst.knockback_time = knockback_time;
+			_inst.image_index= self.image_index;
+			_inst.image_xscale= self.image_xscale;
+		}
 }
 
 function show_hurt()

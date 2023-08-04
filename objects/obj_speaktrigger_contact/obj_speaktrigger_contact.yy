@@ -37,5 +37,5 @@
     "path": "sprites/spr_speaktrigger_contact/spr_speaktrigger_contact.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
