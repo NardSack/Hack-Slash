@@ -30,7 +30,7 @@ if read_timer > 0
 }
 
 //collision
-if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wall
+if(place_meeting(x+moveX + hsp,y+moveY + vsp,obj_wall)) //if next frame will collide with wall
 {
 	while(abs(moveX)>0.1||abs(moveY)>0.1)
 	{
@@ -47,16 +47,29 @@ if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wa
 			y+=moveY;
 		}
 	}
-	moveX=0
-	moveY=0
+	moveX=0;
+	moveY=0;
+	hsp = 0;
+	vsp = 0;
+}
+else
+{
+	//apply knockback movement
+	x+= hsp;
+	y+= vsp;
+	hsp = lerp(hsp, 0, 0.15)
+	vsp = lerp(vsp, 0, 0.15)	
 }
 //	x+=_xsped
 //	y+=_ysped//move_and_collide(_xsped*movespeed,_ysped*movespeed,obj_wall)}
+
 if (state != states.attackdown && state != states.attackhorizontal && state != states.attackup)
 {
 	gun_alpha = 1;
 	x+=moveX
 	y+=moveY
+	
+
 	
 	if ((state==states.walkdown||state==states.walkup||state==states.walkhorizon)&&(inputX==0&&inputY==0)&&checkdone)
 	{
@@ -213,6 +226,7 @@ if(place_meeting(x+moveX,y+moveY,obj_wall)) //if next frame will collide with wa
 #endregion
 }
 
+//damage code function
 get_damaged(obj_damage_player, true);
 
 //depth

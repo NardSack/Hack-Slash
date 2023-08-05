@@ -1,3 +1,8 @@
+if attack_timer > 0
+	{
+		attack_timer--;
+	}
+
 //ai stuff
 switch (current_state)
 {
@@ -18,6 +23,11 @@ switch (current_state)
 	
 	case enemy_states.ATTACK:
 		calc_enemy_movement();
+		if attack_timer <= 0
+			{
+				perform_attack();
+			}
+		check_facing();
 		enemy_anim();
 	break;
 	

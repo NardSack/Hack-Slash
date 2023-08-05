@@ -1,21 +1,22 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_speaktrigger_interact",
+  "name": "obj_teneri_hb",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Triggers",
-    "path": "folders/Dialogue System/Triggers.yy",
+    "name": "Damages Players",
+    "path": "folders/Combat System/Damage/Damages Players.yy",
   },
   "parentObjectId": {
-    "name": "obj_speaktrigger",
-    "path": "objects/obj_speaktrigger/obj_speaktrigger.yy",
+    "name": "obj_damage_player",
+    "path": "objects/obj_damage_player/obj_damage_player.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,10 +33,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_speaktrigger_interact",
-    "path": "sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",
+  "spriteId": null,
+  "spriteMaskId": {
+    "name": "spr_teneriattackHB",
+    "path": "sprites/spr_teneriattackHB/spr_teneriattackHB.yy",
   },
-  "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

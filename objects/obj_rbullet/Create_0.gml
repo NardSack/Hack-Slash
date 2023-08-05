@@ -12,7 +12,7 @@ highSpeed = true;
 //cleanup
 maxDist = 5000; //maximum distance bullet can travel
 destroy = false;
-enemyDestroy = false;
+enemyDestroy = true;
 
 
 

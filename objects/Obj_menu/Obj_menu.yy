@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "farni little detour on menu(possible)",
-    "path": "folders/Sprites/MenuBox/farni little detour on menu(possible).yy",
+    "name": "alt menu",
+    "path": "folders/Sprites/MenuBox/alt menu.yy",
   },
   "parentObjectId": null,
   "persistent": false,

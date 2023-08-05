@@ -6,10 +6,10 @@ moveSpeed=2;
 moveX=0;
 moveY=0;
 dir=1;
+
 knockback_time = 0;
 hsp = 0;
 vsp = 0;
-
 
 is_reading = false;
 read_timer = 0;

@@ -1,11 +1,24 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"enemy","order":1,"path":"folders/Sprites/enemy.yy",},
+    {"name":"MenuBox","order":2,"path":"folders/Sprites/MenuBox.yy",},
+    {"name":"Misc","order":3,"path":"folders/Sprites/Misc.yy",},
+    {"name":"player","order":4,"path":"folders/Sprites/player.yy",},
+    {"name":"tilesets","order":5,"path":"folders/Sprites/tilesets.yy",},
+    {"name":"Walls","order":6,"path":"folders/Sprites/Walls.yy",},
+  ],
   "ResourceOrderSettings": [
     {"name":"entity_processes","order":1,"path":"scripts/entity_processes/entity_processes.yy",},
     {"name":"obj_title_menu","order":1,"path":"objects/obj_title_menu/obj_title_menu.yy",},
+    {"name":"spr_speaktrigger_contact","order":5,"path":"sprites/spr_speaktrigger_contact/spr_speaktrigger_contact.yy",},
+    {"name":"spr_death_laugh","order":4,"path":"sprites/spr_death_laugh/spr_death_laugh.yy",},
+    {"name":"spr_speaktrigger","order":3,"path":"sprites/spr_speaktrigger/spr_speaktrigger.yy",},
     {"name":"obj_damage_player_test","order":1,"path":"objects/obj_damage_player_test/obj_damage_player_test.yy",},
     {"name":"obj_teneri","order":1,"path":"objects/obj_teneri/obj_teneri.yy",},
-    {"name":"spr_damage_player_test","order":2,"path":"sprites/spr_damage_player_test/spr_damage_player_test.yy",},
+    {"name":"bg","order":2,"path":"sprites/bg/bg.yy",},
+    {"name":"spr_speaktrigger_interact","order":1,"path":"sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",},
+    {"name":"spr_damage_player_test","order":6,"path":"sprites/spr_damage_player_test/spr_damage_player_test.yy",},
+    {"name":"obj_teneri_hb","order":2,"path":"objects/obj_teneri_hb/obj_teneri_hb.yy",},
     {"name":"obj_lucent","order":2,"path":"objects/obj_lucent/obj_lucent.yy",},
   ],
 }
