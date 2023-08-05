@@ -9,7 +9,7 @@ function Menu(_x,_y,_options,_description =-1)
 		options = _options;
 		description = _description;
 		optionsCount = array_length(_options)
-		hovermarker = "> " // can use sprite for this
+		hovermarker = ">" // can use sprite for this
 		
 		//set up size
 		margin = 8;
@@ -26,8 +26,8 @@ function Menu(_x,_y,_options,_description =-1)
 		
 		heightLine = 17
 		height = heightLine * (optionsCount +!(description == -1))
-		widthFull = width +margin *2;
-		heightFull = height + margin*2;
+		widthFull = camera_get_view_width(view_camera[0]);
+		heightFull = camera_get_view_height(view_camera[0])
 		
 	}
 	}
