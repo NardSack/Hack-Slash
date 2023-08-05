@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "MenuBox",
-    "path": "folders/Sprites/MenuBox.yy",
+    "path": "folders/MenuBox.yy",
   },
   "parentObjectId": null,
   "persistent": false,

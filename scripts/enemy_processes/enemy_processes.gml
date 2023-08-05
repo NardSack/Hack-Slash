@@ -65,7 +65,6 @@ function check_for_player()
 		//close enough to attack
 		if _dis <= attack_dis && attack_timer-- <= 0
 			{
-				path_end();
 				current_state = enemy_states.ATTACK;
 			}
 	}
@@ -102,13 +101,10 @@ function perform_attack()
 {
 	if image_index >= attack_frame_start
 	{
-			//reset for next attack
-			attack_timer += attack_cooldown;
-			
 			//create hitbox
-			var _inst = instance_create_depth(x, y, depth-2000, obj_teneri_hb,
+			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
 			{
-				mask_index : s_attack
+				mask_index : s_attack_hb
 			}
 			);
 			
@@ -116,7 +112,11 @@ function perform_attack()
 			_inst.knockback_time = knockback_time;
 			_inst.image_index= self.image_index;
 			_inst.image_xscale= self.image_xscale;
-		}
+			
+			//reset for next attack
+			attack_timer += attack_cooldown;
+	}
+	path_end();
 }
 
 function show_hurt()

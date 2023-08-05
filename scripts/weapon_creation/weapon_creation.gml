@@ -33,6 +33,15 @@ global.WeaponList = {
 		90,
 		12,
 		60
+	),
+	//third weapon
+	railgun : new create_weapon(
+		spr_railgun,
+		sprite_get_bbox_right(spr_railgun) - sprite_get_xoffset(spr_railgun),
+		obj_railbullet,
+		900,
+		1,
+		0
 	)
 	
 }

@@ -43,9 +43,9 @@ function is_dead()
 									// play teneri death sound
 									break;
 							
-									//case obj_runt:
+									case obj_runt:
 									//// play runt death sound
-									//break;
+									break;
 							
 									//case obj_lucent:
 									//// play lucent death sound

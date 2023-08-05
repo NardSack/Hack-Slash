@@ -28,7 +28,7 @@ if (hover < 0 )
 {
 	hover = op_length-1
 }
-if ((mouse_check_button_pressed(mb_left)&& mouseOver)||keyboard_check_pressed(vk_enter))
+if ((mouse_check_button_pressed(mb_left)&& mouseOver)||select)
 {
 	//cases for all
 	switch(hover)

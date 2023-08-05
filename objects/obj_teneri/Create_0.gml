@@ -1,13 +1,14 @@
 // Inherit the parent event
 event_inherited();
 alert_dis = 500;
-attack_dis = 12;
-move_spd = 3;
+attack_dis = 2;
+move_spd = 4.5;
 knockback_time = 1;
 //assign sprites
 s_idle = spr_teneriidle;
 s_walk = spr_teneriwalk_right;
 s_attack = spr_teneriattack;
+s_attack_hb = spr_teneriattackHB
 s_dead = spr_tenerideath;
 s_hurt = spr_tenerihurt_right;
 //attack

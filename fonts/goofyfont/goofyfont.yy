@@ -120,7 +120,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "MenuBox",
-    "path": "folders/Sprites/MenuBox.yy",
+    "path": "folders/MenuBox.yy",
   },
   "pointRounding": 0,
   "ranges": [

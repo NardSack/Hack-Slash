@@ -4,6 +4,7 @@ draw_set_font(global.font_main)
 
 //draw text
 draw_text( x, y, string(hp));
+draw_text( x, y-50, string(attack_timer));
 
 //draw player hitbox
 draw_set_color(c_red);

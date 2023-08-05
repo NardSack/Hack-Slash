@@ -2,4 +2,4 @@
 event_inherited();
 
 //damage decrease over time event here
-// damage-=0.1
+if damage > 0 { damage -= 0.001 }

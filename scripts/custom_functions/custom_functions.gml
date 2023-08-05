@@ -18,6 +18,45 @@ function draw_my_weapon()
 		draw_sprite_ext(weapon.sprite, 0, (x+_xOffset), (y+_yOffset - 6) , 1, _weaponYsc1, aimDir, c_white, gun_alpha);
 	}
 
+function shoot_weapon()
+{
+	//create bullet
+		var _xOffset = lengthdir_x( weapon.length + weaponOffsetDist, aimDir)
+		var _yOffset = lengthdir_y( weapon.length + weaponOffsetDist , aimDir)
+		
+		var _spread = weapon.spread;
+		var _spreadDiv = _spread / max( weapon.bulletNum-1 , 1 ) ; //angle is divided by amt of bullets, defaults to 1 if amt of bullets is 1
+		
+		//create the corect num of bullets
+		for (var i = 0; i < weapon.bulletNum; i++ ) //foreach bullet
+		{
+		
+			//create bullet
+			var _bulletInst = instance_create_depth( x + _xOffset + 3, y + _yOffset - 9, depth-100, weapon.bulletObj);
+	
+			//change bullet direction
+			with (_bulletInst)
+			{
+				
+				dir = other.aimDir - _spread/2 + _spreadDiv*i; //spread out the bullets
+				
+				//turn the bullet to face correct direction at creation if needed
+				if dirFix == true 
+				{
+					image_angle = dir;
+				}
+				
+				//strech bullet if high speed
+				if highSpeed == true
+				{
+					image_xscale = max(1, spd/sprite_width)
+				}
+				
+			}
+			
+		}
+}
+
 //damage code
 function get_damaged_create(_hp = 100, _iframes = false )
 {
@@ -100,6 +139,7 @@ function get_damaged( _damageObj, _iframes = false )
 								//take damage from specific instance
 
 								damage_entity( self, _inst, _inst.damage , self.knockback_time);
+								show_hurt();
 						
 								_hitConfirm = true;
 								//tell the damage instance it has hit

@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "energyrifle",
-    "path": "folders/Sprites/player/playerweapons/energyrifle.yy",
+    "name": "railgun",
+    "path": "folders/Sprites/player/playerweapons/railgun.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -2,7 +2,7 @@ inputX=0;
 inputY=0;
 dashy=0
 dashx=0
-moveSpeed=2;
+moveSpeed=1;
 moveX=0;
 moveY=0;
 dir=1;
@@ -76,11 +76,14 @@ aimDir = 0;
 weaponOffsetDist = 6;
 
 //weapon info
-	shootTimer = 0;
+	revolverTimer = 0;
+	shotgunTimer = 0;
+	railgunTimer = 0;
 	
 	//add weapons to player weapon inventory
 	array_push( global.PlayerWeapons, global.WeaponList.revolver);
 	array_push( global.PlayerWeapons, global.WeaponList.shotgun);
+	array_push( global.PlayerWeapons, global.WeaponList.railgun);
 	
 	selectedWeapon = 0;
 	weapon = global.PlayerWeapons[selectedWeapon];

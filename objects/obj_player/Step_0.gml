@@ -7,8 +7,14 @@ down = keyboard_check(ord("S"));
 meleeKey = keyboard_check_pressed(vk_shift);
 interactKey = keyboard_check_pressed(ord("F"));
 
-//_movement= down||up||left||right;
+shootKey = mouse_check_button(mb_left);
+
+swapKey1 = keyboard_check_pressed((ord("1")));
+swapKey2 = keyboard_check_pressed((ord("2")));
+swapKey3 = keyboard_check_pressed((ord("3")));
+
 dash= keyboard_check_pressed(vk_space);/*||keyboard_check_pressed(vk_shift)*/
+
 inputX=0
 inputY=0
 inputX=right-left;
@@ -19,7 +25,7 @@ if (action=="move")
 {
 	#region move
 //movement declare
-moveSpeed=2;
+moveSpeed=1.5;
 moveX=lerp(moveX,inputX*moveSpeed,0.2);
 moveY=lerp(moveY,inputY*moveSpeed,0.2);
 
@@ -234,13 +240,6 @@ depth = -bbox_bottom;
   
 //aim direction
 
-shootKey = mouse_check_button(mb_left);
-
-swapKey1 = keyboard_check_pressed((ord("1")));
-swapKey2 = keyboard_check_pressed((ord("2")));
-
-
-
 aimDir = point_direction(x, y, mouse_x, mouse_y);
 	
 //weapon swapping
@@ -264,53 +263,39 @@ var _playerWeapons = global.PlayerWeapons;
 	
 //cycle through weapons (key press system)
 if swapKey1 { weapon = _playerWeapons[0] }
-if swapKey2 {weapon = _playerWeapons[1] }
+if swapKey2 { weapon = _playerWeapons[1] }
+if swapKey3 { weapon = _playerWeapons[2] }
 	
 	
 //shooting the weapon
-if shootTimer > 0 { shootTimer--; }; //decrease timer
-if shootKey	&& shootTimer <= 0
+if revolverTimer > 0 { revolverTimer--; }; //decrease timer for revolver
+if shotgunTimer > 0 { shotgunTimer--; }; //decrease timer for shotgun
+if railgunTimer > 0 { railgunTimer--;}; //decrease timer for railgun
+
+if weapon == _playerWeapons[0]
 {
-		
-	//reset timer
-	shootTimer = weapon.cooldown;
-		
-	//create bullet
-	var _xOffset = lengthdir_x( weapon.length + weaponOffsetDist, aimDir)
-	var _yOffset = lengthdir_y( weapon.length + weaponOffsetDist , aimDir)
-		
-	var _spread = weapon.spread;
-	var _spreadDiv = _spread / max( weapon.bulletNum-1 , 1 ) ; //angle is divided by amt of bullets, defaults to 1 if amt of bullets is 1
-		
-	//create the corect num of bullets
-	for (var i = 0; i < weapon.bulletNum; i++ ) //foreach bullet
-	{
-		
-		//create bullet
-		var _bulletInst = instance_create_depth( x + _xOffset + 3, y + _yOffset - 9, depth-100, weapon.bulletObj);
-	
-		//change bullet direction
-		with (_bulletInst)
+	if shootKey	&& revolverTimer <= 0
 		{
-				
-			dir = other.aimDir - _spread/2 + _spreadDiv*i; //spread out the bullets
-				
-			//turn the bullet to face correct direction at creation if needed
-			if dirFix == true 
-			{
-				image_angle = dir;
-			}
-				
-			//strech bullet if high speed
-			if highSpeed == true
-			{
-				image_xscale = max(1, spd/sprite_width)
-			}
-				
+			revolverTimer = weapon.cooldown;
+			shoot_weapon();
+			audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
 		}
-			
-	}
-		
-	audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
-		
+}
+if weapon == _playerWeapons[1]
+{
+	if shootKey	&& shotgunTimer <= 0
+		{
+			shotgunTimer = weapon.cooldown;
+			shoot_weapon();
+			audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+		}
+}
+if weapon == _playerWeapons[2]
+{
+	if shootKey	&& railgunTimer <= 0
+		{
+			railgunTimer = weapon.cooldown;
+			shoot_weapon();
+			audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+		}
 }

@@ -1,22 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_teneri_hb",
+  "name": "obj_runt",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Damages Players",
-    "path": "folders/Combat System/Damage/Damages Players.yy",
+    "name": "enemy",
+    "path": "folders/Combat System/enemy.yy",
   },
   "parentObjectId": {
-    "name": "obj_damage_player",
-    "path": "objects/obj_damage_player/obj_damage_player.yy",
+    "name": "obj_teneri",
+    "path": "objects/obj_teneri/obj_teneri.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,10 +31,13 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_runtidle_right",
+    "path": "sprites/spr_runtidle_right/spr_runtidle_right.yy",
+  },
   "spriteMaskId": {
-    "name": "spr_teneriattackHB",
-    "path": "sprites/spr_teneriattackHB/spr_teneriattackHB.yy",
+    "name": "spr_runtidle_right",
+    "path": "sprites/spr_runtidle_right/spr_runtidle_right.yy",
   },
   "visible": true,
 }

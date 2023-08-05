@@ -49,7 +49,7 @@
   "origin": 4,
   "parent": {
     "name": "MenuBox",
-    "path": "folders/Sprites/MenuBox.yy",
+    "path": "folders/MenuBox.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

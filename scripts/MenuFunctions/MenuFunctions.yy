@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "alt menu",
-    "path": "folders/Sprites/MenuBox/alt menu.yy",
+    "path": "folders/MenuBox/alt menu.yy",
   },
 }

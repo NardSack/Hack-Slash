@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"920ad5df-1baa-4cc6-93bd-f9acc96c8f31",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"543c7f87-21d4-429e-99de-6905bc5c26af",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a04ab0a9-662d-4162-9227-efc9a3cddfe0",},
   ],
   "gridX": 0,
@@ -55,7 +55,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"920ad5df-1baa-4cc6-93bd-f9acc96c8f31","path":"sprites/spr_tenerihurt_right/spr_tenerihurt_right.yy",},},},"Disabled":false,"id":"922b5c9f-6783-4a61-808e-2eda1c9e0de8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"543c7f87-21d4-429e-99de-6905bc5c26af","path":"sprites/spr_tenerihurt_right/spr_tenerihurt_right.yy",},},},"Disabled":false,"id":"6ef6fbc8-df8e-4c43-a730-7035929f4d66","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a04ab0a9-662d-4162-9227-efc9a3cddfe0","path":"sprites/spr_tenerihurt_right/spr_tenerihurt_right.yy",},},},"Disabled":false,"id":"20e783f6-a20a-4661-9f21-324dda528a95","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

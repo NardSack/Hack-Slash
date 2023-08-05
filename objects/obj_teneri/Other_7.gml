@@ -7,7 +7,6 @@ switch (current_state)
 		break;
 		
 		case enemy_states.ATTACK:
-			image_index = 0;
 			current_state = enemy_states.IDLE;
 		break;
 	}
