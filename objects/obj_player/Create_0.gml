@@ -2,7 +2,7 @@ inputX=0;
 inputY=0;
 dashy=0
 dashx=0
-moveSpeed=1;
+moveSpeed=2;
 moveX=0;
 moveY=0;
 dir=1;
@@ -10,6 +10,8 @@ dir=1;
 knockback_time = 0;
 hsp = 0;
 vsp = 0;
+
+dashCheck = false;
 
 is_reading = false;
 read_timer = 0;
@@ -19,7 +21,6 @@ gun_alpha = 1;
 
 //damage setup
 get_damaged_create(10, true);
-
 
 action = "move"
 //initialize the three states

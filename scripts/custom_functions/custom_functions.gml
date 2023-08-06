@@ -24,8 +24,13 @@ function shoot_weapon()
 		var _xOffset = lengthdir_x( weapon.length + weaponOffsetDist, aimDir)
 		var _yOffset = lengthdir_y( weapon.length + weaponOffsetDist , aimDir)
 		
+
+		
 		var _spread = weapon.spread;
 		var _spreadDiv = _spread / max( weapon.bulletNum-1 , 1 ) ; //angle is divided by amt of bullets, defaults to 1 if amt of bullets is 1
+		
+		//remove player health based on weapon cost
+		hp -= weapon.cost;
 		
 		//create the corect num of bullets
 		for (var i = 0; i < weapon.bulletNum; i++ ) //foreach bullet

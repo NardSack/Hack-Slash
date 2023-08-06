@@ -23,11 +23,13 @@ checkdone=true;
 
 if (action=="move")
 {
+
 	#region move
-//movement declare
-moveSpeed=1.5;
-moveX=lerp(moveX,inputX*moveSpeed,0.2);
-moveY=lerp(moveY,inputY*moveSpeed,0.2);
+	dashCheck = false;
+	//movement declare
+	moveSpeed=1.5;
+	moveX=lerp(moveX,inputX*moveSpeed,0.2);
+	moveY=lerp(moveY,inputY*moveSpeed,0.2);
 
 
 if read_timer > 0
@@ -174,7 +176,9 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 }
 
 if action == "dash"
+
 {#region dash
+dashCheck = true;
 if state== states.walkhorizon||state==states.idlehorizon
 {
 	state_set(states.dashhorizonal)
@@ -272,30 +276,36 @@ if revolverTimer > 0 { revolverTimer--; }; //decrease timer for revolver
 if shotgunTimer > 0 { shotgunTimer--; }; //decrease timer for shotgun
 if railgunTimer > 0 { railgunTimer--;}; //decrease timer for railgun
 
-if weapon == _playerWeapons[0]
-{
-	if shootKey	&& revolverTimer <= 0
-		{
-			revolverTimer = weapon.cooldown;
-			shoot_weapon();
-			audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
-		}
-}
-if weapon == _playerWeapons[1]
-{
-	if shootKey	&& shotgunTimer <= 0
-		{
-			shotgunTimer = weapon.cooldown;
-			shoot_weapon();
-			audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
-		}
-}
-if weapon == _playerWeapons[2]
-{
-	if shootKey	&& railgunTimer <= 0
-		{
-			railgunTimer = weapon.cooldown;
-			shoot_weapon();
-			audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
-		}
-}
+if dashCheck == false
+	{
+		if (hp - weapon.cost) > 0
+			{
+				if weapon == _playerWeapons[0]
+					{
+						if shootKey	&& revolverTimer <= 0
+							{
+								revolverTimer = weapon.cooldown;
+								shoot_weapon();
+								audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+							}
+					}
+				if weapon == _playerWeapons[1]
+					{
+						if shootKey	&& shotgunTimer <= 0
+							{
+								shotgunTimer = weapon.cooldown;
+								shoot_weapon();
+								audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+							}
+					}
+				if weapon == _playerWeapons[2]
+					{
+						if shootKey	&& railgunTimer <= 0
+							{
+								railgunTimer = weapon.cooldown;
+								shoot_weapon();
+								audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+							}
+					}
+			}
+	}

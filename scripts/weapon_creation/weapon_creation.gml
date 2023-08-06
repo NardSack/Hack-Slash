@@ -1,13 +1,14 @@
 //constructor template for weapons
 
-function create_weapon( _sprite, _weaponLength = 0, _bulletObj , _cooldown = 1, _bulletNum = 1, _spread = 0 ) constructor
+function create_weapon( _sprite, _weaponLength = 0, _bulletObj , _cooldown = 1, _bulletNum = 1, _spread = 0, _cost = 0) constructor
 {
 	sprite = _sprite; //required
-	length = _weaponLength; 
+	length = _weaponLength;
 	bulletObj = _bulletObj; //required
 	cooldown = _cooldown;
 	bulletNum = _bulletNum;
 	spread = _spread;
+	cost = _cost;
 }
 
 //player's weapon inventory
@@ -23,7 +24,8 @@ global.WeaponList = {
 		obj_rbullet, //bullet to be spawned
 		45, //cooldown (in frames)
 		1, //amount of bullets to shoot
-		0 //spread (angle in degrees)
+		0, //spread (angle in degrees)
+		0.5 //health cost
 	),
 	//second weapon
 	shotgun : new create_weapon(
@@ -32,7 +34,9 @@ global.WeaponList = {
 		obj_sgbullet,
 		90,
 		12,
-		60
+		60,
+		1.5
+		
 	),
 	//third weapon
 	railgun : new create_weapon(
@@ -41,7 +45,8 @@ global.WeaponList = {
 		obj_railbullet,
 		900,
 		1,
-		0
+		0,
+		4
 	)
 	
 }
