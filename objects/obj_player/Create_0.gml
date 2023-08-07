@@ -16,11 +16,11 @@ dashCheck = false;
 is_reading = false;
 read_timer = 0;
 read_delay = 30;
-
+hp= 10
 gun_alpha = 1;
 
 //damage setup
-get_damaged_create(10, true);
+get_damaged_create(hp, true);
 
 action = "move"
 //initialize the three states
@@ -41,12 +41,15 @@ dashhorizonal: new State(spr_playerdash_right),
 dashup: new State(spr_playerdash_up) ,
 dashdown: new State(spr_playerdash_down) ,
 
+death : new State(spr_playerdeath) 
+
 }
 
 #region
 states.attackdown.StateOnEnd(states.idledown);
 states.attackup.StateOnEnd(states.idleup);
 states.attackhorizontal.StateOnEnd(states.idlehorizon);
+
 //states.walkdown.StateOnEnd(states.idledown);
 //states.walkup.StateOnEnd(states.idleup);
 //states.walkhorizon.StateOnEnd(states.idlehorizon);

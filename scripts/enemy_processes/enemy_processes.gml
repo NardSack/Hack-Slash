@@ -52,7 +52,11 @@ function check_for_player()
 			{
 				 _found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
 			}
-			
+			else 
+			{
+				alert=false;
+				current_state=enemy_states.IDLE;
+			}
 			//start path if able to reach player
 			if _found_player == true
 				{

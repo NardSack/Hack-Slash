@@ -7,10 +7,14 @@ Menu
 camera_get_view_x(view_camera[0]),
 camera_get_view_y(view_camera[0]),
 [
-["option 1"],
-["option 2"],
-["Quit game "]
+["Resume"],
+["Save Game"],
+["Restart Level"],
+["Go back to Title"],
+["Quit game "],
+
+
 ],
-"Choose Action"
+""
 )
 }

@@ -4,7 +4,7 @@
 draw_sprite_stretched(sMenuBox,0,x,y,widthFull,heightFull)
 
 draw_set_color(c_white)
-draw_set_font(goofyfont)
+draw_set_font(global.font_main)
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
@@ -14,7 +14,7 @@ for (i=0;i<(optionsCount +_desc);i++)
 	draw_set_color(c_white)
 	if i==0 && _desc
 	{
-		draw_text(x+menuitem_x,y+menuitem_y,description)
+		draw_text(menuitem_x,menuitem_y,description)
 	}
 	else
 	{
@@ -22,9 +22,13 @@ for (i=0;i<(optionsCount +_desc);i++)
 		if hover == i -_desc
 		{
 			draw_set_color(c_yellow);
+			if hover == 1
+			{
+				draw_set_color(c_grey);
+			}
 			_str = hovermarker+_str;
 		}
-		draw_text(x+menuitem_x,y+menuitem_y+i*heightLine,_str)
+		draw_text(menuitem_x,menuitem_y+i*heightLine,_str)
 		draw_set_color(c_white)
 	}
 }

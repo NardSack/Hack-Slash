@@ -5,7 +5,7 @@ hover = 0
 mxPrev = mouse_x;
 myPrev = mouse_y;
 // declare which font to use
-draw_set_font(goofyfont);
+draw_set_font(global.font_main);
 
 //padding
 //op_border = 8
@@ -15,7 +15,7 @@ draw_set_font(goofyfont);
 option[0]="Start Game"
 option[1]="Setting"
 option[2]="Quit Game"
-option[3]="super long font thing"
+//option[3]="super long font thing"
 
 //array length of the options
 op_length = array_length(option)
@@ -38,3 +38,5 @@ width= max(width,string_width(option[longoption]))
 width+= string_width(hovermarker)
 widthfull = width+margin*2
 heightfull= height+margin*2
+x-= widthfull/2;
+x+=40

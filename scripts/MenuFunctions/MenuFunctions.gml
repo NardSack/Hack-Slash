@@ -4,7 +4,7 @@ function Menu(_x,_y,_options,_description =-1)
 {
 	if (!instance_exists(obj_menu))
 	{
-	with (instance_create_depth(_x,_y,-999,obj_menu))
+	with (instance_create_layer(_x,_y,"Pause_layer",obj_menu))
 	{
 		options = _options;
 		description = _description;
@@ -13,8 +13,8 @@ function Menu(_x,_y,_options,_description =-1)
 		
 		//set up size
 		margin = 8;
-		draw_set_font(goofyfont);
-		
+		draw_set_font(global.font_main);
+
 		width=1;
 		if (_description != -1)
 		width =max(width,string_width(_description));
@@ -23,16 +23,20 @@ function Menu(_x,_y,_options,_description =-1)
 			width =max(width,string_width(_options[i][0]))
 		}
 		width += string_width(hovermarker);
+		// to be changed
+		heightLine = 25
 		
-		heightLine = 17
 		height = heightLine * (optionsCount +!(description == -1))
 		widthFull = camera_get_view_width(view_camera[0]);
 		heightFull = camera_get_view_height(view_camera[0])
+		
+		
 		
 	}
 	}
 	else
 	{
 		instance_destroy(obj_menu)
+		
 	}
 }

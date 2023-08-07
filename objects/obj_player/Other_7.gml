@@ -9,3 +9,8 @@ if (state.stateOnEnd != undefined) //if next state is not defined
 	}
     state_set(state.stateOnEnd);
 }
+if (state==states.death)
+{
+	instance_destroy()
+	//code to start death screen
+}

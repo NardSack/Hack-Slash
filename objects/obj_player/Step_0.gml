@@ -20,7 +20,10 @@ inputY=0
 inputX=right-left;
 inputY=down-up;
 checkdone=true;
-
+if hp <=0
+{
+	state_set(states.death)
+}
 if (action=="move")
 {
 
