@@ -2,6 +2,7 @@
   "FolderOrderSettings": [
     {"name":"Animation Curves","order":1,"path":"folders/Animation Curves.yy",},
     {"name":"Combat System","order":2,"path":"folders/Combat System.yy",},
+    {"name":"Projectiles","order":3,"path":"folders/Combat System/Damage/Damages Players/Projectiles.yy",},
     {"name":"Dialogue System","order":3,"path":"folders/Dialogue System.yy",},
     {"name":"Objects","order":4,"path":"folders/Objects.yy",},
     {"name":"Paths","order":5,"path":"folders/Paths.yy",},
@@ -18,7 +19,6 @@
     {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":12,"path":"folders/Timelines.yy",},
     {"name":"Walls","order":13,"path":"folders/Walls.yy",},
-    {"name":"Projectiles","order":3,"path":"folders/Combat System/Damage/Damages Players/Projectiles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"entity_processes","order":1,"path":"scripts/entity_processes/entity_processes.yy",},

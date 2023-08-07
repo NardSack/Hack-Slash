@@ -17,6 +17,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Damages Enemies","folderPath":"folders/Combat System/Damage/Damages Enemies.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Projectiles","folderPath":"folders/Combat System/Damage/Damages Enemies/Projectiles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Damages Players","folderPath":"folders/Combat System/Damage/Damages Players.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Projectiles","folderPath":"folders/Combat System/Damage/Damages Players/Projectiles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"enemy","folderPath":"folders/Combat System/enemy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"player","folderPath":"folders/Combat System/player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Combat System/Scripts.yy",},
@@ -89,7 +90,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"darkRuins","folderPath":"folders/Tile Sets/darkRuins.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls","folderPath":"folders/Walls.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Projectiles","folderPath":"folders/Combat System/Damage/Damages Players/Projectiles.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"34x15 runt without shadows.png","CopyToMask":-1,"filePath":"datafiles",},
@@ -126,7 +126,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_lucentattack_left","path":"sprites/spr_lucentattack_left/spr_lucentattack_left.yy",},},
