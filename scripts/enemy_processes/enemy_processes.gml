@@ -44,8 +44,9 @@ function check_for_player()
 		}
 	else if _dis <= attack_dis
 		{
-			if coward == true and alert and (attack_dis > pref_dis) //if too close and coward and alerted
+			if coward and alert and (attack_dis > pref_dis) and _dis < pref_dis //if too close and coward and alerted
 				{
+					path_end();
 					current_state = enemy_states.FLEE;
 				}
 			else
@@ -103,11 +104,18 @@ function run_from_player()
 				var _moveDir = point_direction(_player_x, _player_y, x, y);
 			    var _target_x = x + lengthdir_x(attack_dis, _moveDir);
 			    var _target_y = y + lengthdir_y(attack_dis, _moveDir);
+				
+				_flee_spot = mp_grid_path(global.mp_grid, path, x, y, _target_x, _target_y, _type);
+			
 			}
 		else 
 			{
 				alert=false;
 				current_state=enemy_states.IDLE;
+			}
+		if _flee_spot == true
+			{
+				path_start(path, move_spd, path_action_stop, false);
 			}
 		}
 }
@@ -168,7 +176,7 @@ function perform_attack()
 
 function perform_ranged_attack()
 {
-	
+	path_end();
 }
 
 function show_hurt()

@@ -24,7 +24,10 @@ switch (current_state)
 	case enemy_states.FLEE:
 		calc_enemy_movement();
 		run_from_player();
-		check_for_player();
+		if distance_to_object(obj_player)+50 >= pref_dis
+		{
+			path_end();	
+		}
 		check_facing();
 		if path_index == -1 {current_state = enemy_states.IDLE} //if no longer moving
 		enemy_anim();
