@@ -1,11 +1,25 @@
 // Inherit the parent event
 event_inherited();
-hp = 5
-move_spd= 2
+
+//variables
+alert_dis = 800;
+attack_dis = 600;
+knockback_time = 1;
 
 //assign sprite 
-s_idle = spr_lucentidle_right
-s_walk = spr_lucentwalk_right
-s_attack = spr_lucentattack_right
-s_hurt = spr_lucenthurt
-s_dead = spr_lucentdeath
+s_idle = spr_lucentidle_right;
+s_walk = spr_lucentwalk_right;
+s_attack = spr_lucentattack_right;
+s_hurt = spr_lucenthurt;
+s_dead = spr_lucentdeath;
+
+//attack
+attack_frame_start = 4;
+attack_frame_end = 7;
+can_attack = true;
+attack_timer = 0;
+attack_cooldown = 300;
+attack_timer = attack_cooldown;
+damage = 2.5;
+knockback_time = 0;
+get_damaged_create(2);

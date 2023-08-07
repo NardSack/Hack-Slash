@@ -123,6 +123,12 @@ function perform_attack()
 	path_end();
 }
 
+function perform_ranged_attack()
+{
+
+	
+}
+
 function show_hurt()
 {	///@desc show the hurt sprite when being knocked back
 	

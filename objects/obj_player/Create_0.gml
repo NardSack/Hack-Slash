@@ -56,7 +56,7 @@ states.attackhorizontal.StateOnEnd(states.idlehorizon);
 #endregion
 
 if (inputX !=0 || inputY !=0)
-{//
+{
 	states.dashup.StateOnEnd(states.walkup);
 	states.dashdown.StateOnEnd(states.walkdown);
 	states.dashhorizonal.StateOnEnd(states.walkhorizon);

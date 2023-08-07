@@ -236,6 +236,7 @@
     {"id":{"name":"spr_playeridle_left","path":"sprites/spr_playeridle_left/spr_playeridle_left.yy",},},
     {"id":{"name":"spr_runtdeath","path":"sprites/spr_runtdeath/spr_runtdeath.yy",},},
     {"id":{"name":"spr_playermelee_leftHB","path":"sprites/spr_playermelee_leftHB/spr_playermelee_leftHB.yy",},},
+    {"id":{"name":"obj_lucent_shot","path":"objects/obj_lucent_shot/obj_lucent_shot.yy",},},
     {"id":{"name":"spr_runtattackHB","path":"sprites/spr_runtattackHB/spr_runtattackHB.yy",},},
     {"id":{"name":"spr_runtwalk_down","path":"sprites/spr_runtwalk_down/spr_runtwalk_down.yy",},},
     {"id":{"name":"spr_carnifexvfx1_right","path":"sprites/spr_carnifexvfx1_right/spr_carnifexvfx1_right.yy",},},
@@ -294,6 +295,7 @@
     {"roomId":{"name":"rmInitialize","path":"rooms/rmInitialize/rmInitialize.yy",},},
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
