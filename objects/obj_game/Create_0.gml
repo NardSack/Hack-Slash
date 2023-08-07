@@ -7,6 +7,7 @@ _debug = false;
 enum enemy_states {
 	IDLE,
 	MOVE,
+	FLEE,
 	ATTACK,
 	DEAD,
 }

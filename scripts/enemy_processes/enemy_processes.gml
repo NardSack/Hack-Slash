@@ -38,40 +38,78 @@ function check_for_player()
 	
 	//check to start chasing or not
 	if ((_dis <= alert_dis) or (alert)) and _dis > attack_dis
-	{
-		alert = true;
-	
-		if calc_path_timer-- <= 0 {
+		{
+			alert = true;
+			chase_player();
+		}
+	else if _dis <= attack_dis
+		{
+			if coward == true and alert and (attack_dis > pref_dis) //if too close and coward and alerted
+				{
+					current_state = enemy_states.FLEE;
+				}
+			else
+				{	
+				//close enough to attack and alerted
+				if _dis <= attack_dis && attack_timer-- <= 0
+					{
+						current_state = enemy_states.ATTACK;
+					}
+				}
+		}
+}
+
+function chase_player()
+{
+	if calc_path_timer-- <= 0 {
+		//reset timer
+		calc_path_timer = calc_path_delay;
+		
+		//check for path to player
+		if x == xp and y == yp { var _type = 0} else { var _type = 1 }
+			
+		if instance_exists( obj_player )
+			{
+				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
+			}
+		else 
+			{
+				alert=false;
+				current_state=enemy_states.IDLE;
+			}
+		//start path if able to reach player
+		if _found_player == true
+			{
+				path_start(path, move_spd, path_action_stop, false);
+			}
+	}	
+}
+
+function run_from_player()
+{	
+	if calc_path_timer-- <= 0 
+		{
 			//reset timer
 			calc_path_timer = calc_path_delay;
 		
 			//check for path to player
 			if x == xp and y == yp { var _type = 0} else { var _type = 1 }
-			
-			if instance_exists( obj_player )
+		
+		if instance_exists(obj_player)
 			{
-				 _found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
+				var _player_x = obj_player.x;
+				var _player_y = obj_player.y;
+	
+				var _moveDir = point_direction(_player_x, _player_y, x, y);
+			    var _target_x = x + lengthdir_x(attack_dis, _moveDir);
+			    var _target_y = y + lengthdir_y(attack_dis, _moveDir);
 			}
-			else 
+		else 
 			{
 				alert=false;
 				current_state=enemy_states.IDLE;
 			}
-			//start path if able to reach player
-			if _found_player == true
-				{
-					path_start(path, move_spd, path_action_stop, false);
-				}
 		}
-	}
-	else
-	{
-		//close enough to attack
-		if _dis <= attack_dis && attack_timer-- <= 0
-			{
-				current_state = enemy_states.ATTACK;
-			}
-	}
 }
 
 function enemy_anim()
@@ -85,6 +123,11 @@ function enemy_anim()
 	
 		case enemy_states.MOVE:
 			sprite_index = s_walk;
+			show_hurt()
+		break;
+		
+		case enemy_states.FLEE:
+			sprite_index = s_flee;
 			show_hurt()
 		break;
 	
@@ -125,7 +168,6 @@ function perform_attack()
 
 function perform_ranged_attack()
 {
-
 	
 }
 

@@ -8,7 +8,7 @@ switch (bullet_state)
 			}
 			
 			depth = -y -50;
-						bullet_state = 1;
+
 	break;
 	
 	//shoot / travel
@@ -31,7 +31,7 @@ switch (bullet_state)
 
 	//if out of room
 	var _pad = 32;
-	if bbox_right < -_pad || bbox_left > room_width || bbox_bottom < 0 || bbox_top > room_height
+	if bbox_right < -_pad || bbox_left > room_width + _pad || bbox_bottom < -_pad || bbox_top > room_height + _pad
 	{
 		destroy = true;	
 	}

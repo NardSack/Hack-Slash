@@ -10,8 +10,8 @@ camera_get_view_y(view_camera[0]),
 ["Resume"],
 ["Save Game"],
 ["Restart Level"],
-["Go back to Title"],
-["Quit game "],
+["Back to Title"],
+["Quit Game "],
 
 
 ],

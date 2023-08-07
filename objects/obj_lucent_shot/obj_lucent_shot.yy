@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Damages Players",
-    "path": "folders/Combat System/Damage/Damages Players.yy",
+    "name": "Projectiles",
+    "path": "folders/Combat System/Damage/Damages Players/Projectiles.yy",
   },
   "parentObjectId": {
     "name": "obj_damage_player",

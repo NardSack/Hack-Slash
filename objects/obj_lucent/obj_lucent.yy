@@ -15,8 +15,8 @@
     "path": "folders/Combat System/enemy.yy",
   },
   "parentObjectId": {
-    "name": "obj_dummy",
-    "path": "objects/obj_dummy/obj_dummy.yy",
+    "name": "obj_teneri",
+    "path": "objects/obj_teneri/obj_teneri.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -37,6 +37,9 @@
     "name": "spr_lucentidle_right",
     "path": "sprites/spr_lucentidle_right/spr_lucentidle_right.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_lucentidle_right",
+    "path": "sprites/spr_lucentidle_right/spr_lucentidle_right.yy",
+  },
   "visible": true,
 }

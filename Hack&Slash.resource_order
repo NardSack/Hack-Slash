@@ -18,6 +18,7 @@
     {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":12,"path":"folders/Timelines.yy",},
     {"name":"Walls","order":13,"path":"folders/Walls.yy",},
+    {"name":"Projectiles","order":3,"path":"folders/Combat System/Damage/Damages Players/Projectiles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"entity_processes","order":1,"path":"scripts/entity_processes/entity_processes.yy",},
@@ -32,7 +33,6 @@
     {"name":"bg","order":2,"path":"sprites/bg/bg.yy",},
     {"name":"obj_railbullet","order":1,"path":"objects/obj_railbullet/obj_railbullet.yy",},
     {"name":"spr_speaktrigger_interact","order":1,"path":"sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",},
-    {"name":"obj_lucent_shot","order":2,"path":"objects/obj_lucent_shot/obj_lucent_shot.yy",},
     {"name":"spr_damage_player_test","order":6,"path":"sprites/spr_damage_player_test/spr_damage_player_test.yy",},
     {"name":"Title","order":3,"path":"sprites/Title/Title.yy",},
     {"name":"obj_runt","order":2,"path":"objects/obj_runt/obj_runt.yy",},

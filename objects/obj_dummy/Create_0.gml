@@ -2,6 +2,7 @@
 alert = false;
 alert_dis = 0;
 attack_dis = 0;
+pref_dis = 0;
 move_spd = 0;
 current_state = enemy_states.IDLE;
 facing = 1;
