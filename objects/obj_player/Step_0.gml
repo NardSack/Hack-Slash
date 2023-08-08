@@ -20,6 +20,15 @@ inputY=0
 inputX=right-left;
 inputY=down-up;
 checkdone=true;
+
+
+if energy < 10
+{
+energy+=0.00833
+}
+
+energy = clamp(energy, 0, 10)
+
 if hp <=0
 {
 	state_set(states.death)
@@ -281,7 +290,7 @@ if railgunTimer > 0 { railgunTimer--;}; //decrease timer for railgun
 
 if dashCheck == false
 	{
-		if (hp - weapon.cost) > 0
+		if (energy - weapon.cost) > 0
 			{
 				if weapon == _playerWeapons[0]
 					{

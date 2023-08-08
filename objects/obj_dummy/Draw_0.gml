@@ -4,12 +4,13 @@ draw_set_font(global.font_main)
 
 //draw text
 draw_text( x, y, string(hp));
+draw_text(x - 40, y, string(current_state));
 //draw_text( x, y-50, string(attack_timer));
 
 //draw player hitbox
-//draw_set_color(c_red);
-//draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1);
-//draw_set_color(c_white);
+draw_set_color(c_red);
+draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,1);
+draw_set_color(c_white);
 
 //draw ai pathing
 if keyboard_check(ord("O"))

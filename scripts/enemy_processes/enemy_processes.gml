@@ -44,19 +44,19 @@ function check_for_player()
 		}
 	else if _dis <= attack_dis
 		{
-			if coward and alert and (attack_dis > pref_dis) and _dis < pref_dis //if too close and coward and alerted
-				{
-					path_end();
-					current_state = enemy_states.FLEE;
-				}
-			else
-				{	
+			//if coward and alert and (attack_dis > pref_dis) and _dis < pref_dis //if too close and coward and alerted
+			//	{
+			//		path_end();
+			//		current_state = enemy_states.FLEE;
+			//	}
+			//else
+			//	{	
 				//close enough to attack and alerted
 				if _dis <= attack_dis && attack_timer-- <= 0
 					{
 						current_state = enemy_states.ATTACK;
 					}
-				}
+				//}
 		}
 }
 

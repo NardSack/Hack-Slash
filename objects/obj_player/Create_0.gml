@@ -17,6 +17,7 @@ is_reading = false;
 read_timer = 0;
 read_delay = 30;
 hp= 10
+energy = 10;
 gun_alpha = 1;
 
 //damage setup

@@ -25,7 +25,7 @@ global.WeaponList = {
 		45, //cooldown (in frames)
 		1, //amount of bullets to shoot
 		0, //spread (angle in degrees)
-		0.5 //health cost
+		1 //cost
 	),
 	//second weapon
 	shotgun : new create_weapon(
@@ -35,18 +35,17 @@ global.WeaponList = {
 		90,
 		12,
 		60,
-		1.5
-		
+		3
 	),
 	//third weapon
 	railgun : new create_weapon(
 		spr_railgun,
 		sprite_get_bbox_right(spr_railgun) - sprite_get_xoffset(spr_railgun),
 		obj_railbullet,
-		900,
+		2400,
 		1,
 		0,
-		4
+		8
 	)
 	
 }
