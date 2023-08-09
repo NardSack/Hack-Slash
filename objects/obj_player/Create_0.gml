@@ -16,12 +16,11 @@ dashCheck = false;
 is_reading = false;
 read_timer = 0;
 read_delay = 30;
-hp= 10
 energy = 10;
 gun_alpha = 1;
 
 //damage setup
-get_damaged_create(hp, true);
+get_damaged_create(10, true);
 
 action = "move"
 //initialize the three states

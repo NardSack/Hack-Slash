@@ -9,6 +9,7 @@ facing = 1;
 hsp = 0;
 vsp = 0;
 knockback_time = 0;
+hb_offset = -10;
 //------------AI Pathing------------//
 
 //init previous positions

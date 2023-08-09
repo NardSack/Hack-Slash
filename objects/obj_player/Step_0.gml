@@ -33,6 +33,7 @@ if hp <=0
 {
 	state_set(states.death)
 }
+
 if (action=="move")
 {
 

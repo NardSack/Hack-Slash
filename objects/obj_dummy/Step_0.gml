@@ -1,5 +1,7 @@
 //receive damage
 get_damaged( obj_damage_enemy );
+//depth
+depth = -bbox_bottom;
 
 //death
 if hp <= 0

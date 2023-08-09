@@ -52,7 +52,7 @@ function check_for_player()
 			//else
 			//	{	
 				//close enough to attack and alerted
-				if _dis <= attack_dis && attack_timer-- <= 0
+				if /*_dis <= attack_dis &&*/ attack_timer-- <= 0
 					{
 						current_state = enemy_states.ATTACK;
 					}
@@ -176,6 +176,18 @@ function perform_attack()
 
 function perform_ranged_attack()
 {
+	if image_index >= attack_frame_start
+		{
+			
+			//create hitbox
+			var bulletInst = instance_create_depth(x, y-22, depth, obj_lucent_shot);
+			bulletInst.damage = damage;
+			bulletInst.knockback_time = knockback_time;
+			
+			//reset for next attack
+			attack_timer += attack_cooldown;	
+			
+		}
 	path_end();
 }
 

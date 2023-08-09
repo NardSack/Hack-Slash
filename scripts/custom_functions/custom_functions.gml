@@ -63,9 +63,9 @@ function shoot_weapon()
 //damage code
 function get_damaged_create(_hp = 100, _iframes = false )
 {
-
+	maxHp = _hp;
 	hp = _hp;
-	maxhp = _hp
+
 	if _iframes = true
 		{
 			iframeTimer = 0;
@@ -102,6 +102,9 @@ function get_damaged( _damageObj, _iframes = false )
 								image_alpha = 1;
 							}
 					}
+					
+				hp = clamp(hp, 0, maxHp);
+					
 				exit; //cut off the function if using iframes, so it only counts down the timer and does nothing else
 			}
 			
@@ -178,4 +181,6 @@ function get_damaged( _damageObj, _iframes = false )
 							}
 					}
 			}
+			
+			hp = clamp(hp, 0, maxHp);
 	}

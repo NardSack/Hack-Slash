@@ -1,31 +1,13 @@
-//state machine
-switch (bullet_state)
-{
-	case 0:
-		if instance_exists(obj_player)
-			{
-				dir = point_direction(x, y, obj_player.x, obj_player.y);	
-			}
-			
-			depth = -y -50;
-
-	break;
-	
-	//shoot / travel
-	
-	case 1:
-		//movement
+//move bullet
+if destroy == false
+	{
 		xspd = lengthdir_x(spd, dir);
 		yspd = lengthdir_y(spd,dir);
 		x += xspd;
 		y += yspd;
-		
-		//update depth 
-		depth = -y;
-	break;
-	
-}
-
+	}	
+//update depth 
+depth = -y;
 
 //clean up
 
@@ -37,7 +19,11 @@ switch (bullet_state)
 	}
 	
 	// actually destroy
-	if destroy == true { instance_destroy(); };
+	if destroy == true
+		{	
+			destroy_anim = true;
+			sprite_index = s_break;
+		}	
 
 	//collision w/ wall
 	if place_meeting(x, y, obj_solidwall) { destroy = true; };

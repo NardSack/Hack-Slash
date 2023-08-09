@@ -1,3 +1,6 @@
+//depth
+depth = -bbox_bottom;
+
 if attack_timer > 0
 	{
 		attack_timer--;
