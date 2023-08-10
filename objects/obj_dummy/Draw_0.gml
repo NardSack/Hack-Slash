@@ -1,6 +1,5 @@
 //draw sprite
 draw_sprite_ext(sprite_index, image_index, x, y, facing, 1, 0, c_white, 1);
-draw_set_font(global.font_main)
 
 //draw text
 //draw_text( x, y, string(hp));
@@ -16,7 +15,7 @@ draw_sprite(spr_enemyhealth, _hpImage, x, y - sprite_height + hb_offset);
 //draw_set_color(c_white);
 
 //draw ai pathing
-if keyboard_check(ord("O"))
-{
-	draw_path(path, x, y, 0);	
-}	
+//if keyboard_check(ord("O"))
+//{
+//	draw_path(path, x, y, 0);	
+//}	

@@ -4,7 +4,7 @@ event_inherited();
 alert_dis = 500;
 attack_dis = 2;
 pref_dis = attack_dis;
-move_spd = 4.5;
+move_spd = 3;
 knockback_time = 1;
 //assign sprites
 s_idle = spr_runtidle_right;

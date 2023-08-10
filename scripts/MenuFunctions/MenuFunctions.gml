@@ -14,7 +14,7 @@ function Menu(_x,_y,_options,_description =-1)
 		//set up size
 		margin = 8;
 		draw_set_font(global.font_main);
-
+		
 		width=1;
 		if (_description != -1)
 		width =max(width,string_width(_description));

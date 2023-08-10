@@ -44,19 +44,19 @@ function check_for_player()
 		}
 	else if _dis <= attack_dis
 		{
-			//if coward and alert and (attack_dis > pref_dis) and _dis < pref_dis //if too close and coward and alerted
-			//	{
-			//		path_end();
-			//		current_state = enemy_states.FLEE;
-			//	}
-			//else
-			//	{	
-				//close enough to attack and alerted
-				if /*_dis <= attack_dis &&*/ attack_timer-- <= 0
-					{
-						current_state = enemy_states.ATTACK;
-					}
-				//}
+		//if coward and alert and (attack_dis > pref_dis) and _dis < pref_dis //if too close and coward and alerted
+		//	{
+		//		path_end();
+		//		current_state = enemy_states.FLEE;
+		//	}
+		//else
+		//	{	
+			//close enough to attack and alerted
+			if /*_dis <= attack_dis &&*/ attack_timer-- <= 0
+				{
+					current_state = enemy_states.ATTACK;
+				}
+			//}
 		}
 }
 
@@ -79,9 +79,13 @@ function chase_player()
 				current_state=enemy_states.IDLE;
 			}
 		//start path if able to reach player
-		if _found_player == true
+		if _found_player == true && instance_exists(obj_player)
 			{
 				path_start(path, move_spd, path_action_stop, false);
+			}
+		else
+			{
+				path_end();	
 			}
 	}	
 }

@@ -1,4 +1,4 @@
-accept_key = keyboard_check_pressed(ord("F"));
+accept_key = global.interactKey;
 
 textbox_x = camera_get_view_x(view_camera[0]);
 textbox_y = camera_get_view_y(view_camera[0]) + 288;
@@ -147,6 +147,10 @@ if accept_key
 						instance_destroy();
 						obj_player.is_reading = false;
 						obj_player.read_timer = obj_player.read_delay;
+						draw_set_halign(fa_left);
+						draw_set_valign(fa_top);
+						draw_set_font(-1);
+						draw_set_alpha(1);
 					}
 			}
 		//if not done typing, fill out the page instantly
@@ -218,4 +222,4 @@ for (var c = 0; c < draw_char; c++)
 		draw_text_color(char_x[c, page] + _shake_x, char_y[c, page] + _float_y + _shake_y, char[c, page], col_1[c,page], col_2[c,page], col_3[c,page], col_4[c,page], 1);
 		
 	}
-	
+

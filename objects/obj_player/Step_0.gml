@@ -1,19 +1,19 @@
 //controls
-right =keyboard_check(ord("D"));
-left = keyboard_check(ord("A"));
-up =keyboard_check(ord("W"));
-down = keyboard_check(ord("S"));
+right = global.rightKey;
+left = global.leftKey;
+up = global.upKey;
+down = global.downKey;
 
-meleeKey = keyboard_check_pressed(vk_shift);
-interactKey = keyboard_check_pressed(ord("F"));
+meleeKey = global.meleeKey;
+interactKey = global.interactKey;
 
-shootKey = mouse_check_button(mb_left);
+shootKey = global.shootKey;
 
-swapKey1 = keyboard_check_pressed((ord("1")));
-swapKey2 = keyboard_check_pressed((ord("2")));
-swapKey3 = keyboard_check_pressed((ord("3")));
+swapKey1 = global.swapKey1;
+swapKey2 = global.swapKey2;
+swapKey3 = global.swapKey3;
 
-dash= keyboard_check_pressed(vk_space);/*||keyboard_check_pressed(vk_shift)*/
+dash= global.dashKey;
 
 inputX=0
 inputY=0
@@ -22,16 +22,18 @@ inputY=down-up;
 checkdone=true;
 
 
-if energy < 10
+if energy < maxEnergy
 {
 energy+=0.00833
 }
 
-energy = clamp(energy, 0, 10)
+energy = clamp(energy, 0, maxEnergy)
 
 if hp <=0
 {
-	state_set(states.death)
+	gun_alpha = 0;
+	state_set(states.death);
+	exit;
 }
 
 if (action=="move")
@@ -180,7 +182,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 		image_index=0
 		dashy=inputY
 		dashx=inputX
-		moveSpeed=6;
+		moveSpeed=4.5;
 	}
 
 	

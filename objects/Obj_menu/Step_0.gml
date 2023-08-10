@@ -1,6 +1,6 @@
-var up = keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"))
-var down = keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))
-var select = keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_space)
+var up = global.menuUpKey;
+var down = global.menuDownKey;
+var select = global.interactKey||global.dashKey;
 x=camera_get_view_x(view_camera[0])
 y=camera_get_view_y(view_camera[0])
 
@@ -21,7 +21,7 @@ if point_in_rectangle(mouse_x,mouse_y,x,y,x+widthFull,y+heightFull)
 }
 
 
-hover += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+hover += down - up;
 
 if (hover>optionsCount -1) 
 {
@@ -31,7 +31,7 @@ if (hover < 0 )
 {
 	hover = optionsCount-1
 }
-if ((mouse_check_button_pressed(mb_left)&& mouseOver)||keyboard_check_pressed(vk_enter))
+if ((mouse_check_button_pressed(mb_left) && mouseOver)||select)
 {
 		switch(hover)
 		{
