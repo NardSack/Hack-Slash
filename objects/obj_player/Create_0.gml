@@ -23,7 +23,7 @@ maxEnergy = 10;
 gun_alpha = 1;
 
 //damage setup
-get_damaged_create(10, true);
+get_damaged_create(20, true);
 
 action = "move"
 //initialize the three states

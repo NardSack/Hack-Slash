@@ -20,6 +20,6 @@ can_attack = true;
 attack_timer = 0;
 attack_cooldown = 100;
 attack_timer = attack_cooldown;
-damage = 0.75;
+damage = 2;
 knockback_time = 0;
 get_damaged_create(0.5);

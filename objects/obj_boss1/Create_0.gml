@@ -23,7 +23,7 @@ attack2_frame_start = 9;
 can_attack = true;
 attack_cooldown = 10;
 attack_timer = attack_cooldown;
-damage = 3;
+damage = 6;
 knockback_time = 0;
 get_damaged_create(100);
 

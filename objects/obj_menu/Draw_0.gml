@@ -1,7 +1,15 @@
    /// @description Insert description here
 // You can write your code in this editor
 
-draw_sprite_stretched(sMenuBox,0,x,y,widthFull,heightFull)
+//draw_sprite_stretched(sMenuBox,0,x,y,widthFull,heightFull)
+
+var _camX = camera_get_view_x(view_camera[0]);
+var _camW = camera_get_view_width(view_camera[0]);
+var _camY = camera_get_view_y(view_camera[0]);
+var _camH = camera_get_view_height(view_camera[0]);
+
+//draw a black rectangle
+draw_rectangle_color(_camX, _camY, _camX+_camW, _camY+_camH, c_black,c_black,c_black,c_black, false);
 
 draw_set_color(c_white)
 draw_set_font(global.font_main)

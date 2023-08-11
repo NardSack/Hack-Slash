@@ -1,4 +1,4 @@
-//drawing the player's weapon
+	//drawing the player's weapon
 function draw_my_weapon()
 	{
 		//draw weapon

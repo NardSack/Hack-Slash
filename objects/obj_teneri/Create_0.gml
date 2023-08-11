@@ -19,6 +19,6 @@ can_attack = true;
 attack_timer = 0;
 attack_cooldown = 100;
 attack_timer = attack_cooldown;
-damage = 1.25;
+damage = 3;
 knockback_time = 0;
 get_damaged_create(1.5);
