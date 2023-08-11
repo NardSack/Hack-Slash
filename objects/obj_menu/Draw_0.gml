@@ -33,7 +33,7 @@ for (i=0;i<(optionsCount +_desc);i++)
 	}
 }
 
-
+draw_set_font(-1);
 
 
 

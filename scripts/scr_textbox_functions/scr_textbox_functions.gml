@@ -85,14 +85,14 @@ if argument_count > 1
 			speaker_sprite[page_number] = spr_player_spk;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_player_mid;
-			name[page_number] = "The Venator";
+			name[page_number] = "Venator";
 			break;
 			
 		case "playerdespair":
 			speaker_sprite[page_number] = spr_player_spk_despair;
 			txtb_spr[page_number] = spr_textbox;
 			snd[page_number] = snd_player_low;
-			name[page_number] = "The Venator";
+			name[page_number] = "Venator";
 			break;
 			
 		case "buddy":

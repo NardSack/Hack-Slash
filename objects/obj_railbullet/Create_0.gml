@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-damage = 8;
+damage = 4;
 dir = 0;
 spd = 150; //speed of bullet
 xspd = 0;

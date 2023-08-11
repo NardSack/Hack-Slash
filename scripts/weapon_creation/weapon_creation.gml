@@ -42,9 +42,9 @@ global.WeaponList = {
 		spr_railgun,
 		sprite_get_bbox_right(spr_railgun) - sprite_get_xoffset(spr_railgun),
 		obj_railbullet,
-		2400,
+		240,
+		2,
 		1,
-		0,
 		8
 	)
 	

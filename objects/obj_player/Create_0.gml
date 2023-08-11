@@ -2,7 +2,7 @@ inputX=0;
 inputY=0;
 dashy=0
 dashx=0
-moveSpeed=2;
+moveSpeed=1;
 moveX=0;
 moveY=0;
 dir=1;
@@ -16,7 +16,10 @@ dashCheck = false;
 is_reading = false;
 read_timer = 0;
 read_delay = 30;
+
 energy = 10;
+maxEnergy = 10;
+
 gun_alpha = 1;
 
 //damage setup

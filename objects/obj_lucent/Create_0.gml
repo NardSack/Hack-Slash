@@ -33,6 +33,6 @@ recoverTime = 45;
 
 bulletInst = noone;
 
-damage = 2.5;
+damage = 2;
 knockback_time = 0;
 get_damaged_create(2);

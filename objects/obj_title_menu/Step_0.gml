@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-var up = keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"))
-var down = keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))
-var select = keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_space)
+var up = global.menuUpKey;
+var down = global.menuDownKey;
+var select = global.interactKey||global.dashKey;
 
 mouseOver = false;
 if point_in_rectangle(mouse_x,mouse_y,x,y,x+width,y+height)
@@ -18,7 +18,7 @@ if point_in_rectangle(mouse_x,mouse_y,x,y,x+width,y+height)
 	}
 }
 
-hover += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+hover += down - up;
 
 if (hover>op_length -1) 
 {
