@@ -35,6 +35,7 @@ switch (current_state)
 	check_facing();
 	enemy_anim();
 	break;
+	
 	case enemy_states.DEAD:
 	path_delete(path)
 	check_facing();
