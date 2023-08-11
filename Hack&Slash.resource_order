@@ -41,6 +41,7 @@
     {"name":"obj_boss1","order":4,"path":"objects/obj_boss1/obj_boss1.yy",},
     {"name":"spr_speaktrigger_interact","order":1,"path":"sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",},
     {"name":"spr_playerenergy","order":12,"path":"sprites/spr_playerenergy/spr_playerenergy.yy",},
+    {"name":"Room14","order":1,"path":"rooms/Room14/Room14.yy",},
     {"name":"spr_playerhealth","order":11,"path":"sprites/spr_playerhealth/spr_playerhealth.yy",},
     {"name":"spr_damage_player_test","order":6,"path":"sprites/spr_damage_player_test/spr_damage_player_test.yy",},
     {"name":"Title","order":3,"path":"sprites/Title/Title.yy",},

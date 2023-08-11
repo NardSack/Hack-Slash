@@ -18,9 +18,20 @@ switch (current_state)
 	
 	case enemy_states.ATTACK:
 	calc_enemy_movement();
+	if sprite_index == s_attack_1
+	{
+		s_attack_hb=s_attack_hb_1
+		attack_frame_start=attack1_frame_start;
+	}
+	else if sprite_index == s_attack_2
+	{
+		s_attack_hb=s_attack_hb_2
+		attack_frame_start=attack2_frame_start;
+	}
+	
 	if attack_timer <= 0
 	{
-		bossattack();
+		perform_attack();
 	}
 	check_facing();
 	enemy_anim();

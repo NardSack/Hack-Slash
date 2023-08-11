@@ -13,7 +13,7 @@ function calc_enemy_movement()//for knockbacks
 	}
 	check_if_stopped();
 }
-
+// can combine the function //////////
 function check_if_stopped()
 {
 	if abs(hsp) < 0.1 hsp = 0;
@@ -26,7 +26,8 @@ function check_facing()
 	if knockback_time <= 0
 		{
 			var _facing = sign(x-xp);
-			if _facing != 0 { facing = _facing }
+			if _facing != 0 { facing = _facing; image_xscale=facing }
+			
 		}
 }
 
@@ -156,45 +157,55 @@ function enemy_anim()
 	xp = x;
 	yp = y;
 }
- function bossattack()
-{
-	var attack = s_attack
-	if attack == s_attack_1
-	{ 
-		if image_index>=attack_frame_start
-		{
-			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
-			{
-				mask_index : s_attack_hb_1
-			});
-			_inst.image_xscale = obj_boss1.image_xscale
-			_inst.damage = damage;
-		}
-	}
-	else if attack == s_attack_2
-	{
-		if image_index>=attack2_frame_start
-		{
-			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
-			{
-				mask_index : s_attack_hb_2
-			});
-			_inst.image_xscale = obj_boss1.image_xscale
-			_inst.damage = damage;
-		}
-	}
-	s_attack=attack
-	//reset for next attack
-	attack_timer += attack_cooldown;
-	path_end()
-}
+// function bossattack()
+//{
+//	var attack = s_attack
+//	if attack == s_attack_1
+//	{ 
+//		if image_index>=attack_frame_start
+//		{
+//			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
+//			{
+//				mask_index : s_attack_hb_1
+//			});
+//			_inst.image_xscale = obj_boss1.image_xscale
+//			_inst.damage = damage;
+//		}
+//	}
+//	else if attack == s_attack_2
+//	{
+//		if image_index>=attack2_frame_start
+//		{
+//			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
+//			{
+//				mask_index : s_attack_hb_2
+//			});
+//			_inst.image_xscale = obj_boss1.image_xscale
+//			_inst.damage = damage;
+//		}
+//	}
+//	s_attack=attack
+//	//reset for next attack
+//	attack_timer += attack_cooldown;
+//	path_end()
+//}
 function perform_attack()
 {
 	if image_index >= attack_frame_start
 	{
+		var depforhb = depth
+		if sprite_index == spr_carnifexattack2_right or sprite_index == spr_carnifexattack1_right
+		{
+			depforhb +=100
+		}
+		else
+		{
+			depforhb -=2000
+		}
 			//create hitbox
-			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
+			var _inst = instance_create_depth(x, y, depforhb, obj_enemyattack_hb,
 			{
+				sprite_index : s_attack_hb,
 				mask_index : s_attack_hb
 			}
 			);
