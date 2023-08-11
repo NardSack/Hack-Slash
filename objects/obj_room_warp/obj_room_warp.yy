@@ -1,21 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_player",
+  "name": "obj_room_warp",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Combat System/player.yy",
+    "name": "Game Control",
+    "path": "folders/Game Control.yy",
   },
   "parentObjectId": null,
-  "persistent": true,
+  "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
@@ -31,12 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_playeridle_down",
-    "path": "sprites/spr_playeridle_down/spr_playeridle_down.yy",
+    "name": "spr_room_warp",
+    "path": "sprites/spr_room_warp/spr_room_warp.yy",
   },
-  "spriteMaskId": {
-    "name": "spr_playeridle_down",
-    "path": "sprites/spr_playeridle_down/spr_playeridle_down.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

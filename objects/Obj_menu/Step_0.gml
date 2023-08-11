@@ -38,7 +38,7 @@ if ((mouse_check_button_pressed(mb_left) && mouseOver)||select)
 			case 0: break;
 			case 1: break;
 			case 2 : room_restart() break;
-			case 3 : room_goto(MenuRoom) break;
+			case 3 : room_goto(rm_menu) break;
 			case 4: game_end() break;
 		}
 		instance_destroy();

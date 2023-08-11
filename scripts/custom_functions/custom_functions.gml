@@ -144,7 +144,7 @@ function get_damaged( _damageObj, _iframes = false )
 									}
 								//take damage from specific instance
 
-								damage_entity( self, _inst, _inst.damage , self.knockback_time);
+								damage_entity( self, _inst, _inst.damage , _inst.knockback_time); //knock back using instance knockback
 								show_hurt();
 						
 								_hitConfirm = true;
