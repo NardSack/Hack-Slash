@@ -1,4 +1,4 @@
-function calc_enemy_movement()
+function calc_enemy_movement()//for knockbacks
 {
 	///@desc moves enemy and applies drag
 		
@@ -67,11 +67,12 @@ function chase_player()
 		calc_path_timer = calc_path_delay;
 		
 		//check for path to player
-		if x == xp and y == yp { var _type = 0} else { var _type = 1 }
+		//if x == xp and y == yp { var _type = 0} else { var _type = 1 }
+		//is _type neccary it is only allowing diagonal movement
 			
 		if instance_exists( obj_player )
 			{
-				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
+				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, choose(0,1));
 			}
 		else 
 			{
@@ -151,7 +152,38 @@ function enemy_anim()
 	xp = x;
 	yp = y;
 }
-
+ function bossattack()
+{
+	var attack = s_attack
+	if attack == s_attack_1
+	{ 
+		if image_index>=attack_frame_start
+		{
+			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
+			{
+				mask_index : s_attack_hb_1
+			});
+			_inst.image_xscale = obj_boss1.image_xscale
+			_inst.damage = damage;
+		}
+	}
+	else if attack == s_attack_2
+	{
+		if image_index>=attack2_frame_start
+		{
+			var _inst = instance_create_depth(x, y, depth-2000, obj_enemyattack_hb,
+			{
+				mask_index : s_attack_hb_2
+			});
+			_inst.image_xscale = obj_boss1.image_xscale
+			_inst.damage = damage;
+		}
+	}
+	s_attack=attack
+	//reset for next attack
+	attack_timer += attack_cooldown;
+	path_end()
+}
 function perform_attack()
 {
 	if image_index >= attack_frame_start
@@ -172,7 +204,7 @@ function perform_attack()
 			attack_timer += attack_cooldown;
 	}
 	path_end();
-}
+} 
 
 function perform_ranged_attack()
 {

@@ -6,6 +6,7 @@ pref_dis = 0;
 move_spd = 0;
 current_state = enemy_states.IDLE;
 facing = 1;
+//for knockback
 hsp = 0;
 vsp = 0;
 knockback_time = 0;
@@ -16,7 +17,7 @@ hb_offset = -10;
 xp = x;
 yp = y;
 
-//create path resource
+//create path resource 
 path = path_add();
 
 //set delay for path calculation
