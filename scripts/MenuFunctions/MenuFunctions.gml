@@ -36,6 +36,7 @@ function Menu(_x,_y,_options,_description =-1)
 	}
 	else
 	{
+		instance_destroy(obj_pauser)
 		instance_destroy(obj_menu)
 		
 	}

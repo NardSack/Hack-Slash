@@ -129,5 +129,6 @@ function create_textbox(_text_id) {
 			{
 				scr_game_text(_text_id);
 			}
+	instance_create_depth(x, y, -9999, obj_pauser);
 
 }

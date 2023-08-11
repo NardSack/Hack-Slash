@@ -1,4 +1,6 @@
 //move bullet
+if !instance_exists(obj_pauser)
+{
 if destroy == false
 	{
 		xspd = lengthdir_x(spd, dir);
@@ -29,9 +31,23 @@ depth = -y;
 	if place_meeting(x, y, obj_solidwall) { destroy = true; };
 
 	//collision w/ player
-	if place_meeting(x, y, obj_player) && playerDestroy == true { destroy = true; }
+	if place_meeting(x, y, obj_player) && enemyDestroy == true { destroy = true; }
+	
+	//collision w/ sword
+	if place_meeting(x, y, obj_SwordHitBox) && parryCreated == false
+	{
+		parryCreated = true;
+		destroy = true;
+		
+		with (instance_create_depth(x, y, depth, obj_lucent_shot_reflect))
+			{
+				dir = other.dir - 180;
+				spd= other.spd * 3;
+			}
+	}
 
 
+}
 
 
 

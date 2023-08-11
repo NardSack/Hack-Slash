@@ -35,10 +35,16 @@ if ((mouse_check_button_pressed(mb_left) && mouseOver)||select)
 {
 		switch(hover)
 		{
-			case 0: break;
+			case 0:	instance_destroy(obj_pauser) break;
 			case 1: break;
-			case 2 : room_restart() break;
-			case 3 : room_goto(rm_menu) break;
+			case 2 : 
+				instance_destroy(obj_player);
+				room_restart();
+			break;
+			case 3 : 
+				instance_destroy(obj_player);
+				room_goto(rm_menu);
+			break;
 			case 4: game_end() break;
 		}
 		instance_destroy();

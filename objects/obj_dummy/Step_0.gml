@@ -1,3 +1,10 @@
+if instance_exists(obj_pauser)
+{
+	image_speed = 0;
+}
+else
+{
+	image_speed = 1;
 //receive damage
 get_damaged( obj_damage_enemy );
 //depth
@@ -17,4 +24,4 @@ if hp <= 0
 			instance_destroy();
 		break;
 	}
-
+}

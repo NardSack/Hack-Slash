@@ -1,6 +1,15 @@
 //depth
 depth = -bbox_bottom;
 
+if instance_exists(obj_pauser)
+{
+	image_speed = 0;
+	path_speed = 0;
+}
+else
+{
+	image_speed = 1;
+	
 if attack_timer > 0
 	{
 		attack_timer--;
@@ -42,3 +51,6 @@ switch (current_state)
 
 //receive damage
 get_damaged( obj_damage_enemy );
+}
+
+

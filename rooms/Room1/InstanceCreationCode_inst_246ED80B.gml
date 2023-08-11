@@ -1,3 +1,3 @@
-target_x = 48;
+target_x = 64;
 target_y = 576;
-target_rm = rm_hallway
+target_rm = rm_hallway;

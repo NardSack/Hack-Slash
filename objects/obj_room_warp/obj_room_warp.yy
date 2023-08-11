@@ -33,5 +33,5 @@
     "path": "sprites/spr_room_warp/spr_room_warp.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
