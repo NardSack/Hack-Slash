@@ -47,9 +47,9 @@ function is_dead()
 									//// play runt death sound
 									break;
 							
-									//case obj_lucent:
+									case obj_lucent:
 									//// play lucent death sound
-									//break;
+									break;
 								}
 					
 							return true;

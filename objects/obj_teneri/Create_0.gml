@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 alert_dis = 500;
-attack_dis = 2;
+attack_dis = 20;
 pref_dis = attack_dis;
 move_spd = 2.5;
 knockback_time = 1;

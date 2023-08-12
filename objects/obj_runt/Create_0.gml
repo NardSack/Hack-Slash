@@ -2,9 +2,9 @@ event_inherited();
 
 //variables
 alert_dis = 500;
-attack_dis = 2;
+attack_dis = 15;
 pref_dis = attack_dis;
-move_spd = 3;
+move_spd = 4;
 knockback_time = 1;
 //assign sprites
 s_idle = spr_runtidle_right;
