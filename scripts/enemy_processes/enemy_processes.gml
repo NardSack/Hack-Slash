@@ -137,6 +137,7 @@ function enemy_anim()
 	
 		case enemy_states.DEAD:
 			sprite_index = s_dead;
+			
 		break;
 		case enemy_states.STAGGER:
 		sprite_index = s_stagger;
@@ -233,7 +234,10 @@ function perform_ranged_attack()
 			bulletInst.damage = damage;
 			bulletInst.knockback_time = knockback_time;
 			bulletInst.spd += i*0.9
+			if object_index == obj_boss1
+			{
 			bulletInst.dir =aimdir
+			}
 			if object_index == obj_boss1 and attack_dis >400
 			{
 			var bullet2Inst = instance_create_depth(x, offsety, depth, ammo);
@@ -266,10 +270,25 @@ function show_hurt()
 
 function droppotion()
 {
+	//instance_create_depth(x,y,depth,obj_energypack)
 	if random(10) >= 9
 	{
-		//instance_create_depth()
+		instance_create_depth(x,y,depth,obj_energypack)
 	}
+}
+
+function drophealth()
+{
+	//instance_create_depth(x+(choose(-1,+1)*random(20)),y+(choose(-1,+1)*random(20)),depth,obj_health)
+	if random(10) >= 6
+	{
+		instance_create_depth(x+(choose(-1,+1)*random(20)),y+(choose(-1,+1)*random(20)),depth,obj_health)
+	}
+}
+
+function dropmoney()
+{
+	
 }
 
 

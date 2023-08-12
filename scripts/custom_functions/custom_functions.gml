@@ -187,4 +187,3 @@ function get_damaged( _damageObj, _iframes = false )
 			
 			return hit
 	}
-	

@@ -12,7 +12,7 @@ shootKey = global.shootKey;
 swapKey1 = global.swapKey1;
 swapKey2 = global.swapKey2;
 swapKey3 = global.swapKey3;
-
+usepot = global.usepotion
 dash= global.dashKey;
 
 inputX=0
@@ -33,7 +33,14 @@ else
 	image_speed = 1;
 if energy < maxEnergy
 {
-energy+=0.00833
+	if collision_circle(x,y,50,obj_energypack,false,false)
+	{
+		energy +=0.00533
+	}
+	else
+	{
+		energy+=0.00833
+	}
 }
 
 if hp <=0
@@ -191,6 +198,7 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 		dashx=inputX
 		moveSpeed=4.5;
 	}
+	
 
 	
 }

@@ -104,7 +104,13 @@ if get_damaged( obj_damage_enemy )
 	if current_state == enemy_states.STAGGER
 		{
 			staggerperiod-=50
+			drophealth()
 		}
+	if place_meeting(x,y,obj_SwordHitBox)
+	{
+		drophealth()
+	}
+	
 }
 
 

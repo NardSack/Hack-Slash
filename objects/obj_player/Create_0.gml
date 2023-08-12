@@ -7,6 +7,7 @@ moveX=0;
 moveY=0;
 dir=1;
 
+
 knockback_time = 0;
 hsp = 0;
 vsp = 0;

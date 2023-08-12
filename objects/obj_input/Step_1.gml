@@ -17,6 +17,8 @@ global.restartKey = keyboard_check_pressed((ord("R")));
 global.menuUpKey = keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"));
 global.menuDownKey = keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"));
 
+global.usepotion = keyboard_check_pressed(ord("E"))
+
 
 
 

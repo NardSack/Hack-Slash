@@ -1,8 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_healthpack",
-  "eventList": [],
+  "name": "obj_energypack",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -26,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "potion",
-    "path": "sprites/potion/potion.yy",
+    "name": "spr_potionblue",
+    "path": "sprites/spr_potionblue/spr_potionblue.yy",
   },
   "spriteMaskId": null,
   "visible": true,

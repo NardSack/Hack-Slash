@@ -37,6 +37,9 @@ if instance_exists(obj_player)
 			draw_sprite(spr_playerenergy, _img, _camX + _border + _ebar_xOffset + _sep*i , _camY + _border + _ebar_yOffset);	
 		}
 	#endregion
+	//potion count
+	draw_sprite(spr_potionblue,0,_camX + _border,_camY + _border + _ebar_yOffset+40)
+	draw_text(_camX + _border+90,_camY + _border + _ebar_yOffset+40,"hahaa")
 	
 	#region //enemy count
 	draw_sprite(spr_enemy_count, 0, _camX + _camW - _border, _camY + _border);

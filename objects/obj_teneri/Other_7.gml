@@ -5,7 +5,9 @@ switch (current_state)
 		case enemy_states.DEAD:
 			image_index = image_number - 1;
 			image_speed = 0;
+			droppotion()
 			instance_destroy();
+			
 		break;
 		
 		case enemy_states.ATTACK:
