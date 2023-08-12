@@ -2,7 +2,11 @@
 //event_inherited();
 //depth
 depth = -bbox_bottom;
-
+if hp <= 20 and heal ==0 
+{
+	heal=1
+	current_state=enemy_states.FLEE;
+}
 
 //changing of sprite
 switch (current_state)
@@ -45,25 +49,45 @@ switch (current_state)
 	check_facing();
 	s_attack=choose(s_attack_1,s_attack_2);
 		if path_index == -1 {current_state = enemy_states.IDLE} //if no longer moving
-	check_facing();
 	enemy_anim();
 	break;
 	
 	case enemy_states.DEAD:
-	path_delete(path)
+
 	check_facing();
 	enemy_anim();
 	break;
 	// flee useless
 	case enemy_states.FLEE:
+
+	stopandheal()
 	check_facing();
 	enemy_anim();
+	break;
+	
+	case enemy_states.STAGGER:
+	staggerperiod -= 1
+	if staggerperiod <= 0
+	{
+		current_state=enemy_states.IDLE
+		staggerperiod=300
+	}
 	break;
 }
 
 
 //receive damage
-get_damaged( obj_damage_enemy );
+if get_damaged( obj_damage_enemy )
+{
+	if heal <6 and heal!=0
+	{
+	heal+=1
+	}
+	if current_state == enemy_states.STAGGER
+	{
+		staggerperiod-=50
+	}
+}
 
 
 

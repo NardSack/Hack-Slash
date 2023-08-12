@@ -16,4 +16,5 @@ enum enemy_states {
 	FLEE,
 	ATTACK,
 	DEAD,
+	STAGGER,
 }

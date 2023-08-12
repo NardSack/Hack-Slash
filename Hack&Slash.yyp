@@ -129,7 +129,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_lucentattack_left","path":"sprites/spr_lucentattack_left/spr_lucentattack_left.yy",},},

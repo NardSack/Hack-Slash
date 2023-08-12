@@ -113,7 +113,7 @@ function get_damaged( _damageObj, _iframes = false )
 				{
 					image_alpha = 1;
 				}
-		
+		var hit = false;
 		//receive damage
 		if place_meeting(x, y, _damageObj)
 			{
@@ -148,6 +148,7 @@ function get_damaged( _damageObj, _iframes = false )
 								show_hurt();
 						
 								_hitConfirm = true;
+								hit =true
 								//tell the damage instance it has hit
 								_inst.hitConfirm = true;
 							}
@@ -183,6 +184,8 @@ function get_damaged( _damageObj, _iframes = false )
 			}
 			
 			hp = clamp(hp, 0, maxHp);
+			
+			return hit
 	}
 	
 function room_change(_warp_id)

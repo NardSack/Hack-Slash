@@ -94,11 +94,28 @@ function chase_player()
 			{
 				path_end();	
 			}
+
 	}	
 }
 
-function run_from_player()
+function stopandheal()
 {	
+alert =false
+if heal <6 
+{
+	hp+=00.06-heal*00.01
+}
+if heal== 6 or hp==maxHp
+{
+	if heal == 6
+	{
+	current_state=enemy_states.STAGGER	
+	}
+	else
+	{
+	current_state=enemy_states.IDLE
+	}
+}
 
 }
 
@@ -127,6 +144,9 @@ function enemy_anim()
 	
 		case enemy_states.DEAD:
 			sprite_index = s_dead;
+		break;
+		case enemy_states.STAGGER:
+		sprite_index = s_idle;
 		break;
 	}
 	//update previous position

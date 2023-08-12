@@ -1,11 +1,13 @@
 // Inherit the parent event
 event_inherited();
+heal=0
 alert_dis = 500;
 attack_dis = 1;
 pref_dis = attack_dis;
 knockback_time = 1;
 move_spd=2.5
 //assign sprites
+staggerperiod = 300
 s_idle = spr_carnifexidle_right;
 s_walk = spr_carnifexwalk_right;
 s_attack_1= spr_carnifexattack1_right
@@ -15,7 +17,7 @@ s_attack_hb_2 =spr_carnifexvfx2_right
 s_dead = spr_carnifexdeath_right;
 s_attack=0;
 s_attack_hb=0;
-
+s_flee = spr_carnifexidle_right;
 //hurt to only happen when changing phases
 s_hurt = spr_carnifexhurt_right;
 //attack disable attack frame
@@ -27,7 +29,7 @@ attack_cooldown = 50;
 attack_timer = attack_cooldown;
 damage = 6;
 knockback_time = 0;
-get_damaged_create(100);
+get_damaged_create(30);
 
 
 
