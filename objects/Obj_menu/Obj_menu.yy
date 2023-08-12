@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "alt menu",
-    "path": "folders/MenuBox/alt menu.yy",
+    "name": "MenuBox",
+    "path": "folders/MenuBox.yy",
   },
   "parentObjectId": null,
   "persistent": false,

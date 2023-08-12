@@ -75,7 +75,7 @@ function chase_player()
 		//check for path to player
 		//if x == xp and y == yp { var _type = 0} else { var _type = 1 }
 		//is _type neccary it is only allowing diagonal movement
-			
+		
 		if instance_exists( obj_player )
 			{
 				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, choose(0,1));

@@ -21,13 +21,20 @@ inputX=right-left;
 inputY=down-up;
 checkdone=true;
 
+energy = clamp(energy, 0, maxEnergy)
 
+if instance_exists(obj_pauser)
+{
+	image_speed = 0;
+	moveSpeed = 0;
+}
+else
+{
+	image_speed = 1;
 if energy < maxEnergy
 {
 energy+=0.00833
 }
-
-energy = clamp(energy, 0, maxEnergy)
 
 if hp <=0
 {
@@ -324,3 +331,4 @@ if dashCheck == false
 					}
 			}
 	}
+}

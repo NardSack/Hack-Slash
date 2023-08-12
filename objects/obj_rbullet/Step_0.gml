@@ -1,4 +1,6 @@
 	//collision
+	if !instance_exists(obj_pauser)
+	{
 	if place_meeting( x, y, obj_solidwall) //only collide with solid walls
 		{
 			destroy = true;
@@ -35,7 +37,7 @@
 		{
 			destroy = true;
 		}
-
+	}
 
 
 

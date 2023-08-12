@@ -6,10 +6,12 @@ spd = 2;
 xspd = 0;
 yspd = 0;
 
+parryCreated = false;
+
 //cleanup
 destroy = false;
 destroy_anim = false;
-playerDestroy = true;
+enemyDestroy = true;
 
 //impact sprites
 

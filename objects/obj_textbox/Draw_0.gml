@@ -144,6 +144,7 @@ if accept_key
 				//destroy textbox after all pages done
 				else
 					{
+						instance_destroy(obj_pauser);
 						instance_destroy();
 						obj_player.is_reading = false;
 						obj_player.read_timer = obj_player.read_delay;

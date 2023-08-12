@@ -1,3 +1,5 @@
+if !instance_exists(obj_pauser)
+{
 switch (current_state)
 	{
 		case enemy_states.DEAD:
@@ -10,7 +12,7 @@ switch (current_state)
 			current_state = enemy_states.IDLE;
 		break;
 	}
-
+}
 
 
 

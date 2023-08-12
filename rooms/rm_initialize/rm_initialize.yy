@@ -1,15 +1,15 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "rmInitialize",
-  "creationCodeFile": "rooms/rmInitialize/RoomCreationCode.gml",
+  "name": "rm_initialize",
+  "creationCodeFile": "rooms/rm_initialize/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
   "instanceCreationOrder": [
-    {"name":"inst_1AB0F0BE","path":"rooms/rmInitialize/rmInitialize.yy",},
-    {"name":"inst_FC4CB02","path":"rooms/rmInitialize/rmInitialize.yy",},
-    {"name":"inst_39ADD28","path":"rooms/rmInitialize/rmInitialize.yy",},
+    {"name":"inst_1AB0F0BE","path":"rooms/rm_initialize/rm_initialize.yy",},
+    {"name":"inst_FC4CB02","path":"rooms/rm_initialize/rm_initialize.yy",},
+    {"name":"inst_39ADD28","path":"rooms/rm_initialize/rm_initialize.yy",},
   ],
   "isDnd": false,
   "layers": [
