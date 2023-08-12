@@ -60,7 +60,6 @@ if setup == false
 								var _last_free_space_string = string_char_at(text[p], last_free_space);
 								line_break_offset[p] = string_width(_txt_up_to_last_space) - string_width(_last_free_space_string);
 							}
-						
 					}	
 				
 				//getting each character's coordinates
