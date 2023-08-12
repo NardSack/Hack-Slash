@@ -2,7 +2,7 @@
 //event_inherited();
 //depth
 depth = -bbox_bottom;
-if hp <= 20 and heal ==0 
+if hp <= 30 and heal ==0 
 {
 	heal=1
 	current_state=enemy_states.FLEE;
@@ -37,7 +37,21 @@ switch (current_state)
 	
 	if attack_timer <= 0
 	{
+		var i = choose(1,2) 
+		if attack_dis>200
+		{
+			i=2
+		}
+		if i ==1
+		{
 		perform_attack();
+		}
+		else
+		{
+			aimdir=point_direction(x,y,obj_player.x,obj_player.y)
+			perform_ranged_attack()
+
+		}
 	}
 
 	enemy_anim();
@@ -60,6 +74,9 @@ switch (current_state)
 	// flee useless
 	case enemy_states.FLEE:
 	stopandheal()
+	attack_dis=40
+	attack_cooldown=40
+	move_spd=4
 	check_facing();
 	enemy_anim();
 	break;

@@ -50,13 +50,7 @@ function check_for_player()
 		}
 	else if _dis <= attack_dis
 		{
-		//if coward and alert and (attack_dis > pref_dis) and _dis < pref_dis //if too close and coward and alerted
-		//	{
-		//		path_end();
-		//		current_state = enemy_states.FLEE;
-		//	}
-		//else
-		//	{	
+path_end();	
 			//close enough to attack and alerted
 			if /*_dis <= attack_dis &&*/ attack_timer-- <= 0
 				{
@@ -102,7 +96,7 @@ function stopandheal()
 	alert =false
 		if heal <6 
 		{
-			hp+=00.06-heal*00.01
+			hp+=0.1-heal*00.01
 		}
 	if heal == 6 or hp >= maxHp
 		{
@@ -220,12 +214,42 @@ function perform_ranged_attack()
 {
 	if image_index >= attack_frame_start
 		{
-			
+			var numshot=1
+			var offsety = y
+			var ammo = obj_lucent_shot
+			if object_index == obj_boss1 and attack_dis >400
+			{
+				numshot =3
+			}
+			if object_index == obj_boss1
+			{
+				 offsety=y
+				 ammo=obj_boss_shot
+			}
+			for(var i = 0; i < numshot; i++ )
+			{
 			//create hitbox
-			var bulletInst = instance_create_depth(x, y-22, depth, obj_lucent_shot);
+			var bulletInst = instance_create_depth(x, offsety, depth, ammo);
 			bulletInst.damage = damage;
 			bulletInst.knockback_time = knockback_time;
-			
+			bulletInst.spd += i*0.9
+			bulletInst.dir =aimdir
+			if object_index == obj_boss1 and attack_dis >400
+			{
+			var bullet2Inst = instance_create_depth(x, offsety, depth, ammo);
+			bullet2Inst.damage = damage;
+			bullet2Inst.knockback_time = knockback_time;
+			bullet2Inst.spd += i*0.9 
+			bullet2Inst.dir =aimdir+5
+
+			var bullet3Inst = instance_create_depth(x, offsety, depth, ammo);
+			bullet3Inst.damage = damage;
+			bullet3Inst.knockback_time = knockback_time;
+			bullet3Inst.spd += i*0.9 
+			bullet3Inst.dir =aimdir-5
+
+			}
+			}
 			//reset for next attack
 			attack_timer += attack_cooldown;	
 			
@@ -238,6 +262,14 @@ function show_hurt()
 	
 	if knockback_time-- > 0 sprite_index = s_hurt;
 	
+}
+
+function droppotion()
+{
+	if random(10) >= 9
+	{
+		//instance_create_depth()
+	}
 }
 
 

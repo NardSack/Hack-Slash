@@ -2,9 +2,9 @@
 event_inherited();
 heal=0
 alert_dis = 500;
-attack_dis = 10;
+attack_dis = 450;
 pref_dis = attack_dis;
-knockback_time = 1;
+knockback_time = 0;
 move_spd=2.5
 //assign sprites
 staggerperiod = 300
@@ -26,11 +26,11 @@ attack1_frame_start = 1;
 attack2_frame_start = 1;
 //attack_frame_end = 7;
 can_attack = true;
-attack_cooldown = 50;
+attack_cooldown = 90;
 attack_timer = attack_cooldown;
 damage = 6;
 knockback_time = 0;
-get_damaged_create(30);
+get_damaged_create(60);
 
 
 
