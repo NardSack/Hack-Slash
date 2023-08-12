@@ -145,7 +145,7 @@ function enemy_anim()
 			sprite_index = s_dead;
 		break;
 		case enemy_states.STAGGER:
-		sprite_index = s_idle;
+		sprite_index = s_stagger;
 		break;
 	}
 	//update previous position

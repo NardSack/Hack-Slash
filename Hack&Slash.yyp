@@ -245,6 +245,7 @@
     {"id":{"name":"obj_railbullet","path":"objects/obj_railbullet/obj_railbullet.yy",},},
     {"id":{"name":"obj_speaktrigger_rs","path":"objects/obj_speaktrigger_rs/obj_speaktrigger_rs.yy",},},
     {"id":{"name":"obj_sgbullet","path":"objects/obj_sgbullet/obj_sgbullet.yy",},},
+    {"id":{"name":"spr_carnifexidle_healing","path":"sprites/spr_carnifexidle_healing/spr_carnifexidle_healing.yy",},},
     {"id":{"name":"spr_lucentidle_right","path":"sprites/spr_lucentidle_right/spr_lucentidle_right.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"ts_plants","path":"tilesets/ts_plants/ts_plants.yy",},},
