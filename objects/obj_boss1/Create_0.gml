@@ -2,7 +2,7 @@
 event_inherited();
 heal=0
 alert_dis = 500;
-attack_dis = 1;
+attack_dis = 10;
 pref_dis = attack_dis;
 knockback_time = 1;
 move_spd=2.5

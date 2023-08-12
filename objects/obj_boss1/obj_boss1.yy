@@ -39,6 +39,9 @@
     "name": "spr_carnifexidle_right",
     "path": "sprites/spr_carnifexidle_right/spr_carnifexidle_right.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_carnifexidle_right",
+    "path": "sprites/spr_carnifexidle_right/spr_carnifexidle_right.yy",
+  },
   "visible": true,
 }

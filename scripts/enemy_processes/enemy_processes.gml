@@ -73,12 +73,11 @@ function chase_player()
 		calc_path_timer = calc_path_delay;
 		
 		//check for path to player
-		//if x == xp and y == yp { var _type = 0} else { var _type = 1 }
-		//is _type neccary it is only allowing diagonal movement
+		if x == xp and y == yp { var _type = 0} else { var _type = 1 }
 		
 		if instance_exists( obj_player )
 			{
-				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, choose(0,1));
+				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
 			}
 		else 
 			{
@@ -100,22 +99,22 @@ function chase_player()
 
 function stopandheal()
 {	
-alert =false
-if heal <6 
-{
-	hp+=00.06-heal*00.01
-}
-if heal== 6 or hp==maxHp
-{
-	if heal == 6
-	{
-	current_state=enemy_states.STAGGER	
-	}
-	else
-	{
-	current_state=enemy_states.IDLE
-	}
-}
+	alert =false
+		if heal <6 
+		{
+			hp+=00.06-heal*00.01
+		}
+	if heal == 6 or hp >= maxHp
+		{
+			if heal == 6
+			{
+				current_state=enemy_states.STAGGER	
+			}
+			else
+			{
+			current_state=enemy_states.IDLE
+			}
+		}
 
 }
 
