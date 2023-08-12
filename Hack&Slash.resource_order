@@ -49,6 +49,7 @@
     {"name":"bg","order":2,"path":"sprites/bg/bg.yy",},
     {"name":"obj_speaktrigger_contact","order":1,"path":"objects/obj_speaktrigger_contact/obj_speaktrigger_contact.yy",},
     {"name":"obj_railbullet","order":1,"path":"objects/obj_railbullet/obj_railbullet.yy",},
+    {"name":"spr_carnifexidle_healing","order":2,"path":"sprites/spr_carnifexidle_healing/spr_carnifexidle_healing.yy",},
     {"name":"obj_boss1","order":4,"path":"objects/obj_boss1/obj_boss1.yy",},
     {"name":"spr_warp_destination","order":10,"path":"sprites/spr_warp_destination/spr_warp_destination.yy",},
     {"name":"spr_speaktrigger_interact","order":1,"path":"sprites/spr_speaktrigger_interact/spr_speaktrigger_interact.yy",},
