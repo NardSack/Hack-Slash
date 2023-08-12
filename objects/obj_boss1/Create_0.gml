@@ -19,8 +19,8 @@ s_attack_hb=0;
 //hurt to only happen when changing phases
 s_hurt = spr_carnifexhurt_right;
 //attack disable attack frame
-attack1_frame_start = 8;
-attack2_frame_start = 8;
+attack1_frame_start = 1;
+attack2_frame_start = 1;
 //attack_frame_end = 7;
 can_attack = true;
 attack_cooldown = 50;

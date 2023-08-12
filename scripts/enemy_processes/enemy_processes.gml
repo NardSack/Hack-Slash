@@ -27,6 +27,11 @@ function check_facing()
 		{
 			var _facing = sign(x-xp);
 			if _facing != 0 { facing = _facing; image_xscale=facing }
+			if instance_exists(obj_player)
+			{
+			if x >obj_player.x{image_xscale=-1}
+			else {image_xscale=1}
+			}
 			
 		}
 }
@@ -94,36 +99,7 @@ function chase_player()
 
 function run_from_player()
 {	
-	if calc_path_timer-- <= 0 
-		{
-			//reset timer
-			calc_path_timer = calc_path_delay;
-		
-			//check for path to player
-			if x == xp and y == yp { var _type = 0} else { var _type = 1 }
-		
-		if instance_exists(obj_player)
-			{
-				var _player_x = obj_player.x;
-				var _player_y = obj_player.y;
-	
-				var _moveDir = point_direction(_player_x, _player_y, x, y);
-			    var _target_x = x + lengthdir_x(attack_dis, _moveDir);
-			    var _target_y = y + lengthdir_y(attack_dis, _moveDir);
-				
-				_flee_spot = mp_grid_path(global.mp_grid, path, x, y, _target_x, _target_y, _type);
-			
-			}
-		else 
-			{
-				alert=false;
-				current_state=enemy_states.IDLE;
-			}
-		if _flee_spot == true
-			{
-				path_start(path, move_spd, path_action_stop, false);
-			}
-		}
+
 }
 
 function enemy_anim()

@@ -18,6 +18,8 @@ switch (current_state)
 	
 	case enemy_states.ATTACK:
 	calc_enemy_movement();
+	check_facing();
+
 	if sprite_index == s_attack_1
 	{
 		s_attack_hb=s_attack_hb_1
@@ -33,7 +35,7 @@ switch (current_state)
 	{
 		perform_attack();
 	}
-	check_facing();
+
 	enemy_anim();
 	break;
 	
