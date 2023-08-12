@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "bluwall",
-    "path": "sprites/bluwall/bluwall.yy",
+    "name": "spr_wall",
+    "path": "sprites/spr_wall/spr_wall.yy",
   },
   "spriteMaskId": null,
   "visible": false,

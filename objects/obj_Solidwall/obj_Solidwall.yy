@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "solidwall",
-    "path": "sprites/solidwall/solidwall.yy",
+    "name": "spr_solidwall",
+    "path": "sprites/spr_solidwall/spr_solidwall.yy",
   },
   "spriteMaskId": null,
   "visible": false,

@@ -300,7 +300,7 @@ if railgunTimer > 0 { railgunTimer--;}; //decrease timer for railgun
 
 if dashCheck == false
 	{
-		if (energy - weapon.cost) > 0
+		if (energy - weapon.cost) >= 0
 			{
 				if weapon == _playerWeapons[0]
 					{

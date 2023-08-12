@@ -13,8 +13,14 @@ else
 	playerEnergy = 0;
 }
 
-
-
+if instance_exists(obj_dummy)
+{
+	enemyCount = instance_number(obj_dummy);
+}
+else
+{
+	enemyCount = 0;	
+}
 
 
 

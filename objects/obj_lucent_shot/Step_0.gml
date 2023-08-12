@@ -38,11 +38,15 @@ depth = -y;
 	{
 		parryCreated = true;
 		destroy = true;
+		if instance_exists(obj_player) && obj_player.hp > 0 //heal on parry
+		{
+			obj_player.hp += damage/4;	
+		}
 		
-		with (instance_create_depth(x, y, depth, obj_lucent_shot_reflect))
+		with (instance_create_depth(x, y, depth, obj_lucent_shot_reflect)) //create parried projectile
 			{
 				dir = other.dir - 180;
-				spd= other.spd * 3;
+				spd= other.spd * 2;
 			}
 	}
 

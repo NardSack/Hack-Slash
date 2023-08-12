@@ -8,6 +8,6 @@ xspd = 0;
 yspd = 0;
 
 //cleanup
-maxDist = 250; //maximum distance bullet can travel
+maxDist = 400; //maximum distance bullet can travel
 destroy = false;
 enemyDestroy = true;

@@ -9,6 +9,8 @@ if instance_exists(obj_player)
 	var _border = 8;
 	var _ebar_xOffset = 60;
 	var _ebar_yOffset = 48;
+	var _text_xOffset = 110;
+	var _text_yOffset = 8;
 
 	#region //health
 	draw_sprite(spr_playerhealth, 0, _camX + _border, _camY + _border);
@@ -35,13 +37,14 @@ if instance_exists(obj_player)
 			draw_sprite(spr_playerenergy, _img, _camX + _border + _ebar_xOffset + _sep*i , _camY + _border + _ebar_yOffset);	
 		}
 	#endregion
+	
+	#region //enemy count
+	draw_sprite(spr_enemy_count, 0, _camX + _camW - _border, _camY + _border);
+	draw_set_font(global.font_main);
+	draw_text(_camX + _camW - _border - _text_xOffset, _camY + _border + _text_yOffset, string(enemyCount));
+	draw_set_font(-1);
+	#endregion
 }
-//var _hpString = "HP: " + string(playerHp) + "/" + string(playerMaxHp); 
-//var _energyString = "ENERGY: " + string(playerEnergy) + "/" + string(playerMaxEnergy); 
-
-//draw_text(_camX + _camW - 300, _camY, _hpString);
-//draw_text(_camX + _camW - 300, _camY + 30, _energyString);
-
 
 
 

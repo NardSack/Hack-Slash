@@ -61,7 +61,7 @@ function shoot_weapon()
 }
 
 //damage code
-function get_damaged_create(_hp = 100, _iframes = false )
+	function get_damaged_create(_hp = 100, _iframes = false )
 {
 	maxHp = _hp;
 	hp = _hp;
@@ -69,7 +69,7 @@ function get_damaged_create(_hp = 100, _iframes = false )
 	if _iframes = true
 		{
 			iframeTimer = 0;
-			iframeNumber = 90;
+			iframeNumber = 30;
 		}
 	//create damage list
 	if _iframes = false
@@ -188,7 +188,3 @@ function get_damaged( _damageObj, _iframes = false )
 			return hit
 	}
 	
-function room_change(_warp_id)
-{
-	
-}
