@@ -9,7 +9,7 @@ function damage_entity( _tid, _sid, _damage, _time)
 			//set knockback
 			if _dead { var _dis = 4 } else { _dis = 1; }
 			if _tid.object_index == obj_player { _dis = 6 }
-			if _sid.object_index == obj_sgbullet {_dis = 1.5; }
+			if _sid.object_index == obj_sgbullet {_dis = 1/6; }
 			var _dir = point_direction(_sid.x, _sid.y, x, y);
 			hsp += lengthdir_x(_dis, _dir);
 			vsp += lengthdir_y(_dis, _dir);

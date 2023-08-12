@@ -4,6 +4,7 @@ if !instance_exists(obj_pauser)
 		{
 			instance_create_layer(x, y, "Instances", obj_player);	
 		}
+
 }
 
 
