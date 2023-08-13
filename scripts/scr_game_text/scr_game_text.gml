@@ -181,7 +181,7 @@ switch(_text_id){
 		scr_text("A room filled with those DETESTABLE dummies.", "buddy")
 		scr_text("Leave NOTHING standing.", "buddygrin")
 		scr_text("Let's... see... you... try...", "carnifexunknown", -1)
-		scr_text_shake(0, 100);
+		scr_text_shake(0, 100); scr_text_color(0, 110, c_red,c_red,c_red,c_red);
 	break;
 	
 	case "deadven":
@@ -196,15 +196,15 @@ switch(_text_id){
 	
 	case "start13":
 		scr_text("You...fool to come...", "carnifex", -1)
-			scr_text_shake(0, 100);
+			scr_text_shake(0, 100); scr_text_color(0, 100, c_red,c_red,c_red,c_red);
 		scr_text("Nothing... but death... awaits you...", "carnifex", -1)
-			scr_text_shake(0, 100);
+			scr_text_shake(0, 100); scr_text_color(0, 100, c_red,c_red,c_red,c_red);
 		scr_text("Big talk, for a walking corpse.", "player")
 	break;
 	
 	case "end13":
 		scr_text("You...traitor......", "carnifex", -1)
-			scr_text_shake(0, 100);
+			scr_text_shake(0, 100); scr_text_color(0, 100, c_red,c_red,c_red,c_red);
 		scr_text("Nicely done.", "buddy")
 		scr_text("Come now, once more unto the breach.", "buddy")
 	break;
