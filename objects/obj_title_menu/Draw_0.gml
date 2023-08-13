@@ -16,6 +16,10 @@ for (var i =0 ;i<op_length;i++)
 	if hover == i
 	{
 		draw_set_color(c_yellow)
+		if hover == 1
+		{
+			draw_set_color(c_gray)
+		}
 		_str=hovermarker+_str
 	}
 	draw_text(x,y+i*heightline,_str)
