@@ -148,10 +148,7 @@
     "name": "Rooms",
     "path": "folders/Rooms.yy",
   },
-  "parentRoom": {
-    "name": "rm_base",
-    "path": "rooms/rm_base/rm_base.yy",
-  },
+  "parentRoom": null,
   "physicsSettings": {
     "inheritPhysicsSettings": true,
     "PhysicsWorld": false,
