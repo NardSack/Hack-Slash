@@ -50,12 +50,12 @@ function check_for_player()
 		}
 	else if _dis <= attack_dis
 		{
-path_end();	
 			//close enough to attack and alerted
 			if /*_dis <= attack_dis &&*/ attack_timer-- <= 0
 				{
 					current_state = enemy_states.ATTACK;
 				}
+				path_end();	
 			//}
 		}
 }
@@ -74,12 +74,13 @@ function chase_player()
 				_found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
 			}
 		else 
-			{
+			{  
 				alert=false;
 				current_state=enemy_states.IDLE;
 			}
 		//start path if able to reach player
-		if _found_player == true && instance_exists(obj_player)
+		//_found_player == true && 
+		if instance_exists(obj_player)
 			{
 				path_start(path, move_spd, path_action_stop, false);
 			}
@@ -96,7 +97,7 @@ function stopandheal()
 	alert =false
 		if heal <6 
 		{
-			hp+=0.1-heal*00.01
+			hp+= 0.1-heal*00.01
 		}
 	if heal == 6 or hp >= maxHp
 		{

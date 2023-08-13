@@ -1,14 +1,14 @@
-// Inherit the parent event
+ // Inherit the parent event
 //event_inherited();
 //depth
 
-if instance_exists(obj_pauser)
-{
-	image_speed = 0;
-	path_speed = 0;
-}
-else
-{
+//if instance_exists(obj_pauser)
+//{
+//	image_speed = 0;
+//	path_speed = 0;
+//}
+//else
+//{
 	depth = -bbox_bottom;
 	if hp <= maxHp/3 and heal == 0 
 	{
@@ -19,54 +19,7 @@ if hp <= 0
 {
 	current_state=enemy_states.DEAD;
 }
-//changing of sprite
-switch (current_state)
-{
-	case enemy_states.IDLE:
-	calc_enemy_movement();
-	check_for_player();
-	s_attack=choose(s_attack_1,s_attack_2);
-		if path_index != -1 {current_state = enemy_states.MOVE} //if no longer idle
-	check_facing();
-	enemy_anim();
-	break;
-	
-	case enemy_states.ATTACK:
-	calc_enemy_movement();
-	check_facing();
 
-	if sprite_index == s_attack_1
-	{
-		s_attack_hb=s_attack_hb_1
-		attack_frame_start=attack1_frame_start;
-	}
-	else if sprite_index == s_attack_2
-	{
-		s_attack_hb=s_attack_hb_2
-		attack_frame_start=attack2_frame_start;
-	}
-	
-	if attack_timer <= 0
-	{
-		var i = choose(1,2) 
-		if attack_dis>200
-		{
-			i=2
-		}
-		if i ==1
-		{
-		perform_attack();
-		}
-		else
-		{
-			if instance_exists(obj_player)
-			{
-			aimdir=point_direction(x,y,obj_player.x,obj_player.y)
-			perform_ranged_attack()
-			}
-
-		}
-	}
 
 	//changing of sprite
 	switch (current_state)
@@ -169,5 +122,5 @@ switch (current_state)
 		}
 	
 	}
-}
-}
+
+//}

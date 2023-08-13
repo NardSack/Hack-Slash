@@ -19,4 +19,3 @@ draw_text_color(x-10, y-120, string(ceil(hp)), c_red, c_red, c_red, c_red, 1);
 draw_set_font(global.font_main);
 }
 
-

@@ -9,7 +9,9 @@ switch (current_state)
 			image_index = image_number - 1;
 			image_speed = 0;
 			droppotion()
+			//instance_destroy()
 			mask_index = spr_playermelee_rightHB;
+			alarm[1]=180
 		break;
 
 		
