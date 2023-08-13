@@ -10,6 +10,7 @@ function damage_entity( _tid, _sid, _damage, _time)
 			if _dead { var _dis = 4 } else { _dis = 1; }
 			if _tid.object_index == obj_player { _dis = 6 }
 			if _sid.object_index == obj_sgbullet {_dis = 1/6; }
+			if _tid.object_index == obj_boss1 { _dis = 0; }
 			var _dir = point_direction(_sid.x, _sid.y, x, y);
 			hsp += lengthdir_x(_dis, _dir);
 			vsp += lengthdir_y(_dis, _dir);
@@ -40,15 +41,19 @@ function is_dead()
 							switch (object_index) 
 								{
 									default:
-									// play teneri death sound
+										audio_play_sound(snd_tenerideath,2, 0);
 									break;
 							
 									case obj_runt:
-									//// play runt death sound
+										audio_play_sound(snd_runtdeath,2, 0);
 									break;
 							
 									case obj_lucent:
-									//// play lucent death sound
+										audio_play_sound(snd_lucentdeath,2, 0);
+									break;
+									
+									case obj_boss1:
+										audio_play_sound(snd_bossdeath,2, 0);
 									break;
 								}
 					

@@ -145,8 +145,11 @@ if accept_key
 					{
 						instance_destroy(obj_pauser);
 						instance_destroy();
+						if instance_exists(obj_player)
+						{
 						obj_player.is_reading = false;
 						obj_player.read_timer = obj_player.read_delay;
+						}
 						draw_set_halign(fa_left);
 						draw_set_valign(fa_top);
 						draw_set_font(-1);

@@ -25,6 +25,7 @@ function state_set_attack (_state)
 	var mask =spr_playermelee_rightHB
 	if _state == states.attackdown
 	{	
+		audio_play_sound(snd_sword,1,0);
 		gun_alpha = 0;
 		mask=spr_playermelee_downHB
 		
@@ -40,6 +41,7 @@ function state_set_attack (_state)
 	}
 	else if _state == states.attackup
 	{
+		audio_play_sound(snd_sword,1,0);
 		gun_alpha = 0;
 		mask=spr_playermelee_upHB
 		if image_xscale== 1
@@ -54,6 +56,7 @@ function state_set_attack (_state)
 	}
 	else if _state == states.attackhorizontal
 	{
+		audio_play_sound(snd_sword,1,0);
 		gun_alpha = 0;
 		if image_xscale == 1
 		{

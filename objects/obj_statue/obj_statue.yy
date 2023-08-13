@@ -9,7 +9,10 @@
     "name": "Decor",
     "path": "folders/Objects/Decor.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_decor",
+    "path": "objects/obj_decor/obj_decor.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_statue",
+    "path": "sprites/spr_statue/spr_statue.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

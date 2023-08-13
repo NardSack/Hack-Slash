@@ -19,5 +19,5 @@
   "sampleRate": 5512,
   "soundFile": "snd_pistolshot.wav",
   "type": 0,
-  "volume": 0.8,
+  "volume": 0.85,
 }

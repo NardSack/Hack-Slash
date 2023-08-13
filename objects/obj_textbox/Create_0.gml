@@ -44,4 +44,7 @@ text_pause_timer = 0;
 text_pause_time = 16;
 
 //set player is reading
+if instance_exists(obj_player)
+{
 obj_player.is_reading = true;
+}

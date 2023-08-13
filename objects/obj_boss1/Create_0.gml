@@ -1,8 +1,8 @@
 // Inherit the parent event
 event_inherited();
 heal=0
-alert_dis = 500;
-attack_dis = 450;
+alert_dis = 2000;
+attack_dis = 1000;
 pref_dis = attack_dis;
 knockback_time = 0;
 move_spd=2.5

@@ -15,6 +15,7 @@ if !instance_exists(obj_pauser)
 			instance_destroy()
 			//code to start death screen
 			instance_create_depth(0, 0, -10000, obj_gameover);
+			audio_play_sound(snd_deathscreen, 1, 0);
 			instance_create_layer(0, 0, "Pause_layer", obj_pauser);
 		}
 }

@@ -10,7 +10,6 @@ if destroy == false
 	}	
 //update depth 
 depth = -y;
-
 //clean up
 
 	//if out of room
@@ -28,17 +27,25 @@ depth = -y;
 		}	
 
 	//collision w/ wall
-	if place_meeting(x, y, obj_solidwall) { destroy = true; };
+	if place_meeting(x, y, obj_solidwall)
+	{ 
+		destroy = true;
+	}
 
 	//collision w/ player
-	if place_meeting(x, y, obj_player) && enemyDestroy == true { destroy = true; }
+	if place_meeting(x, y, obj_player) && enemyDestroy == true 
+	{ 
+		destroy = true;
+	}
 	
 	//collision w/ sword
 	if place_meeting(x, y, obj_SwordHitBox) && parryCreated == false
 	{
 		parryCreated = true;
 		destroy = true;
-
+		
+		audio_play_sound(snd_parry, 1, 0);
+		
 		with (instance_create_depth(x, y, depth, obj_lucent_shot_reflect)) //create parried projectile
 			{
 				dir = other.dir - 180;

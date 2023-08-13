@@ -6,7 +6,7 @@ if instance_exists(obj_player)
 	{
 	if obj_player.energy <= obj_player.maxEnergy
 	{
-		obj_player.energy=obj_player.maxEnergy
+		obj_player.energy+=2;
 	}
 	instance_destroy ()
 	

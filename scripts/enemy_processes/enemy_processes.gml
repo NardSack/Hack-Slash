@@ -183,6 +183,16 @@ function perform_attack()
 {
 	if image_index >= attack_frame_start
 	{
+		
+		if object_index != obj_boss1
+		{
+			audio_play_sound(snd_enemyslam, 2, 0);
+		}
+		else
+		{
+			audio_play_sound(snd_sword, 2, 0);
+		}
+		
 		var depforhb = depth
 		if sprite_index == spr_carnifexattack2_right or sprite_index == spr_carnifexattack1_right
 		{
@@ -218,6 +228,8 @@ function perform_ranged_attack()
 			var numshot=1
 			var offsety = y
 			var ammo = obj_lucent_shot
+			var _damageOffset = 0;
+			audio_play_sound(snd_projectilelaunch, 2, 0);
 			if object_index == obj_boss1 and attack_dis >400
 			{
 				numshot =3
@@ -226,12 +238,13 @@ function perform_ranged_attack()
 			{
 				 offsety=y
 				 ammo=obj_boss_shot
+				 _damageOffset = 3;
 			}
 			for(var i = 0; i < numshot; i++ )
 			{
 			//create hitbox
 			var bulletInst = instance_create_depth(x, offsety, depth, ammo);
-			bulletInst.damage = damage;
+			bulletInst.damage = damage-_damageOffset;
 			bulletInst.knockback_time = knockback_time;
 			bulletInst.spd += i*0.9
 			if object_index == obj_boss1
@@ -241,13 +254,13 @@ function perform_ranged_attack()
 			if object_index == obj_boss1 and attack_dis >400
 			{
 			var bullet2Inst = instance_create_depth(x, offsety, depth, ammo);
-			bullet2Inst.damage = damage;
+			bullet2Inst.damage = damage-_damageOffset;
 			bullet2Inst.knockback_time = knockback_time;
 			bullet2Inst.spd += i*0.9 
 			bullet2Inst.dir =aimdir+5
 
 			var bullet3Inst = instance_create_depth(x, offsety, depth, ammo);
-			bullet3Inst.damage = damage;
+			bullet3Inst.damage = damage-_damageOffset;
 			bullet3Inst.knockback_time = knockback_time;
 			bullet3Inst.spd += i*0.9 
 			bullet3Inst.dir =aimdir-5
