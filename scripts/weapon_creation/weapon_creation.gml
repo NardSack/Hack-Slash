@@ -33,8 +33,8 @@ global.WeaponList = {
 		sprite_get_bbox_right(spr_shotgun) - sprite_get_xoffset(spr_shotgun),
 		obj_sgbullet,
 		90,
-		12,
-		60,
+		30,
+		69,
 		3
 	),
 	//third weapon

@@ -36,7 +36,10 @@ switch(_text_id){
 		scr_text("(A voice... in my head...?)", "player")
 		scr_text("Be not afraid.", "buddyunknown",-1)
 		scr_text("I mean you no harm, but we must make haste.", "buddyunknown",-1)
-		scr_text("Come now, stand up. We must move.", "buddyunknown",-1)
+		scr_text("Come now, stand up.", "buddyunknown",-1)
+		scr_text("You are a Venator, and so, you will hunt.", "buddyunknown",-1)
+			scr_text_color(9, 18, c_lime,c_lime,c_lime,c_lime);
+		scr_text("You will hunt, until there is nothing left.", "buddyunknown",-1)
 		scr_text("Press [W] [A] [S] [D] to move.")
 	break;
 	
@@ -54,9 +57,17 @@ switch(_text_id){
 		scr_text("Its patronizing face mocks me, destroy it, Venator.", "buddy")
 		scr_text_color(31, 37, c_red,c_red,c_red,c_red); scr_text_shake(31, 37);
 		scr_text("( . . . Seriously?)", "playerdespair")
-		scr_text("Press [LSHIFT] to attack.")
+		scr_text("Press [LSHIFT] to attack with your sword.")
+		scr_text("Aim with your [MOUSE].")
 		scr_text("Press [LMB] to shoot.")
 		scr_text("Press [1] [2] [3] to switch weapons.")
+		scr_text("[1] is your Revolver.")
+			scr_text_color(12, 22, c_orange,c_orange,c_orange,c_orange);
+		scr_text("[2] is your Shotgun.")
+			scr_text_color(12, 37, c_lime,c_lime,c_lime,c_lime);
+		scr_text("[3] is your Railgun.")
+			scr_text_color(12, 37, c_aqua,c_aqua,c_aqua,c_aqua);
+		scr_text("Use them well.")
 		break;
 		
 	case "dummyinspect" :
@@ -101,6 +112,36 @@ switch(_text_id){
 		scr_text("It's a one-way transfer of thoughts, from Greater Minds to these Lesser Husks.", "buddy")	
 		scr_text("We'll be fine.", "buddygrin")	
 	break;
+	
+	case "statueinspect":
+		scr_text("A Statue of the Goddess.")
+		scr_text("It's strange, how there's so many of these out here in this forest.", "player")	
+		scr_text("Could we use these somehow?", "player")
+		scr_text("No. Are you stupid?", "buddy")	
+		scr_text("What could you possibly do with a statue?", "buddy")
+		scr_text("Fool.", "buddy")
+		scr_text("You didn't have to put it that bluntly...", "playerdespair")	
+	break;
+	
+	case "whatwerethose":
+		scr_text("Some of those Runts were a little tougher than the rest.","player")
+			scr_text_color(14, 19, c_red,c_red,c_red,c_red);
+		scr_text("Those were Teneri. Slightly older and more resilient versions of Runts.", "buddy")
+			scr_text_color(11, 18, c_red,c_red,c_red,c_red); scr_text_color(65, 70, c_red,c_red,c_red,c_red);
+		scr_text("You put them down wonderfully nonetheless.", "buddygrin")
+	break;
+	
+	case "why":
+		scr_text("(Why can't I remember anything?)","player")
+		scr_text("I have taken your memories, for you have no need to remember.", "buddy")
+		scr_text("You now exist as my blade.", "buddy")
+		scr_text("A blade exists to cut.", "buddy")
+		scr_text("A blade asks no questions.", "buddy")
+		scr_text("A blade will cut what it must.", "buddy")
+		scr_text("And my blade will serve it's purpose.", "buddy")
+	break;
+
+
 
 	case "trigger 1":
 		scr_text("Hey Venator, it smells like updog in here.", "buddy", -1)
