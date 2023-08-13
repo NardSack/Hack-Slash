@@ -325,7 +325,7 @@ if dashCheck == false
 							{
 								shotgunTimer = weapon.cooldown;
 								shoot_weapon();
-								audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+								audio_play_sound(snd_shotgunblast,1,0) //play sound (change later)
 							}
 					}
 				if weapon == _playerWeapons[2]
@@ -334,7 +334,7 @@ if dashCheck == false
 							{
 								railgunTimer = weapon.cooldown;
 								shoot_weapon();
-								audio_play_sound(snd_pistolshot,1,0) //play sound (change later)
+								audio_play_sound(snd_railgun,1,0) //play sound (change later)
 							}
 					}
 			}
