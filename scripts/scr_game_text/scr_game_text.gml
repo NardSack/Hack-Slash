@@ -131,6 +131,20 @@ switch(_text_id){
 		scr_text("You put them down wonderfully nonetheless.", "buddygrin")
 	break;
 	
+	case "where":
+		scr_text("Where are we, anyway? All I remember is waking up on a stone platform.","player")
+		scr_text("We are in The Garden of Sinners...", "buddygrin")
+		scr_text(". . . . . .", "player")
+		scr_text("Why-", "player")
+		scr_text("Silence, fool. The enemy awaits us.", "buddy")
+		scr_text("......Here we go again.", "playerdespair")
+	break;
+	
+	case "thosehealth":
+		scr_text("Those Healing Vials were really useful.","player")
+		scr_text("Ration them well, drink them only when necessary.", "buddy")
+	break;
+	
 	case "why":
 		scr_text("(Why can't I remember anything?)","player")
 		scr_text("I have taken your memories, for you have no need to remember.", "buddy")
@@ -142,8 +156,7 @@ switch(_text_id){
 	break;
 
 
-
-	case "trigger 1":
+	case "heyven":
 		scr_text("Hey Venator, it smells like updog in here.", "buddy", -1)
 			scr_text_color(28, 33, c_yellow, c_yellow, c_yellow, c_yellow); scr_text_float(28, 33);
 		scr_text("What is updog???", "player")
@@ -154,25 +167,51 @@ switch(_text_id){
 		scr_text("I hate you.", "playerdespair")
 		break;
 	
+	case "end9":
+		scr_text("So that was why you wanted me to ration them.","player")
+		scr_text("It's a good habit to keep.", "buddy")
+	break;
 	
+	case "end10":
+		scr_text("I can't believe you actually survived that.","buddy")
+		scr_text("I was right to choose you, to lend you my strength.", "buddy")
+	break;
 	
-	case "trigger 2":
+	case "start11":
+		scr_text("A room filled with those DETESTABLE dummies.", "buddy")
+		scr_text("Leave NOTHING standing.", "buddygrin")
+		scr_text("Let's... see... you... try...", "carnifexunknown", -1)
+		scr_text_shake(0, 100);
+	break;
+	
+	case "deadven":
 		scr_text("A dead Venator. Torn to shreds.", "buddy")
 			scr_text_color(7,15, c_lime, c_lime, c_lime, c_lime)
-		scr_text("Something wicked this way comes.","buddy")
+		scr_text("True horror lies ahead...","buddy")
 		scr_text("A Carnifex. One of your own, consumed by the Black Mold. He is naught but a corpse now.", "buddy")
-			scr_text_color(2, 10, c_red,c_red,c_red,c_red)
+			scr_text_color(2, 10, c_red,c_red,c_red,c_red); scr_text_shake(2, 10);
 		scr_text("Show what remains no mercy...", "buddygrin")
 			scr_text_shake(0,30);
 		break;
 	
+	case "start13":
+		scr_text("You...fool to come...", "carnifex", -1)
+			scr_text_shake(0, 100);
+		scr_text("Nothing... but death... awaits you...", "carnifex", -1)
+			scr_text_shake(0, 100);
+		scr_text("Big talk, for a walking corpse.", "player")
+	break;
 	
+	case "end13":
+		scr_text("You...traitor......", "carnifex", -1)
+			scr_text_shake(0, 100);
+		scr_text("Nicely done.", "buddy")
+		scr_text("Come now, once more unto the breach.", "buddy")
+	break;
 	
-	case "trigger 3":
-		scr_text("A training dummy.")
-		scr_text("Its patronizing smile mocks me, destroy it, Venator.", "buddy")
-		scr_text_color(32, 38, c_red,c_red,c_red,c_red); scr_text_shake(32, 38);
-		scr_text("( . . . Seriously?)", "playerdespair")
+	case "closing":
+		scr_text("=ACT I COMPLETE=")
+		scr_text("TO BE CONTINUED...")
 		break;
 	
 	

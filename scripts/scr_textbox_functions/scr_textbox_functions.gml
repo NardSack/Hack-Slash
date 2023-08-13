@@ -115,6 +115,21 @@ if argument_count > 1
 			snd[page_number] = snd_buddy_low;
 			name[page_number] = "\"Malfy\"";
 			break;
+			
+		case "carnifexunknown":
+			speaker_sprite[page_number] = spr_carnifex_face;
+			txtb_spr[page_number] = spr_textbox;
+			snd[page_number] = snd_player_low;
+			name[page_number] = "??????";
+			break;
+			
+		case "carnifex":
+			speaker_sprite[page_number] = spr_carnifex_face;
+			txtb_spr[page_number] = spr_textbox;
+			snd[page_number] = snd_player_low;
+			name[page_number] = "Carnifex";
+			break;
+			
 		
 	}
 if argument_count > 2
