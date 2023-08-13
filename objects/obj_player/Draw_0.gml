@@ -33,9 +33,13 @@ if (place_meeting(x, y, obj_speaktrigger_interact)||place_meeting(x, y, obj_spea
 		draw_text(x-14, y-60, "[F]");
 		draw_set_font(global.font_main);
 	}
-	
-	
-	
+if action =="stun"
+{
+	draw_set_color(c_yellow)
+	draw_text(x+30,y-30,$"TRAPPED")
+	draw_set_color(c_white)
+
+}
 	
 	
 	
