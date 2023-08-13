@@ -24,6 +24,9 @@ maxEnergy = 10;
 
 gun_alpha = 1;
 
+deathsoundTimer = 0;
+
+
 //damage setup
 get_damaged_create(20, true);
 

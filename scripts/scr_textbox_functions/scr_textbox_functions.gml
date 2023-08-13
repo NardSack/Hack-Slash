@@ -95,6 +95,13 @@ if argument_count > 1
 			name[page_number] = "Venator";
 			break;
 			
+		case "buddyunknown":
+			speaker_sprite[page_number] = spr_buddy_spk;
+			txtb_spr[page_number] = spr_textbox;
+			snd[page_number] = snd_buddy_mid;
+			name[page_number] = "??????";
+			break;
+			
 		case "buddy":
 			speaker_sprite[page_number] = spr_buddy_spk;
 			txtb_spr[page_number] = spr_textbox;

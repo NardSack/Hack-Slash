@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_lucentshot_travel",
-    "path": "sprites/spr_lucentshot_travel/spr_lucentshot_travel.yy",
+    "name": "spr_bossshot_travel",
+    "path": "sprites/spr_bossshot_travel/spr_bossshot_travel.yy",
   },
   "spriteMaskId": {
     "name": "spr_lucentshot_travel",

@@ -33,20 +33,20 @@ else
 	image_speed = 1;
 if energy < maxEnergy
 {
-	if collision_circle(x,y,50,obj_energypack,false,false)
-	{
-		energy +=0.00533
-	}
-	else
-	{
-		energy+=0.00833
-	}
+
+	energy+=0.00833
+
 }
 
 if hp <=0
 {
 	gun_alpha = 0;
 	state_set(states.death);
+	if deathsoundTimer == 0
+		{
+			deathsoundTimer = 1;
+			audio_play_sound(snd_playerdeath, 1, 0);
+		}
 	exit;
 }
 if action =="stun"

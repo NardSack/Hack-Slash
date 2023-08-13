@@ -27,11 +27,12 @@ draw_self();
 	}
 
 //draw interact prompt
-if place_meeting(x, y, obj_speaktrigger_interact) && is_reading == false
+if (place_meeting(x, y, obj_speaktrigger_interact)||place_meeting(x, y, obj_speaktrigger_interact_break))&& is_reading == false
 	{
-		draw_text(x-14, y-60, "[F]")
+		draw_set_font(-1);
+		draw_text(x-14, y-60, "[F]");
+		draw_set_font(global.font_main);
 	}
-	draw_text(x,y-20,$"{energy}")
 	
 	
 	

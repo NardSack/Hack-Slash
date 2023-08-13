@@ -36,5 +36,5 @@
     "path": "sprites/spr_speaktrigger_rs/spr_speaktrigger_rs.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

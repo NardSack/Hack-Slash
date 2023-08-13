@@ -28,16 +28,25 @@ depth = -y;
 		}	
 
 	//collision w/ wall
-	if place_meeting(x, y, obj_solidwall) { destroy = true; };
+	if place_meeting(x, y, obj_solidwall)
+	{ 
+		destroy = true;
+	}
 
 	//collision w/ player
-	if place_meeting(x, y, obj_player) && enemyDestroy == true { destroy = true; }
+	if place_meeting(x, y, obj_player) && enemyDestroy == true 
+	{ 
+		destroy = true;
+	}
 	
 	//collision w/ sword
 	if place_meeting(x, y, obj_SwordHitBox) && parryCreated == false
 	{
 		parryCreated = true;
 		destroy = true;
+		
+		audio_play_sound(snd_parry, 1, 0);
+		
 		if instance_exists(obj_player) && obj_player.hp > 0 //heal on parry
 		{
 			obj_player.hp += damage/4;	
