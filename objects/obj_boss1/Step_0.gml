@@ -2,7 +2,12 @@
 //event_inherited();
 //depth
 
-if !instance_exists(obj_pauser)
+if instance_exists(obj_pauser)
+{
+	image_speed = 0;
+	path_speed = 0;
+}
+else
 {
 	depth = -bbox_bottom;
 	if hp <= maxHp/3 and heal == 0 
