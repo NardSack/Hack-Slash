@@ -4,7 +4,7 @@ event_inherited();
 //if path_index != -1
 //{
 //draw_path(path,x,y,1)
-//draw_text(x,y-10,$"{hp}and {current_state}")
+//draw_text(x,y-10,$"{hp}and {current_st ate}")
 //}; 
 if current_state == enemy_states.FLEE
 {
@@ -16,5 +16,7 @@ if current_state == enemy_states.STAGGER
 	draw_text(x,y-20,$"Stagger for {staggerperiod/60}seconds")
 }
 //draw_text(x,y-20,$"Stagger for {staggerperiod}")
-
+if current_state != enemy_states.DEAD
+{
 draw_text(x, y-100, string(hp));
+}

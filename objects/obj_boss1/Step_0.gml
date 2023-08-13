@@ -7,7 +7,10 @@ if hp <= 30 and heal ==0
 	heal=1
 	current_state=enemy_states.FLEE;
 }
-
+if hp <= 0
+{
+	current_state=enemy_states.DEAD;
+}
 //changing of sprite
 switch (current_state)
 {
@@ -48,8 +51,11 @@ switch (current_state)
 		}
 		else
 		{
+			if instance_exists(obj_player)
+			{
 			aimdir=point_direction(x,y,obj_player.x,obj_player.y)
 			perform_ranged_attack()
+			}
 
 		}
 	}

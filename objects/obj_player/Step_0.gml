@@ -49,7 +49,58 @@ if hp <=0
 	state_set(states.death);
 	exit;
 }
+if action =="stun"
+{
+	moveSpeed=0
+	if stuncount==0
+	{
+		stuncount=1
+		state=states.idledown
+	}
+	if (meleeKey)
+	{
+		checkdone=false;
+		ydir=0
+		if (dir== -1)
+			{ydir= 1}
+		else if (dir == 1)
+			{ydir= (-1)}
+			if (inputX !=0 && inputY==0){
+			image_xscale = sign(inputX);
+			state_set_attack(states.attackhorizontal);
+			}
+			else if (inputX ==0 && inputY==0)
+			{
+				image_xscale=dir;
+				
 
+				if (state== states.walkhorizon|| state==states.idlehorizon)
+				{
+
+					state_set_attack(states.attackhorizontal)
+				}
+				else if (state== states.walkup||state==states.idleup)
+				{
+					state_set_attack(states.attackup)
+				}
+				else if (state== states.walkdown||state==states.idledown)
+				{
+					image_xscale=ydir
+					state_set_attack(states.attackdown)
+				}
+			}
+
+			else if (inputY <0)// condition wrong
+			{
+				state_set_attack(states.attackup);
+			}
+			else if (inputY>0)
+			{
+				image_xscale=ydir
+				state_set_attack(states.attackdown);
+			}
+	}
+}
 if (action=="move")
 {
 
@@ -196,7 +247,9 @@ if (state != states.attackdown && state != states.attackhorizontal && state != s
 		image_index=0
 		dashy=inputY
 		dashx=inputX
+
 		moveSpeed=4.5;
+		
 	}
 	
 

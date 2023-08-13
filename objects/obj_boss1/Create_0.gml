@@ -19,6 +19,7 @@ s_attack=0;
 s_attack_hb=0;
 s_flee = spr_carnifexidle_healing;
 s_stagger =  spr_carnifexidle_right
+finaldeath= 78964523;
 //hurt to only happen when changing phases
 s_hurt = spr_carnifexhurt_right;
 //attack disable attack frame
