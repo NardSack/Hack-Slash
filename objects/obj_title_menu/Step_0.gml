@@ -35,6 +35,9 @@ if ((mouse_check_button_pressed(mb_left)&& mouseOver)||select)
 	{
 	case 0: room_goto_next(); break;
 	case 2 : game_end(); break;
+	case 3 :
+	//creditsroom
+	break;
 	}
 }
 

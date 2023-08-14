@@ -47,7 +47,10 @@ if ((mouse_check_button_pressed(mb_left) && mouseOver)||select)
 				instance_destroy(obj_player);
 				room_goto(rm_menu);
 			break;
-			case 4: 
+			case 4:
+			//credit room
+			break;
+			case 5: 
 				game_end();
 			break;
 		}

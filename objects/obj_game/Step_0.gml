@@ -14,8 +14,9 @@ if keyboard_check_pressed(vk_escape)
 		["Save Game"],
 		["Restart Level"],
 		["Back to Title"],
+		["Credits"],
 		["Quit Game "],
-
+		
 
 		],
 		""
