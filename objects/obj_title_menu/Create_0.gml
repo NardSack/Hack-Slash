@@ -14,8 +14,8 @@ draw_set_font(global.font_main);
 
 option[0]="Start Game"
 option[1]="Setting"
-option[2]="Quit Game"
-option[3]="Credits"
+option[2]="Credits"
+option[3]="Quit Game"
 //option[3]="super long font thing"
 
 //array length of the options

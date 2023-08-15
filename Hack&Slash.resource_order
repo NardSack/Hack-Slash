@@ -59,6 +59,7 @@
     {"name":"rm_6","order":7,"path":"rooms/rm_6/rm_6.yy",},
     {"name":"obj_tree_1","order":1,"path":"objects/obj_tree_1/obj_tree_1.yy",},
     {"name":"obj_lucent","order":1,"path":"objects/obj_lucent/obj_lucent.yy",},
+    {"name":"rm_credit","order":11,"path":"rooms/rm_credit/rm_credit.yy",},
     {"name":"spr_nextroom","order":1,"path":"sprites/spr_nextroom/spr_nextroom.yy",},
   ],
 }

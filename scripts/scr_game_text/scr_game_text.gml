@@ -68,7 +68,7 @@ switch(_text_id){
 		scr_text("[3] is your Railgun.")
 			scr_text_color(12, 37, c_aqua,c_aqua,c_aqua,c_aqua);
 		scr_text("Use them well.")
-		break;
+	break;
 		
 	case "dummyinspect" :
 		scr_text("A regular training dummy.")
@@ -165,7 +165,7 @@ switch(_text_id){
 		scr_text(". . . . . .", "playerdespair")
 			scr_text_shake(0, 11);
 		scr_text("I hate you.", "playerdespair")
-		break;
+	break;
 	
 	case "end9":
 		scr_text("So that was why you wanted me to ration them.","player")
@@ -192,7 +192,7 @@ switch(_text_id){
 			scr_text_color(2, 10, c_red,c_red,c_red,c_red); scr_text_shake(2, 10);
 		scr_text("Show what remains no mercy...", "buddygrin")
 			scr_text_shake(0,30);
-		break;
+	break;
 	
 	case "start13":
 		scr_text("You...fool to come...", "carnifex", -1)
@@ -210,11 +210,24 @@ switch(_text_id){
 	break;
 	
 	case "closing":
+		scr_text("The hunt is yet to end.", "buddygrin")
 		scr_text("=ACT I COMPLETE=")
 		scr_text("TO BE CONTINUED...")
-		break;
+	break;
 	
-	
+	case "credit":
+		scr_text("A first-time game. Made by njosika and NardSack.")
+		scr_text("Special Thanks to...")
+		scr_text("Penusbmic, for the Player and Enemy sprite assets, as well as the Parallax background asset.")
+		scr_text("Cainos, for the tileset assets.")
+		scr_text("Grafxkid, for the pixel font.")
+		scr_text("Stealthix, for the Trap sprite asset.")
+		scr_text("Peyton Burnham, for the extensive Top-Down Shooter and RPG tutorials.")
+		scr_text("And you, for playing!")
+		scr_text("Links to the assets used will be placed in the GitHub Repository, which can be found in the description.")
+		scr_text("Goodbye!")
+	break;
+		
 	
 	}
 }

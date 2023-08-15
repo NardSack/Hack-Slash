@@ -167,7 +167,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.6.0.89",
   },
   "resources": [
     {"id":{"name":"spr_lucentattack_left","path":"sprites/spr_lucentattack_left/spr_lucentattack_left.yy",},},
@@ -416,6 +416,7 @@
     {"id":{"name":"snd_parry","path":"sounds/snd_parry/snd_parry.yy",},},
     {"id":{"name":"spr_playerwalk_up","path":"sprites/spr_playerwalk_up/spr_playerwalk_up.yy",},},
     {"id":{"name":"obj_rbullet","path":"objects/obj_rbullet/obj_rbullet.yy",},},
+    {"id":{"name":"rm_credit","path":"rooms/rm_credit/rm_credit.yy",},},
     {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},},
     {"id":{"name":"spr_runtwalk_left","path":"sprites/spr_runtwalk_left/spr_runtwalk_left.yy",},},
     {"id":{"name":"obj_parallax_bg","path":"objects/obj_parallax_bg/obj_parallax_bg.yy",},},
@@ -442,6 +443,7 @@
     {"roomId":{"name":"rm_12","path":"rooms/rm_12/rm_12.yy",},},
     {"roomId":{"name":"rm_13","path":"rooms/rm_13/rm_13.yy",},},
     {"roomId":{"name":"rm_14","path":"rooms/rm_14/rm_14.yy",},},
+    {"roomId":{"name":"rm_credit","path":"rooms/rm_credit/rm_credit.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
